@@ -6,6 +6,10 @@
     font-family: "Poppins", sans-serif;
 }
 
+a {
+    text-decoration: none!important;
+}
+
 .login {
     height: 100vh;
 }
