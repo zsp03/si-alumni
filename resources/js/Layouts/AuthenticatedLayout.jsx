@@ -28,24 +28,24 @@ export default function Authenticated({ auth, header, children }) {
                             </div>
                             <div className="hidden space-x-2 sm:-my-px sm:ml-10 sm:flex">
                                 <NavLink
-                                    href={route("dashboard")}
-                                    active={route().current("dashboard")}
+                                    href={route("home")}
+                                    active={route().current("home")}
                                 >
                                     Home
                                 </NavLink>
                                 <NavLink
-                                    href={route("dashboard")}
+                                    href={route("home")}
                                     active={route().current("event")}
                                 >
                                     Event
                                 </NavLink>
                                 <NavLink
-                                    href={route("dashboard")}
+                                    href={route("home")}
                                     active={route().current("newsletter")}
                                 >
                                     Newsletter
                                 </NavLink>
-                                <NavLink href={route("dashboard")}>
+                                <NavLink href={route("home")}>
                                     Donasi
                                 </NavLink>
                             </div>
@@ -147,8 +147,8 @@ export default function Authenticated({ auth, header, children }) {
                 >
                     <div className="pt-2 pb-3 space-y-1">
                         <ResponsiveNavLink
-                            href={route("dashboard")}
-                            active={route().current("dashboard")}
+                            href={route("home")}
+                            active={route().current("home")}
                         >
                             Home
                         </ResponsiveNavLink>
