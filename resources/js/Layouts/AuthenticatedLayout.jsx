@@ -10,23 +10,26 @@ export default function Authenticated({ auth, header, children }) {
         useState(false);
 
     return (
-        <div className="min-h-screen bg-gray-100 dark:bg-gray-900">
-            <nav className="bg-navy border-b border-gray-100">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="min-h-screen bg-gray-100 dark:bg-gray-900 ">
+            <nav className="bg-white border-b border-gray-100 ">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
                     <div className="flex justify-between">
-                        <div className="flex">
-                            <div className="flex items-center px-4 py-2.5">
+                        <div className="flex justify-between">
+                            <div className="flex items-center px-4 py-2.5 ">
                                 <Link href="/">
                                     <ApplicationLogo className="block h-9 w-auto fill-current text-gray-800 dark:text-gray-200" />
                                 </Link>
 
                                 <div className="ml-auto">
-                                    <span className="ml-3 font-semibold text-lg text-white">
+                                    <span className="ml-3 font-semibold text-lg text-black">
                                         Portal Alumni
                                     </span>
                                 </div>
                             </div>
-                            <div className="hidden space-x-2 sm:-my-px sm:ml-10 sm:flex">
+                        </div>
+
+                        <div className="hidden sm:flex sm:items-center sm:ml-6">
+                            <div className="hidden space-x-2 sm:-my-px sm:ml-10 sm:flex justify-between">
                                 <NavLink
                                     href={route("home")}
                                     active={route().current("home")}
@@ -45,13 +48,8 @@ export default function Authenticated({ auth, header, children }) {
                                 >
                                     Newsletter
                                 </NavLink>
-                                <NavLink href={route("home")}>
-                                    Donasi
-                                </NavLink>
+                                <NavLink href={route("home")}>Donasi</NavLink>
                             </div>
-                        </div>
-
-                        <div className="hidden sm:flex sm:items-center sm:ml-6">
                             <div className="ml-3 relative">
                                 <Dropdown>
                                     <Dropdown.Trigger>
