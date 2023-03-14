@@ -16,7 +16,7 @@ export default function Home(props) {
             <Head title="Home" />
 
             <div className="py-10">
-                <div className="max-w-20xl mx-auto sm:px-6 lg:px-8 flex justify-between md:justify-between">
+                <div className="max-w-20xl mx-auto sm:px-6 lg:px-8 flex justify-between md:justify-between gap-2.5">
                     {/* berita*/}
                     <div className="bg-white dark:bg-gray-800 overflow-hidden">
                         <div className="dark:bg-gray-800 dark:text-gray-50">
@@ -91,7 +91,7 @@ export default function Home(props) {
                         </div>
                     </div>
                     {/* end-berita */}
-                    test
+
                     {/* profil */}
                     <div className="bg-white dark:bg-gray-800 overflow-hidden">
                         {/* proifl */}
