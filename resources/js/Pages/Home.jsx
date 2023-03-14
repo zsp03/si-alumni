@@ -1,6 +1,7 @@
 import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout";
 import { Head } from "@inertiajs/react";
 import PrimaryButton from "@/Components/PrimaryButton";
+import { Link } from "@inertiajs/react";
 
 export default function Home(props) {
     return (
@@ -95,9 +96,9 @@ export default function Home(props) {
                     {/* profil */}
                     <div className="bg-white dark:bg-gray-800 overflow-hidden">
                         {/* proifl */}
-                        <div className="max-w-md mx-auto bg-white  shadow-md overflow-hidden md:max-w-md">
+                        <div className="bg-white h-full shadow-md overflow-hidden md:max-w-md">
                             <div className="md:flex">
-                                <div className="w-full p-2 py-10">
+                                <div className="p-4">
                                     <div className="flex justify-center">
                                         <div className="relative">
                                             <img
@@ -108,7 +109,7 @@ export default function Home(props) {
                                             <span className="absolute border-white border-4 h-5 w-5 top-12 left-16 bg-green-700 rounded-full" />
                                         </div>
                                     </div>
-                                    <div className="flex flex-col text-center mt-3 mb-4">
+                                    <div className="flex flex-col text-center gap-3">
                                         <span className="text-2xl font-medium">
                                             Lindsey James
                                         </span>
@@ -116,16 +117,20 @@ export default function Home(props) {
                                             @lindsey_jam3s
                                         </span>
                                     </div>
-                                    <p className="px-16 text-center text-md text-gray-800">
+                                    <p className="text-center text-md text-gray-800">
                                         Actress, musician, songwriter, and
-                                        artist.DM for work inquires or{" "}
+                                        artist. DM for work inquires
                                     </p>
-
+                                    <Link
+                                    href={route('profile.edit')}>
                                     <div className="px-20 mt-1">
-                                        <PrimaryButton className="h-12 bg-navy w-full text-white text-md rounded hover:shadow hover:bg-blue-800">
-                                            Update Profil
+                                        <PrimaryButton
+                                        className="h-8 text-xs bg-navy w-full text-white text-md rounded hover:shadow hover:bg-blue-800"
+                                        >
+                                            Perbarui Profil
                                         </PrimaryButton>
                                     </div>
+                                    </Link>
                                 </div>
                             </div>
                         </div>

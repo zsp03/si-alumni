@@ -43,7 +43,7 @@ export default function Authenticated({ auth, header, children }) {
                                     Event
                                 </NavLink>
                                 <NavLink
-                                    href={route("home")}
+                                    href={route("newsletter")}
                                     active={route().current("newsletter")}
                                 >
                                     Newsletter
