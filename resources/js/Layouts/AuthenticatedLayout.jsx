@@ -11,7 +11,7 @@ export default function Authenticated({ auth, header, children }) {
 
     return (
         <div className="min-h-screen bg-gray-100 dark:bg-gray-900 ">
-            <nav className="bg-white border-b border-gray-100 ">
+            <nav className="bg-white border-b border-gray-100 fixed top-0 right-0 left-0 h-20 w-full z-50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
                     <div className="flex justify-between">
                         <div className="flex justify-between">
@@ -21,14 +21,17 @@ export default function Authenticated({ auth, header, children }) {
                                 </Link>
 
                                 <div className="ml-auto">
-                                    <span className="ml-3 font-semibold text-lg text-black">
+                                    <div className="ml-3 font-semibold text-lg text-black">
                                         Portal Alumni
-                                    </span>
+                                    </div>
+                                    <div className="ml-3 font-semibold text-lg text-rose-700">
+                                        Universitas Hasanuddin
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div className="hidden sm:flex sm:items-center sm:ml-6">
+                        <div className="hidden sm:flex sm:items-center sm:ml-6 ">
                             <div className="hidden space-x-2 sm:-my-px sm:ml-10 sm:flex justify-between">
                                 <NavLink
                                     href={route("home")}
@@ -143,7 +146,7 @@ export default function Authenticated({ auth, header, children }) {
                         " sm:hidden"
                     }
                 >
-                    <div className="pt-2 pb-3 space-y-1">
+                    <div className="pt-2 pb-3 space-y-1 ">
                         <ResponsiveNavLink
                             href={route("home")}
                             active={route().current("home")}
@@ -179,7 +182,7 @@ export default function Authenticated({ auth, header, children }) {
             </nav>
 
             {header && (
-                <header className="bg-white dark:bg-gray-800 shadow">
+                <header className="bg-white dark:bg-gray-800 shadow mt-20">
                     <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
                         {header}
                     </div>

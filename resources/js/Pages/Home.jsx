@@ -9,14 +9,19 @@ export default function Home(props) {
             auth={props.auth}
             errors={props.errors}
             header={
-                <h2 className="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-                    Home
-                </h2>
+                <div>
+                    <div className="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+                        Halo Eka Jay, SELAMAT DATANG DI PORTAL ALUMNI UNIVERSITAS HASANUDDIN
+                    </div>
+                    <div className="font-medium text-base text-gray-800 dark:text-gray-200 leading-tight">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit ipsa consequatur, illum est cum, expedita repudiandae accusamus nesciunt inventore architecto sed amet magni facilis eius nulla doloribus rerum commodi quibusdam?
+                    </div>
+                </div>
             }
         >
             <Head title="Home" />
 
-            <div className="py-10">
+            <div className="py-14">
                 <div className="max-w-20xl mx-auto sm:px-6 lg:px-8 flex justify-between md:justify-between gap-2.5">
                     {/* berita*/}
                     <div className="bg-white dark:bg-gray-800 overflow-hidden">
@@ -106,30 +111,25 @@ export default function Home(props) {
                                                 className="rounded-full"
                                                 width={80}
                                             />
-                                            <span className="absolute border-white border-4 h-5 w-5 top-12 left-16 bg-green-700 rounded-full" />
                                         </div>
                                     </div>
-                                    <div className="flex flex-col text-center gap-3">
+                                    <div className="flex flex-col text-center gap-1">
                                         <span className="text-2xl font-medium">
-                                            Lindsey James
+                                            Eka Jay
                                         </span>
                                         <span className="text-md text-gray-400">
-                                            @lindsey_jam3s
+                                            Teknik Informatika 1990
                                         </span>
                                     </div>
                                     <p className="text-center text-md text-gray-800">
-                                        Actress, musician, songwriter, and
-                                        artist. DM for work inquires
+                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione, labore illum. Similiq
                                     </p>
-                                    <Link
-                                    href={route('profile.edit')}>
-                                    <div className="px-20 mt-1">
-                                        <PrimaryButton
-                                        className="h-8 text-xs bg-navy w-full text-white text-md rounded hover:shadow hover:bg-blue-800"
-                                        >
-                                            Perbarui Profil
-                                        </PrimaryButton>
-                                    </div>
+                                    <Link href={route("profile.edit")}>
+                                        <div className="px-20 mt-1">
+                                            <PrimaryButton className="h-8 text-xs bg-navy w-full text-white text-md rounded hover:shadow hover:bg-blue-800">
+                                                Perbarui Profil
+                                            </PrimaryButton>
+                                        </div>
                                     </Link>
                                 </div>
                             </div>
