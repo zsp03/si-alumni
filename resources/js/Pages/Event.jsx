@@ -24,9 +24,9 @@ export default function Newsletter(props) {
         >
             <Head title="Event" />
 
-            <section className="p-4 lg:p-8 dark:bg-gray-800 dark:text-gray-100">
+            <section className=" p-5 lg:p-8 dark:bg-gray-800 dark:text-gray-100 ">
                 <div className="container mx-auto space-y-12 bg-white">
-                    <div className="flex flex-col overflow-hidden shadow-sm lg:flex-row">
+                    <div className="flex flex-col overflow-hidden shadow-sm lg:flex-row ">
                         <img
                             src="https://source.unsplash.com/640x480/?1"
                             alt=""
