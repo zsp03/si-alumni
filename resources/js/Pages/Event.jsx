@@ -24,9 +24,9 @@ export default function Newsletter(props) {
         >
             <Head title="Event" />
 
-            <section className=" p-5 lg:p-8 dark:bg-gray-800 dark:text-gray-100 ">
-                <div className="container mx-auto space-y-12 bg-white">
-                    <div className="flex flex-col overflow-hidden shadow-sm lg:flex-row ">
+            <section className="mt-6 lg:mt-11 dark:bg-gray-800 dark:text-gray-100 bg-white">
+                <div className="container space-y-12  ">
+                    <div className="flex flex-col overflow-hidden shadow-sm lg:flex-row pt-7">
                         <img
                             src="https://source.unsplash.com/640x480/?1"
                             alt=""
@@ -45,7 +45,7 @@ export default function Newsletter(props) {
                                 error esse quos.
                             </p>
                             {/* <link></link> */}
-                            <PrimaryButton className="self-start w-32 rounded-none">
+                            <PrimaryButton className="self-start !w-32 rounded-md">
                                 Find Out More
                             </PrimaryButton>
                         </div>
@@ -71,7 +71,6 @@ export default function Newsletter(props) {
                             <button type="button" className="self-start">
                                 Action
                             </button>
-                            
                         </div>
                     </div>
                     <div className="flex flex-col overflow-hidden shadow-sm lg:flex-row">
@@ -118,7 +117,6 @@ export default function Newsletter(props) {
                             <button type="button" className="self-start">
                                 Action
                             </button>
-                            
                         </div>
                     </div>
                 </div>
