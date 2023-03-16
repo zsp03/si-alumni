@@ -2,6 +2,7 @@ import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout";
 import { Head } from "@inertiajs/react";
 import PrimaryButton from "@/Components/PrimaryButton";
 import { Link } from "@inertiajs/react";
+import Footer from "@/Components/Footer";
 
 export default function Home(props) {
     return (
@@ -138,6 +139,7 @@ export default function Home(props) {
                     {/* end-profil */}
                 </div>
             </div>
+            <Footer />
         </AuthenticatedLayout>
     );
 }
