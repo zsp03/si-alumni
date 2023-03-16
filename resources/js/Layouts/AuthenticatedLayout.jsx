@@ -40,7 +40,7 @@ export default function Authenticated({ auth, header, children }) {
                                     Home
                                 </NavLink>
                                 <NavLink
-                                    href={route("home")}
+                                    href={route("event")}
                                     active={route().current("event")}
                                 >
                                     Event

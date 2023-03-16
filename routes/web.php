@@ -33,6 +33,10 @@ Route::get('/newsletter', function () {
     return Inertia::render('Newsletter');
 })->middleware(['auth', 'verified'])->name('newsletter');
 
+Route::get('/event', function () {
+    return Inertia::render('Event');
+})->middleware(['auth', 'verified'])->name('event');
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
