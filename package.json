@@ -21,6 +21,7 @@
     },
     "dependencies": {
         "bootstrap": "^5.2.3",
+        "daisyui": "^2.51.3",
         "react-bootstrap": "^2.7.2"
     }
 }
