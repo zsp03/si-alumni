@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
+            Selamat Datang, {{ Auth::user()->name }}!
         </h2>
     </x-slot>
 
@@ -65,16 +65,16 @@
             <div class="bg-white dark:bg-gray-800 overflow-hidden">
                 <div class="bg-white h-full shadow-md overflow-hidden md:max-w-md">
                     <div class="md:flex">
-                        <div class="p-4">
+                        <div class="flex flex-col gap-2 p-4">
                             <div class="flex justify-center">
                                 <div class="relative">
                                     <img src="https://source.unsplash.com/150x150/?portrait?3" class="rounded-full"
-                                        width={80} />
+                                        width=80 />
                                 </div>
                             </div>
-                            <div class="flex flex-col text-center gap-1">
+                            <div class="flex flex-col text-center">
                                 <span class="text-2xl font-medium">
-                                    Eka Jay
+                                    {{ Auth::user()->name }}
                                 </span>
                                 <span class="text-md text-gray-400">
                                     Teknik Informatika 1990
@@ -85,8 +85,8 @@
                             </p>
                             <div class="px-20 mt-1">
                                 <x-primary-button
-                                    class="h-8 text-xs bg-navy w-full text-white text-md rounded hover:shadow hover:bg-blue-800">
-                                    Perbarui Profil
+                                    class="h-8 text-xs bg-navy w-full whitespace-nowrap text-white rounded hover:shadow hover:bg-blue-800">
+                                    Ganti Profil
                                 </x-primary-button>
                             </div>
                         </div>
