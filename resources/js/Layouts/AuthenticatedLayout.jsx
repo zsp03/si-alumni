@@ -14,13 +14,13 @@ export default function Authenticated({ auth, header, children }) {
             <nav className="bg-white border-b border-gray-100 fixed top-0 right-0 left-0 h-20 w-full z-50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
                     <div className="flex justify-between">
-                        <div className="flex justify-between">
+                        <div className="flex justify-between items-center">
                             <div className="flex items-center px-4 py-2.5 ">
                                 <Link href="/">
                                     <ApplicationLogo className="block h-9 w-auto fill-current text-gray-800 dark:text-gray-200" />
                                 </Link>
 
-                                <div className="ml-auto">
+                                <div className="pt-2 whitespace-nowrap">
                                     <div className="ml-3 font-semibold text-lg text-black">
                                         Portal Alumni
                                     </div>
@@ -143,15 +143,38 @@ export default function Authenticated({ auth, header, children }) {
                 <div
                     className={
                         (showingNavigationDropdown ? "block" : "hidden") +
-                        " sm:hidden"
+                        " sm:hidden bg-white"
                     }
                 >
-                    <div className="pt-2 pb-3 space-y-1 ">
+                    <div className="pb-2 space-y-1 ">
                         <ResponsiveNavLink
                             href={route("home")}
                             active={route().current("home")}
                         >
                             Home
+                        </ResponsiveNavLink>
+                    </div>
+                    <div className="pb-2 space-y-1 ">
+                        <ResponsiveNavLink
+                            href={route("event")}
+                            active={route().current("event")}
+                        >
+                            Event
+                        </ResponsiveNavLink>
+                    </div>
+                    <div className="pb-2 space-y-1 ">
+                        <ResponsiveNavLink
+                            href={route("newsletter")}
+                            active={route().current("newsletter")}
+                        >
+                            Newsletter
+                        </ResponsiveNavLink>
+                    </div>
+                    <div className="pb-2 space-y-1 ">
+                        <ResponsiveNavLink
+                            href={route("home")}
+                        >
+                            Donasi
                         </ResponsiveNavLink>
                     </div>
 

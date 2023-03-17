@@ -1,6 +1,7 @@
 import PrimaryButton from "@/Components/PrimaryButton";
 import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout";
 import { Head } from "@inertiajs/react";
+import Footer from "@/Components/Footer";
 
 export default function Newsletter(props) {
     return (
@@ -24,8 +25,8 @@ export default function Newsletter(props) {
         >
             <Head title="Event" />
 
-            <section className="mt-6 lg:mt-11 dark:bg-gray-800 dark:text-gray-100 bg-white">
-                <div className="container space-y-12  ">
+            <section className="mt-6 py-4 lg:mt-11 dark:bg-gray-800 dark:text-gray-100 bg-white">
+                <div className="container space-y-12 ">
                     <div className="flex flex-col overflow-hidden shadow-sm lg:flex-row pt-7">
                         <img
                             src="https://source.unsplash.com/640x480/?1"
@@ -121,6 +122,7 @@ export default function Newsletter(props) {
                     </div>
                 </div>
             </section>
+            <Footer/>
         </AuthenticatedLayout>
     );
 }

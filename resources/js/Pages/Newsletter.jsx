@@ -1,3 +1,4 @@
+import Footer from "@/Components/Footer";
 import NewsletterCard from "@/Components/NewsletterCard";
 import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout";
 import { Head } from "@inertiajs/react";
@@ -33,6 +34,7 @@ export default function Newsletter(props) {
                 >
                 </NewsletterCard>
             </div>
+            <Footer/>
         </AuthenticatedLayout>
     );
 }

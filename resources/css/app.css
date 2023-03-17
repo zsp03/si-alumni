@@ -10,6 +10,12 @@ a {
     text-decoration: none!important;
 }
 
+.navbarLogo {
+    height: 55px!important;
+    max-width: none;
+
+}
+
 .login {
     height: 100vh;
 }

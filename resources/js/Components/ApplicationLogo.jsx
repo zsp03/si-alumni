@@ -5,6 +5,7 @@ export default function ApplicationLogo(props) {
             alt="logo unhas"
             width="55"
             height="55"
+            className="navbarLogo"
         />
     );
 }
