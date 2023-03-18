@@ -1,10 +1,10 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+        <div class="font-semibold text-xl text-gray-800 dark:text-gray-20 leading-tight">
             Halo {{ Auth::user()->name }}! SELAMAT DATANG DI PORTAL ALUMNI
             UNIVERSITAS HASANUDDIN
-        </h2>
-        <div className="font-medium text-base text-gray-800 dark:text-gray-200 leading-tight">
+        </div>
+        <div class="font-medium text-base text-gray-800 dark:text-gray-200 leading-tight pt-2">
             Lorem, ipsum dolor sit amet consectetur adipisicing
             elit. Odit ipsa consequatur, illum est cum, expedita
             repudiandae accusamus nesciunt inventore architecto sed
@@ -87,8 +87,8 @@
                             <li class="text-sm"><i class="iconoir-pin-alt mr-2"></i>Alumni</li>
                             <li class="text-sm"><i class="iconoir-calendar mr-2"></i>Teknik Informatika 1990 </li>
                         </ul>
-        
-                        
+
+
                         <x-primary-button class="transition-colors !bg-red-600 p-2 rounded-sm w-full text-white text-hover shadow-md">
                             Perbarui Profil
                         </x-primary-button>
