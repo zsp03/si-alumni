@@ -83,9 +83,8 @@
                             <p class="inline text-gray-700 font-normal leading-6 w-full text-base">UX Researcher, Co-host of the Interesting Design podcast
                                 and a proud mother of three children</p>
                         </div>
-                        <ul class="space-y-4  md:space-y-0 space-x-0 md:space-x-4 flex flex-col md:flex-row text-left justify-center">
-                            <li class="text-sm"><i class="iconoir-pin-alt mr-2"></i>Alumni</li>
-                            <li class="text-sm"><i class="iconoir-calendar mr-2"></i>Teknik Informatika 1990 </li>
+                        <ul class="space-y-4 md:space-y-0 space-x-0 md:space-x-4 flex flex-col md:flex-row text-left justify-center">
+                            <li class="flex items-center text-sm"><i class="iconoir-calendar mr-2"></i>Teknik Informatika 1990 </li>
                         </ul>
 
 
