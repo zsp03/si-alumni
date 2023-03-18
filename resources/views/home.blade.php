@@ -1,8 +1,16 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            Selamat Datang, {{ Auth::user()->name }}!
+            Halo {{ Auth::user()->name }}! SELAMAT DATANG DI PORTAL ALUMNI
+            UNIVERSITAS HASANUDDIN
         </h2>
+        <div className="font-medium text-base text-gray-800 dark:text-gray-200 leading-tight">
+            Lorem, ipsum dolor sit amet consectetur adipisicing
+            elit. Odit ipsa consequatur, illum est cum, expedita
+            repudiandae accusamus nesciunt inventore architecto sed
+            amet magni facilis eius nulla doloribus rerum commodi
+            quibusdam?
+        </div>
     </x-slot>
 
     <div class="py-14">
@@ -62,34 +70,28 @@
                 </div>
             </div>
 
-            <div class="bg-white dark:bg-gray-800 overflow-hidden">
-                <div class="bg-white h-full shadow-md overflow-hidden md:max-w-md">
-                    <div class="md:flex">
-                        <div class="flex flex-col gap-2 p-4">
-                            <div class="flex justify-center">
-                                <div class="relative">
-                                    <img src="https://source.unsplash.com/150x150/?portrait?3" class="rounded-full"
-                                        width=80 />
-                                </div>
-                            </div>
-                            <div class="flex flex-col text-center">
-                                <span class="text-2xl font-medium">
-                                    {{ Auth::user()->name }}
-                                </span>
-                                <span class="text-md text-gray-400">
-                                    Teknik Informatika 1990
-                                </span>
-                            </div>
-                            <p class="text-center text-md text-gray-800">
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione, labore illum. Similiq
-                            </p>
-                            <div class="px-20 mt-1">
-                                <x-primary-button
-                                    class="h-8 text-xs bg-navy w-full whitespace-nowrap text-white rounded hover:shadow hover:bg-blue-800">
-                                    Ganti Profil
-                                </x-primary-button>
-                            </div>
+            <div class='w-full max-w-lg py-8 flex flex-row items-center justify-center mx-auto bg-[#FFFFFF] rounded-none'>
+                <div class="flex flex-col md:flex-row w-3/4 md:w-5/6 space-x-0 md:space-x-8">
+                    <div class="w-full md:w-2/5 flex flex-col items-center justify-center">
+                        <figure class="w-1/2 md:w-full  rounded-full overflow-hidden">
+                            <img src="https://images.pexels.com/photos/1820559/pexels-photo-1820559.jpeg?auto=compress&cs=tinysrgb&w=600" alt="woman wearing a headwrap and an Africa-shaped earring while smiling"
+                        </figure>
+                    </div>
+                    <div class="w-full md:w-3/5 space-y-4 flex flex-col justify-center items-center">
+                        <div class="flex flex-col justify-center">
+                            <h1 class="text-center md:text-left text-2xl font-bold text-gray-900">{{ Auth::user()->name }}</h1>
+                            <p class="inline text-gray-700 font-normal leading-6 w-full text-base">UX Researcher, Co-host of the Interesting Design podcast
+                                and a proud mother of three children</p>
                         </div>
+                        <ul class="space-y-4  md:space-y-0 space-x-0 md:space-x-4 flex flex-col md:flex-row text-left justify-center">
+                            <li class="text-sm"><i class="iconoir-pin-alt mr-2"></i>NYC</li>
+                            <li class="text-sm"><i class="iconoir-calendar mr-2"></i>Member since 2019 </li>
+                        </ul>
+        
+                        
+                        <x-primary-button class="transition-colors !bg-red-600 p-2 rounded-sm w-full text-white text-hover shadow-md">
+                            Perbarui Profil
+                        </x-primary-button>
                     </div>
                 </div>
             </div>
