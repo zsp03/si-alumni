@@ -24,6 +24,18 @@
         </div>
 
         <div>
+            <x-input-label for="jurusan" :value="__('Jurusan')" />
+            <x-text-input id="jurusan" name="jurusan" type="text" class="mt-1 block w-full" :value="old('jurusan', $user->jurusan)" autofocus />
+            <x-input-error class="mt-2" :messages="$errors->get('')" />
+        </div>
+
+        <div>
+            <x-input-label for="instagram_account" :value="__('Instagram')" />
+            <x-text-input id="instagram_account" name="instagram_account" type="text" class="mt-1 block w-full" :value="old('instagram_account', $user->instagram_account)" autofocus/>
+            <x-input-error class="mt-2" :messages="$errors->get('name')" />
+        </div>
+
+        <div>
             <x-input-label for="email" :value="__('Email')" />
             <x-text-input id="email" name="email" type="email" class="mt-1 block w-full" :value="old('email', $user->email)" required autocomplete="username" />
             <x-input-error class="mt-2" :messages="$errors->get('email')" />

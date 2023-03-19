@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,6 +26,9 @@ Route::get('/home', function () {
 Route::get('/event', function () {
     return view('event');
 })->middleware(['auth', 'verified'])->name('event');
+
+Route::get('/database', [UserController::class, 'search'])->middleware(['auth', 'verified'])->name('database');
+
 
 Route::get('/newsletter', function () {
     return view('newsletter');

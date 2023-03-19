@@ -26,6 +26,9 @@
                     <x-nav-link :href="route('event')" :active="request()->routeIs('event')">
                         {{ __('Event') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('database')" :active="request()->routeIs('database')">
+                        {{ __('Database') }}
+                    </x-nav-link>
                     <x-nav-link :href="route('newsletter')" :active="request()->routeIs('newsletter')">
                         {{ __('Newsletter') }}
                     </x-nav-link>
@@ -86,6 +89,9 @@
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('home')" :active="request()->routeIs('home')">
                 {{ __('Home') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('database')" :active="request()->routeIs('database')">
+                {{ __('Database') }}
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('event')" :active="request()->routeIs('event')">
                 {{ __('Event') }}

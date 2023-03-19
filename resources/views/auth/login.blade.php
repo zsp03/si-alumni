@@ -5,7 +5,7 @@
         <div>
             <x-input-label for="email" class="sr-only">Email</x-input-label>
 
-            <div class="relative">
+            <div class="relative pt-1">
                 <x-text-input id="email" type="email" name="email" :value="old('email')"
                     class="w-full rounded-lg border-gray-200 p-4 pr-12 text-sm shadow-sm" placeholder="Enter email"
                     required autofocus autocomplete="username" />
@@ -23,7 +23,7 @@
         <div>
             <x-input-label for="password" class="sr-only">Password</x-input-label>
 
-            <div class="relative">
+            <div class="relative pt-1">
                 <x-text-input id="password" name="password" type="password" class="w-full rounded-lg border-gray-200 p-4 pr-12 text-sm shadow-sm"
                     placeholder="Enter password" required autocomplete="current-password" />
                 <span class="absolute inset-y-0 right-0 grid place-content-center px-4">
@@ -46,7 +46,7 @@
             </p>
 
             <button type="submit" class="inline-block rounded-lg bg-blue-500 px-5 py-3 text-sm font-medium text-white">
-                Sign in
+                Masuk
             </button>
         </div>
     </form>

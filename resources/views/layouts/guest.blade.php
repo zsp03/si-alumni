@@ -17,8 +17,8 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="font-sans text-gray-900 antialiased">
-    <section class="relative flex flex-wrap lg:h-screen lg:items-center">
+<body class="min-w-screen font-sans text-gray-900 antialiased">
+    <section class="relative flex flex-wrap h-screen items-center">
         <div class="w-full px-4 py-12 sm:px-6 sm:py-16 lg:w-1/2 lg:px-8 lg:py-24">
             <div class="flex flex-col mx-auto max-w-lg text-center">
                 <x-application-logo class="self-center h-20 w-20 mb-2"></x-application-logo>
@@ -32,20 +32,20 @@
             {{ $slot }}
         </div>
 
-        <div class="relative h-64 w-full sm:h-96 lg:h-full lg:w-1/2">
-            <div id="carouselExampleControls" class="relative" data-te-carousel-init data-te-carousel-slide>
-                <div class="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
-                    <div class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+        <div class="hidden lg:block h-64 w-full lg:h-full lg:w-1/2">
+            <div id="carouselExampleControls" class="relative h-full w-full" data-te-carousel-init data-te-carousel-slide>
+                <div class="relative w-full h-full overflow-hidden after:clear-both after:block after:content-['']">
+                    <div class="relative float-left -mr-[100%] hidden w-full h-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
                         data-te-carousel-item data-te-carousel-active>
-                        <img src="{{ asset('assets/image/alumni1.jpg') }}" class="block w-full" alt="Wild Landscape" />
+                        <img src="{{ asset('assets/image/alumni1.jpg') }}" class="block w-full h-full object-cover" alt="Wild Landscape" />
                     </div>
-                    <div class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+                    <div class="relative float-left -mr-[100%] hidden w-full h-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
                         data-te-carousel-item>
-                        <img src="{{ asset('assets/image/alumni2.jpg') }}" class="block w-full" alt="Camera" />
+                        <img src="{{ asset('assets/image/alumni2.jpg') }}" class="block w-full h-full object-cover" alt="Camera" />
                     </div>
-                    <div class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+                    <div class="relative float-left -mr-[100%] hidden w-full h-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
                         data-te-carousel-item>
-                        <img src="{{ asset('assets/image/alumni3.jpg') }}" class="block w-full" alt="Exotic Fruits" />
+                        <img src="{{ asset('assets/image/alumni3.jpg') }}" class="block w-full h-full object-cover" alt="Exotic Fruits" />
                     </div>
                 </div>
                 <button
