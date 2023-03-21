@@ -122,7 +122,7 @@ return [
     |
     */
 
-    'manifest_path' => base_path('bootstrap/cache/livewire-components.php'),
+    'manifest_path' => base_path('tmp/storage/bootstrap/cache/livewire-components.php'),
 
     /*
     |--------------------------------------------------------------------------
