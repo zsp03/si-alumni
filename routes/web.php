@@ -27,8 +27,13 @@ Route::get('/event', function () {
     return view('event');
 })->middleware(['auth', 'verified'])->name('event');
 
-Route::get('/database', [UserController::class, 'search'])->middleware(['auth', 'verified'])->name('database');
+Route::get('/event', function () {
+    return view('event');
+})->middleware(['auth', 'verified'])->name('event');
 
+Route::get('/database', function () {
+    return view('database');
+})->middleware(['auth', 'verified'])->name('database');
 
 Route::get('/newsletter', function () {
     return view('newsletter');

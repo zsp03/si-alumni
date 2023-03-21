@@ -1,4 +1,5 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
+const plugins = require('tailwindcss/plugin');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -19,6 +20,7 @@ module.exports = {
 
     plugins: [
         require('@tailwindcss/forms'),
-        require('tw-elements/dist/plugin')
+        require('tw-elements/dist/plugin'),
+        require('daisyui')
     ],
 };
