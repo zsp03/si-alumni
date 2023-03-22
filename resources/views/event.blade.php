@@ -16,15 +16,15 @@
     <section class="mt-6 py-4 lg:mt-11 dark:bg-gray-800 dark:text-gray-100 bg-white">
         <div class="container space-y-12 ">
             <div class="flex flex-col overflow-hidden shadow-lg lg:flex-row pt-7">
-                <div
-                    class="h-80 flex items-center aspect-video justify-center bg-[url('{{ asset('assets/image/uniqlo.jpeg') }}')] bg-cover">
+                <div class="h-80 flex items-center aspect-video justify-center bg-cover"
+                    style="background-image: url('{{ asset('assets/image/uniqlo.jpeg') }}');">
                 </div>
                 <div class="flex flex-col justify-center flex-1 p-6 dark:bg-gray-900">
                     <h3 class="text-3xl font-bold">
                         UNIQLO MANAGER CANDIDATE
                     </h3>
                     <p class="my-7 dark:text-gray-400 text-red-500">
-                        tanggal 11 January 2023 dan ditutup pada tanggal 31 January 2023
+                        11 January 2023 - 31 January 2023
                     </p>
                     <x-primary-button onclick="window.location='{{ route('loker') }}'"
                         class="self-start !w-36 rounded-md !bg-red-600">
