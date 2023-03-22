@@ -23,9 +23,22 @@
                     <h3 class="text-3xl font-bold">
                         UNIQLO MANAGER CANDIDATE
                     </h3>
-                    <p class="my-7 dark:text-gray-400 text-red-500">
-                        11 January 2023 - 31 January 2023
-                    </p>
+                    <div class="my-2 mt-7 dark:text-gray-400 text-green-500">
+                        <span class="">
+                            Open:
+                        </span>
+                        <span class="font-bold">
+                            11 January 2023
+                        </span>
+                    </div>
+                    <div class="my-2 mb-7 dark:text-gray-400 text-red-500">
+                        <span class="">
+                            Close:
+                        </span>
+                        <span class="font-bold">
+                            31 January 2023
+                        </span>
+                    </div>
                     <x-primary-button onclick="window.location='{{ route('loker') }}'"
                         class="self-start !w-36 rounded-md !bg-red-600">
                         Find Out More
