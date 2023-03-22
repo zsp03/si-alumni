@@ -1,4 +1,5 @@
 <x-guest-layout>
+    @section('title','Register')
     <form method="POST" action="{{ route('register') }}" class="mx-auto max-w-md mt-8">
         @csrf
 

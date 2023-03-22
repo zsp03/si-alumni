@@ -1,4 +1,5 @@
 <x-app-layout>
+    @section('title','Home')
     <x-slot name="header">
         <div class="font-semibold text-xl text-gray-800 dark:text-gray-20 leading-tight">
             Halo {{ Auth::user()->name }}! SELAMAT DATANG DI PORTAL ALUMNI

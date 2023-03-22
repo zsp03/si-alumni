@@ -1,1 +1,3 @@
-<x-app-layout></x-app-layout>
+<x-app-layout>
+    @section('title','Newsletter')
+</x-app-layout>
