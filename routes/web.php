@@ -31,6 +31,10 @@ Route::get('/event', function () {
     return view('event');
 })->middleware(['auth', 'verified'])->name('event');
 
+Route::get('/event/1', function () {
+    return view('loker');
+})->middleware(['auth', 'verified'])->name('loker');
+
 Route::get('/database', function () {
     return view('database');
 })->middleware(['auth', 'verified'])->name('database');
@@ -38,6 +42,8 @@ Route::get('/database', function () {
 Route::get('/newsletter', function () {
     return view('newsletter');
 })->middleware(['auth', 'verified'])->name('newsletter');
+
+
 
 
 Route::middleware('auth')->group(function () {
