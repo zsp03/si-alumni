@@ -15,7 +15,7 @@
 
     <div class="py-14">
         <div class="max-w-20xl mx-auto sm:px-6 lg:px-8 flex justify-between md:justify-between gap-2.5">
-            <div class="bg-white dark:bg-gray-800 overflow-hidde rounded-md">
+            <div class="bg-white dark:bg-gray-800 overflow-hidde rounded-md shadow">
                 <div class="dark:bg-gray-800 dark:text-gray-50">
                     <div class="container grid grid-cols-12 mx-auto dark:bg-gray-900">
                         <div class="bg-no-repeat bg-cover dark:bg-gray-700 col-span-full lg:col-span-4"
@@ -70,7 +70,7 @@
                 </div>
             </div>
 
-            <div class='w-full max-w-lg py-8 flex flex-row items-center justify-center mx-auto bg-[#FFFFFF] rounded-md'>
+            <div class='w-full max-w-lg py-8 flex flex-row items-center justify-center mx-auto bg-white rounded-md shadow'>
                 <div class="flex flex-col md:flex-row w-3/4 md:w-5/6 space-x-0 md:space-x-8">
                     <div class="w-full md:w-2/5 flex flex-col items-center justify-center">
                         <figure class="w-1/2 md:w-full  rounded-full overflow-hidden">

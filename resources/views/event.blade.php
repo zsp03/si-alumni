@@ -14,7 +14,7 @@
 
     <section class="mt-6 py-4 lg:mt-11 dark:bg-gray-800 dark:text-gray-100 bg-white">
         <div class="container space-y-12 ">
-            <div class="flex flex-col overflow-hidden shadow-sm lg:flex-row pt-7">
+            <div class="flex flex-col overflow-hidden shadow-lg lg:flex-row pt-7">
                 <img
                     src="https://source.unsplash.com/640x480/?1"
                     alt=""
@@ -38,7 +38,7 @@
                     </x-primary-button>
                 </div>
             </div>
-            <div class="flex flex-col overflow-hidden shadow-sm lg:flex-row-reverse">
+            <div class="flex flex-col overflow-hidden shadow-lg lg:flex-row-reverse">
                 <img
                     src="https://source.unsplash.com/640x480/?2"
                     alt=""
@@ -61,7 +61,7 @@
                     </x-primary-button>
                 </div>
             </div>
-            <div class="flex flex-col overflow-hidden shadow-sm lg:flex-row">
+            <div class="flex flex-col overflow-hidden shadow-lg lg:flex-row">
                 <img
                     src="https://source.unsplash.com/640x480/?3"
                     alt=""
@@ -84,7 +84,7 @@
                     </x-primary-button>
                 </div>
             </div>
-            <div class="flex flex-col overflow-hidden shadow-sm lg:flex-row-reverse">
+            <div class="flex flex-col overflow-hidden shadow-lg lg:flex-row-reverse">
                 <img
                     src="https://source.unsplash.com/640x480/?2"
                     alt=""
