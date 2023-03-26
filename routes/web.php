@@ -23,15 +23,15 @@ Route::get('/home', function () {
     return view('home');
 })->middleware(['auth', 'verified'])->name('home');
 
-Route::get('/event', function () {
-    return view('event');
-})->middleware(['auth', 'verified'])->name('event');
+Route::get('/lowongan', function () {
+    return view('lowongan');
+})->middleware(['auth', 'verified'])->name('lowongan');
 
 Route::get('/event', function () {
     return view('event');
 })->middleware(['auth', 'verified'])->name('event');
 
-Route::get('/event/1', function () {
+Route::get('/lowongan/1', function () {
     return view('loker');
 })->middleware(['auth', 'verified'])->name('loker');
 

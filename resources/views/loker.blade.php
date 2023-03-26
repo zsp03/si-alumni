@@ -1,7 +1,8 @@
 <x-app-layout>
+    @section('title', 'Uniqlo Hiring')
     <x-slot name="header">
         <div class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-            Activities and Job Vacancy
+            Job Vacancy
         </div>
         <div class="font-medium text-base text-gray-800 dark:text-gray-200 leading-tight pt-2">
             Lorem, ipsum dolor sit amet consectetur adipisicing

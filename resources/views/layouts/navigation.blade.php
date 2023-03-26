@@ -23,6 +23,9 @@
                     <x-nav-link :href="route('home')" :active="request()->routeIs('home')">
                         {{ __('Home') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('lowongan')" :active="request()->routeIs('lowongan')">
+                        {{ __('Job Vacancy') }}
+                    </x-nav-link>
                     <x-nav-link :href="route('event')" :active="request()->routeIs('event')">
                         {{ __('Event') }}
                     </x-nav-link>
@@ -92,6 +95,9 @@
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('database')" :active="request()->routeIs('database')">
                 {{ __('Database') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('lowongan')" :active="request()->routeIs('lowongan')">
+                {{ __('Lowongan') }}
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('event')" :active="request()->routeIs('event')">
                 {{ __('Event') }}
