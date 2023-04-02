@@ -12,6 +12,10 @@ class AlumniTable extends Component
     public $search;
     use WithPagination;
 
+    protected $queryString = [
+        'search' => ['except' => '']
+    ];
+
     public function render()
     {
         return view('livewire.alumni-table',[
