@@ -3,13 +3,13 @@
 namespace App\Http\Livewire;
 
 use App\Models\Newsletter;
-use Illuminate\Support\Facades\DB;
 use Livewire\Component;
+use Livewire\WithPagination;
 
 class ShowNewsletters extends Component
 {
     public $search;
-
+    use WithPagination;
     protected $queryString = [
         'search' => ['except' => '']
     ];
@@ -22,6 +22,7 @@ class ShowNewsletters extends Component
                 ->orWhere('title','like','%'.$this->search.'%')
                 ->get()
                 ->sortByDesc('published_date')
+                ->paginate(8)
         ]);
     }
 }
