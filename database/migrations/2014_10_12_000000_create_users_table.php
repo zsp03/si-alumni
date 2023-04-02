@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('instagram_account')->nullable();
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
+            $table->string('role')->default('4');
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
