@@ -45,15 +45,6 @@
                             />
                         </div>
                     </div>
-                    <div class="text-justify py-2 mt-5">
-                        <span class="text-black font-bold">Job Description:</span>
-                        <ul class="w-96 list-disc">
-                            <li class="">A second  Lorem ipsum dolor sit amet consectetur </li>
-                            <li class="">A third item adipisicing elit.  sunt rerum quaerat quis nisi illo delectus mollitia cum earum officiis magni similique?</li>
-                            <li class="">A fourth item Corporis corrupti dolor, hic, officia sint, rem ab adipisci</li>
-                            <li class="">And a fifth one Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas error at saepe facilis ducimus nobis corporis </li>
-                        </ul>
-                    </div>
                 </div>
             </div>
         </div>

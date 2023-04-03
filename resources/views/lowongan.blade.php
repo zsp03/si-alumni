@@ -2,7 +2,7 @@
     @section('title', 'Job Vacancy
     ')
     <x-slot name="header">
-        <div class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+        <div class="font-semibold text-xl text-gray-800 dark:text-gray-20 leading-tight">
             Job Vacancy
         </div>
         <div class="font-medium text-base text-gray-800 dark:text-gray-200 leading-tight pt-2">
@@ -39,6 +39,16 @@
                         <span class="font-bold">
                             31 January 2023
                         </span>
+                    </div>
+                    <div class="flex">
+                        <div
+                            class="inline-block mx-auto ml-0 mr-2 rounded-full bg-primary-100 px-4 pt-[6px] pb-[5px] text-xs font-medium uppercase text-primary-700 font-semibold mb-7">
+                            manajemen
+                        </div>
+                        <div
+                            class="pointer-events-none inline-block mx-auto ml-0 rounded-full bg-primary-100 px-4 pt-[6px] pb-[5px] text-xs font-medium uppercase text-primary-700 font-semibold mb-7">
+                            Jakarta
+                        </div>
                     </div>
                     <x-primary-button onclick="window.location='{{ route('loker') }}'"
                         class="self-start !w-36 rounded-md !bg-red-600">
