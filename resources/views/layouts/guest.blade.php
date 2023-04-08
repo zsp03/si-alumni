@@ -11,6 +11,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css">
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
@@ -31,7 +32,6 @@
 
             {{ $slot }}
         </div>
-
         <div class="hidden lg:block h-64 w-full lg:h-full lg:w-1/2">
             <div id="carouselExampleControls" class="relative h-full w-full" data-te-carousel-init data-te-carousel-slide>
                 <div class="relative w-full h-full overflow-hidden after:clear-both after:block after:content-['']">
@@ -74,8 +74,7 @@
                 </button>
             </div>
         </div>
-
-
+    </section>
 </body>
 
 </html>
