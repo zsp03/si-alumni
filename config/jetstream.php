@@ -76,6 +76,6 @@ return [
     |
     */
 
-    'profile_photo_disk' => 'google',
+    'profile_photo_disk' => 'public',
 
 ];
