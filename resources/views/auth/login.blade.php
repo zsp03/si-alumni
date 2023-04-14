@@ -18,7 +18,6 @@
             </div>
 
             <div x-data="{ show : true }">
-                <x-label for="password" class="sr-only">Password</x-label>
 
                 <div class="relative pt-1" >
                     <x-input id="password" name="password" x-bind:type="show ? 'password' : 'text'" class="w-full rounded-lg border-gray-200 p-4 pr-12 text-sm shadow-sm"

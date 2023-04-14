@@ -30,10 +30,11 @@ class User extends Authenticatable implements FilamentUser, HasAvatar
      */
     protected $fillable = [
         'name',
-        'role',
         'jurusan',
         'instagram_account',
         'email',
+        'phone_number',
+        'role',
         'password',
     ];
 
@@ -86,4 +87,9 @@ class User extends Authenticatable implements FilamentUser, HasAvatar
                 ? Storage::disk($this->profilePhotoDisk())->url($this->profile_photo_path)
                 : $this->defaultProfilePhotoUrl();
     }
+    public function routeNotificationForTwilio()
+    {
+        return 'whatsapp:+'.$this->phone_number;
+    }
+
 }

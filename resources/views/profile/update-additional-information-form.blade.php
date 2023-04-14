@@ -11,14 +11,23 @@
 
         <!-- Phone -->
         <div class="col-span-6 sm:col-span-4">
+            <x-label for="phone_number" value="{{ __('Nomor Telepon') }}" />
+            <x-wireui.inputs.maskable mask="+##-############"
+                                      id="phone" type="text" class="mt-1 block w-full"
+                                      hint="Kode negara-Nomor (ex:62821234567)"
+                               wire:model.defer="state.phone_number" />
+            <x-input-error for="phone" class="mt-2" />
+        </div>
+
+        <div class="col-span-6 sm:col-span-4">
             <x-label for="jurusan" value="{{ __('Jurusan') }}" />
-            <x-input id="jurusan" type="text" class="mt-1 block w-full" wire:model.defer="state.jurusan" />
+            <x-wireui.input id="jurusan" type="text" class="mt-1 block w-full" wire:model.defer="state.jurusan" />
             <x-input-error for="jurusan" class="mt-2" />
         </div>
 
         <div class="col-span-6 sm:col-span-4">
             <x-label for="instagram_account" value="{{ __('Akun Instagram') }}" />
-            <x-input id="instagram_account" type="text" class="mt-1 block w-full" wire:model.defer="state.instagram_account" />
+            <x-wireui.input id="instagram_account" type="text" class="mt-1 block w-full" wire:model.defer="state.instagram_account" />
             <x-input-error for="instagram_account" class="mt-2" />
         </div>
 
