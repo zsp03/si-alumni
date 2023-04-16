@@ -29,7 +29,7 @@ class SendTwoFactorCodeListener
      */
     public function handle( TwoFactorAuthenticationChallenged|TwoFactorAuthenticationEnabled $event)
     {
-//        $event->user->notify(app(SendOTPWhatsapp::class));
-        $event->user->notify(app(SendOTPTwilio::class));
+        $event->user->notify(app(SendOTPWhatsapp::class));
+//        $event->user->notify(app(SendOTPTwilio::class));
     }
 }

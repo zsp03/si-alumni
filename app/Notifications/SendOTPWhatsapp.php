@@ -46,7 +46,8 @@ class SendOTPWhatsapp extends Notification
     public function toWhatsapp($notifiable)
     {
         return WhatsAppTemplate::create()
-            ->name('send_otp2fa') // Name of your configured template
+            ->name('otp_code') // Name of your configured template
+            ->body(Component::text('Alumni Portal'))
             ->body(Component::text($this->getTwoFactorCode($notifiable)))
             ->to($notifiable->phone_number);
     }
