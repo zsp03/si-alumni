@@ -1,22 +1,20 @@
 <x-app-layout>
     @section('title','Home')
     <x-slot name="header">
-        <div class="font-semibold text-xl text-gray-800 dark:text-gray-20 leading-tight">
-            Halo {{ Auth::user()->name }}! SELAMAT DATANG DI PORTAL ALUMNI
-            UNIVERSITAS HASANUDDIN
-        </div>
-        <div class="font-medium text-base text-gray-800 dark:text-gray-200 leading-tight pt-2">
-            Lorem, ipsum dolor sit amet consectetur adipisicing
-            elit. Odit ipsa consequatur, illum est cum, expedita
-            repudiandae accusamus nesciunt inventore architecto sed
-            amet magni facilis eius nulla doloribus rerum commodi
-            quibusdam?
+        <img src="/assets/image/header-static.png" alt="" class="w-full h-80 sm:h-60">
+        <div class="max-w-7xl mx-auto px-12 sm:px-10 lg:px-20 absolute inset-0 py-10 z-10">
+            <div class="font-semibold text-4xl text-white dark:text-gray-20 leading-tight">
+                Halo, {{ Auth::user()->name }}
+            </div>
+            <div class="font-normal text-2xl text-white dark:text-gray-200 leading-tight pt-2">
+                Selamat Datang di Portal Alumni Universitas Hasanuddin!
+            </div>
         </div>
     </x-slot>
 
     <div class="py-14">
         <div class="max-w-20xl mx-auto sm:px-6 lg:px-8 flex justify-between md:justify-between gap-2.5 flex-col lg:flex-row">
-            <div class="bg-white dark:bg-gray-800 overflow-hidde rounded-md shadow">
+            <div class="bg-white dark:bg-gray-800 overflow-hidde rounded-md drop-shadow-xl">
                 <div class="dark:bg-gray-800 dark:text-gray-50">
                     <div class="container grid grid-cols-12 mx-auto dark:bg-gray-900">
                         <div class="bg-no-repeat bg-cover dark:bg-gray-700 col-span-full lg:col-span-4"
@@ -71,7 +69,7 @@
                 </div>
             </div>
 
-            <div class='w-full py-8 flex flex-row items-center justify-center mx-auto bg-white rounded-md shadow'>
+            <div class='w-full py-8 flex flex-row items-center justify-center mx-auto bg-white rounded-md drop-shadow-xl'>
                 <div class="flex flex-col md:flex-row w-3/4 md:w-5/6 space-x-0 md:space-x-8">
                     <div class="w-full md:w-2/5 flex flex-col items-center justify-center">
                         <figure class="w-1/2 md:w-full  rounded-full overflow-hidden">

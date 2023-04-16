@@ -2,6 +2,7 @@
 
 namespace App\Listeners;
 
+use App\Notifications\SendOTPEmail;
 use App\Notifications\SendOTPTwilio;
 use App\Notifications\SendOTPWhatsapp;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -30,6 +31,7 @@ class SendTwoFactorCodeListener
     public function handle( TwoFactorAuthenticationChallenged|TwoFactorAuthenticationEnabled $event)
     {
         $event->user->notify(app(SendOTPWhatsapp::class));
+        $event->user->notify(app(SendOTPEmail::class));
 //        $event->user->notify(app(SendOTPTwilio::class));
     }
 }

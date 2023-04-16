@@ -1,9 +1,12 @@
 <x-app-layout>
     @section('title','Profile')
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Profile') }}
-        </h2>
+        <div class="bg-[#1F44BE] h-32"></div>
+        <div class="max-w-7xl mx-auto px-12 sm:px-10 lg:px-20 absolute inset-0 py-10 z-10">
+            <div class="font-semibold text-4xl text-white dark:text-gray-20 leading-tight">
+                {{__('Profile')}}
+            </div>
+        </div>
     </x-slot>
 
     <div>

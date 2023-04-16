@@ -2,25 +2,24 @@
     @section('title',
         'Job Vacancy
         ')
-        <x-slot name="header">
-            <div class="font-semibold text-xl text-gray-800 dark:text-gray-20 leading-tight">
+    <x-slot name="header">
+        <img src="/assets/image/header-static.png" alt="" class="w-full h-80 sm:h-60">
+        <div class="max-w-7xl mx-auto px-12 sm:px-10 lg:px-20 absolute inset-0 py-10 z-10">
+            <div class="font-semibold text-4xl text-white dark:text-gray-20 leading-tight">
                 Job Vacancy
             </div>
-            <div class="font-medium text-base text-gray-800 dark:text-gray-200 leading-tight pt-2">
+            <div class="font-normal text-xl text-white dark:text-gray-200 leading-tight pt-2">
                 Lorem, ipsum dolor sit amet consectetur adipisicing
                 elit. Odit ipsa consequatur, illum est cum, expedita
                 repudiandae accusamus nesciunt inventore architecto sed
                 amet magni facilis eius nulla doloribus rerum commodi
                 quibusdam?
             </div>
-        </x-slot>
+        </div>
+    </x-slot>
 
-        <section class="mt-6 py-4 lg:mt-11 dark:bg-gray-800 dark:text-gray-100 bg-white">
-            <div class="main flex flex-col my-4 max-w-7xl justify-center mx-auto px-6">
-                <div class="header">
-                    <div class="text-3xl font-bold text-gray-600 mb-4">Lowongan Pekerjaan</div>
-                </div>
-
+        <section class="py-4 bg-white">
+            <div class="main flex flex-col max-w-7xl justify-center mx-auto px-6">
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <a href="https://www.w3schools.com/js/" target="_new">
                         <div

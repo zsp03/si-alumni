@@ -1,15 +1,18 @@
 <x-app-layout>
     @section('title', 'Event')
     <x-slot name="header">
-        <div class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-            Activities
-        </div>
-        <div class="font-medium text-base text-gray-800 dark:text-gray-200 leading-tight pt-2">
-            Lorem, ipsum dolor sit amet consectetur adipisicing
-            elit. Odit ipsa consequatur, illum est cum, expedita
-            repudiandae accusamus nesciunt inventore architecto sed
-            amet magni facilis eius nulla doloribus rerum commodi
-            quibusdam?
+        <img src="/assets/image/header-static.png" alt="" class="w-full h-80 sm:h-60">
+        <div class="max-w-7xl mx-auto px-12 sm:px-10 lg:px-20 absolute inset-0 py-10 z-10">
+            <div class="font-semibold text-4xl text-white dark:text-gray-20 leading-tight">
+                Event
+            </div>
+            <div class="font-normal text-xl text-white dark:text-gray-200 leading-tight pt-2">
+                Lorem, ipsum dolor sit amet consectetur adipisicing
+                elit. Odit ipsa consequatur, illum est cum, expedita
+                repudiandae accusamus nesciunt inventore architecto sed
+                amet magni facilis eius nulla doloribus rerum commodi
+                quibusdam?
+            </div>
         </div>
     </x-slot>
 
@@ -72,7 +75,7 @@
                         <p>Mei ex aliquid eleifend forensibus, quo ad dicta apeirian neglegentur, ex has tantas percipit perfecto. At per tempor albucius perfecto, ei probatus consulatu patrioque mea, ei vocent delicata indoctum pri.</p>
                     </div>
                 </a>
-              
+
             </div>
             <div class="flex justify-center">
                 <button type="button" class="px-6 py-3 text-sm rounded-md hover:underline dark:bg-gray-900 dark:text-gray-400">Load more posts...</button>
