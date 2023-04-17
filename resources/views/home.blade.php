@@ -1,7 +1,7 @@
 <x-app-layout>
-    @section('title','Home')
+    @section('title', 'Home')
     <x-slot name="header">
-        <img src="/assets/image/header-static.png" alt="" class="w-full h-80 sm:h-60">
+        <img src="/assets/image/wave-4.png" alt="" class="w-full !h-2/3 sm:h-60">
         <div class="max-w-7xl mx-auto px-12 sm:px-10 lg:px-20 absolute inset-0 py-10 z-10">
             <div class="font-semibold text-4xl text-white dark:text-gray-20 leading-tight">
                 Halo, {{ Auth::user()->name }}
@@ -9,90 +9,33 @@
             <div class="font-normal text-2xl text-white dark:text-gray-200 leading-tight pt-2">
                 Selamat Datang di Portal Alumni Universitas Hasanuddin!
             </div>
+
         </div>
     </x-slot>
 
-    <div class="py-14">
-        <div class="max-w-20xl mx-auto sm:px-6 lg:px-8 flex justify-between md:justify-between gap-2.5 flex-col lg:flex-row">
-            <div class="bg-white dark:bg-gray-800 overflow-hidde rounded-md drop-shadow-xl">
-                <div class="dark:bg-gray-800 dark:text-gray-50">
-                    <div class="container grid grid-cols-12 mx-auto dark:bg-gray-900">
-                        <div class="bg-no-repeat bg-cover dark:bg-gray-700 col-span-full lg:col-span-4"
-                            style="
-                        background-image:url('https://source.unsplash.com/random/640x480');
-                        background-position:center center;
-                        background-blend-mode:multiply;
-                        background-size:cover;">
-                        </div>
-                        <div class="flex flex-col p-6 col-span-full row-span-full lg:col-span-8 lg:p-10">
-                            <div class="flex justify-start">
-                                <span class="px-2 py-1 text-xs rounded-full dark:bg-violet-400 dark:text-gray-900">
-                                    Label
-                                </span>
-                            </div>
-                            <h1 class="text-3xl font-semibold">
-                                Lorem ipsum dolor sit.
-                            </h1>
-                            <p class="flex-1 pt-2">
-                                Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit. Iste, reprehenderit
-                                adipisci tempore voluptas laborum quod.
-                            </p>
-                            <a rel="noopener noreferrer" href="#"
-                                class="inline-flex items-center pt-2 pb-6 space-x-2 text-sm dark:text-violet-400">
-                                <span>Read more</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                                    class="w-4 h-4">
-                                    <path fillRule="evenodd"
-                                        d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                                        clipRule="evenodd" />
-                                </svg>
-                            </a>
-                            <div class="flex items-center justify-between pt-2">
-                                <div class="flex space-x-2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                                        class="w-5 h-5 dark:text-gray-400">
-                                        <path fillRule="evenodd"
-                                            d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z"
-                                            clipRule="evenodd" />
-                                    </svg>
-                                    <span class="self-center text-sm">
-                                        by Leroy Jenkins
-                                    </span>
-                                </div>
-                                <span class="text-xs">
-                                    3 min read
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class='w-full py-8 flex flex-row items-center justify-center mx-auto bg-white rounded-md drop-shadow-xl'>
-                <div class="flex flex-col md:flex-row w-3/4 md:w-5/6 space-x-0 md:space-x-8">
-                    <div class="w-full md:w-2/5 flex flex-col items-center justify-center">
-                        <figure class="w-1/2 md:w-full  rounded-full overflow-hidden">
-                            <img src="{{ $user->profile_photo_url }}" alt="{{ $user->name }}">
-                        </figure>
-                    </div>
-                    <div class="w-full md:w-3/5 space-y-4 flex flex-col justify-center items-center">
-                        <div class="flex flex-col justify-center">
-                            <h1 class="text-center md:text-left text-2xl font-bold text-gray-900">{{ Auth::user()->name }}</h1>
-                            <p class="inline text-gray-700 font-normal leading-6 w-full text-base">UX Researcher, Co-host of the Interesting Design podcast
-                                and a proud mother of three children</p>
-                        </div>
-                        <ul class="space-y-4 md:space-y-0 space-x-0 md:space-x-4 flex flex-col md:flex-row text-left justify-center">
-                            <li class="flex items-center text-sm"><i class="iconoir-calendar mr-2"></i>Teknik Informatika 1990 </li>
-                        </ul>
-
-
-                        <x-button class="transition-colors !bg-red-600 p-2 rounded-sm w-full text-white text-hover shadow-md">
-                            Perbarui Profil
-                        </x-button>
-                    </div>
-                </div>
+    <section class="flex flex-col w-full pt-16  sm:flex-row shadow-md">
+        <div class="relative flex-1 px-6 pt-6 bg-gray-100 sm:p-0">
+            <img class="object-cover object-center w-full h-full pb-px rounded-lg sm:rounded-none"
+                src={{ asset('assets/image/foto-unhas.jpg') }} alt="">
+            <div
+                class="absolute inset-y-0 right-0 hidden w-16 h-full transform translate-x-1/2 skew-x-6 bg-gray-100 sm:block">
             </div>
         </div>
-    </div>
+        <div class="flex-1 bg-gray-100">
+            <div class="flex flex-col justify-center h-full max-w-xl p-6 sm:p-8 sm:pl-16 md:p-20">
+                <h2 class="text-3xl text-gray-800">
+                    <span class="flex justify-start mt-2">
+                        <span class="inline-block overflow-hidden text-primary-600">
+                            Enjoy
+                        </span>
+                    </span>
+                </h2>
+                <p class="mt-6 text-lg text-gray-600">
+                    We picked our office location to maximize our team's enjoyment! SF's best restaurants
+                    are within walking distance, as well are some of the finest coffee shops in the world.
+                    Come visit us and you'll agree.
+                </p>
+            </div>
+        </div>
+    </section>
 </x-app-layout>
