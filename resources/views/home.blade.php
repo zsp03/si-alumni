@@ -1,15 +1,28 @@
 <x-app-layout>
     @section('title', 'Home')
     <x-slot name="header">
-        <img src="/assets/image/wave-4.png" alt="" class="w-full !h-2/3 sm:h-60">
+        <img src="/assets/image/header-bg.png" alt="alumni unhas" class="w-full !h-2/3 sm:h-60">
         <div class="max-w-7xl mx-auto px-12 sm:px-10 lg:px-20 absolute inset-0 py-10 z-10">
-            <div class="font-semibold text-4xl text-white dark:text-gray-20 leading-tight">
-                Halo, {{ Auth::user()->name }}
+            <div class="container">
+                <div class="flex flex-wrap pb-7">
+                    <div class="w-full self-center px-4 lg:w-1/2">
+                        <h2 class="mb-8 text-2xl font-semibold tracking-widest text-white uppercase title-font"> Hi, {{ Auth::user()->name }}! </h2>
+                        <h1 class="text-base font-semibold text-white md:text-xl">SELAMAT DATANG DI PORTAL ALUMNI
+                             <span
+                                class="mt-1 block text-2xl font-bold text-dark dark:text-white  text-gray-300 lg:text-5xl">UNIVERSITAS HASANUDDIN</span></h1>
+                    </div>
+                    <div class="w-full lg:w-1/3 lg:max-w-lg md:w-1/2">
+                        <img class="object-cover object-center rounded-full " alt="hero" src="{{ $user->profile_photo_url }}">
+                    </div>
+                </div>
+                <div class="">
+                    <h2 class="text-4xl font-bold leading-tight lg:text-5xl text-white">Get in touch</h2>
+                    <div class="dark:text-gray-400 text-white">Saling Terhubung dengan para alumni</div>
+                    <x-button class="transition-colors !bg-red-700 p-2 rounded-sm w-full text-white text-hover shadow-lg">
+                        Here
+                    </x-button>
+                </div>
             </div>
-            <div class="font-normal text-2xl text-white dark:text-gray-200 leading-tight pt-2">
-                Selamat Datang di Portal Alumni Universitas Hasanuddin!
-            </div>
-
         </div>
     </x-slot>
 
