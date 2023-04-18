@@ -10,10 +10,7 @@
             </div>
             <div class="font-normal text-xl text-white dark:text-gray-200 leading-tight pt-2">
                 Lorem, ipsum dolor sit amet consectetur adipisicing
-                elit. Odit ipsa consequatur, illum est cum, expedita
-                repudiandae accusamus nesciunt inventore architecto sed
-                amet magni facilis eius nulla doloribus rerum commodi
-                quibusdam?
+                elit. 
             </div>
         </div>
     </x-slot>
