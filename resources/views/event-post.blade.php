@@ -1,37 +1,5 @@
 <x-app-layout>
     <div class="max-w-screen-lg mx-auto">
-        <!-- header -->
-        <header class="flex items-center justify-between py-2">
-            <a href="#" class="px-2 lg:px-0 font-bold">
-                Tech Blog
-            </a>
-            <button class="block md:hidden px-2 text-3xl">
-                <i class='bx bx-menu'></i>
-            </button>
-            <ul class="hidden md:inline-flex items-center">
-                <li class="px-2 md:px-4">
-                    <a href="" class="text-green-800 font-semibold hover:text-green-600"> Home </a>
-                </li>
-                <li class="px-2 md:px-4">
-                    <a href="" class="text-gray-500 font-semibold hover:text-green-600"> About </a>
-                </li>
-                <li class="px-2 md:px-4">
-                    <a href="" class="text-gray-500 font-semibold hover:text-green-600"> Press </a>
-                </li>
-                <li class="px-2 md:px-4">
-                    <a href="" class="text-gray-500 font-semibold hover:text-green-600"> Contact </a>
-                </li>
-                <li class="px-2 md:px-4 hidden md:block">
-                    <a href="" class="text-gray-500 font-semibold hover:text-green-600"> Login </a>
-                </li>
-                <li class="px-2 md:px-4 hidden md:block">
-                    <a href="" class="text-gray-500 font-semibold hover:text-green-600"> Register </a>
-                </li>
-            </ul>
-
-        </header>
-        <!-- header ends here -->
-
         <main class="mt-10">
 
             <div class="mb-4 md:mb-0 w-full mx-auto relative">
@@ -101,6 +69,9 @@
                         are marry
                         among. Delightful remarkably new assistance saw literature mrs favourable.</p>
 
+                    <figure><img src="https://flowbite.s3.amazonaws.com/typography-plugin/typography-image-1.png"
+                            alt="">
+                    </figure>
                     <h2 class="text-2xl text-gray-800 font-semibold mb-4 mt-4">Uneasy barton seeing remark happen his
                         has</h2>
 
@@ -167,53 +138,74 @@
 
             </div>
         </main>
-        <!-- main ends here -->
+        <div class="border-t mt-12 pt-12 px-4 lg:px-0"></div>
 
-        <!-- footer -->
-        <footer class="border-t mt-12 pt-12 pb-32 px-4 lg:px-0">
-            <div>
-                <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80"
-                    class="h-12 w-12" alt="logo">
+        <aside aria-label="Related articles" class="py-8 lg:py-2 dark:bg-gray-800">
+            <div class="px-4 mx-auto max-w-screen-xl">
+                <h2 class="mb-8 text-2xl font-bold text-gray-900 dark:text-white">Latest Articles</h2>
+                <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
+                    <article class="max-w-xs">
+                        <a href="#">
+                            <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/article/blog-1.png"
+                                class="mb-5 rounded-lg" alt="Image 1">
+                        </a>
+                        <h2 class="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white">
+                            <a href="#">Our first office</a>
+                        </h2>
+                        <p class="mb-4 font-light text-gray-500 dark:text-gray-400">Over the past year, Volosoft has
+                            undergone many changes! After months of preparation.</p>
+                        <a href="#"
+                            class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline">
+                            Read in 2 minutes
+                        </a>
+                    </article>
+                    <article class="max-w-xs">
+                        <a href="#">
+                            <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/article/blog-2.png"
+                                class="mb-5 rounded-lg" alt="Image 2">
+                        </a>
+                        <h2 class="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white">
+                            <a href="#">Enterprise design tips</a>
+                        </h2>
+                        <p class="mb-4 font-light text-gray-500 dark:text-gray-400">Over the past year, Volosoft has
+                            undergone many changes! After months of preparation.</p>
+                        <a href="#"
+                            class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline">
+                            Read in 12 minutes
+                        </a>
+                    </article>
+                    <article class="max-w-xs">
+                        <a href="#">
+                            <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/article/blog-3.png"
+                                class="mb-5 rounded-lg" alt="Image 3">
+                        </a>
+                        <h2 class="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white">
+                            <a href="#">We partnered with Google</a>
+                        </h2>
+                        <p class="mb-4 font-light text-gray-500 dark:text-gray-400">Over the past year, Volosoft has
+                            undergone many changes! After months of preparation.</p>
+                        <a href="#"
+                            class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline">
+                            Read in 8 minutes
+                        </a>
+                    </article>
+                    <article class="max-w-xs">
+                        <a href="#">
+                            <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/article/blog-4.png"
+                                class="mb-5 rounded-lg" alt="Image 4">
+                        </a>
+                        <h2 class="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white">
+                            <a href="#">Our first project with React</a>
+                        </h2>
+                        <p class="mb-4 font-light text-gray-500 dark:text-gray-400">Over the past year, Volosoft has
+                            undergone many changes! After months of preparation.</p>
+                        <a href="#"
+                            class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline">
+                            Read in 4 minutes
+                        </a>
+                    </article>
+                </div>
             </div>
-            <div class="flex flex-wrap">
-                <div class="w-full lg:w-2/5">
-                    <p class="text-gray-600 hidden lg:block mt-4 p-0 lg:pr-12">
-                        Boisterous he on understood attachment as entreaties ye devonshire.
-                        In mile an form snug were been sell.
-                        Extremely ham any his departure for contained curiosity defective.
-                        Way now instrument had eat diminution melancholy expression sentiments stimulated.
-                    </p>
-                </div>
-
-                <div class="w-full mt-6 lg:mt-0 md:w-1/2 lg:w-1/5">
-                    <h6 class="font-semibold text-gray-700 mb-4">Company</h6>
-                    <ul>
-                        <li> <a href="" class="block text-gray-600 py-2">Team</a> </li>
-                        <li> <a href="" class="block text-gray-600 py-2">About us</a> </li>
-                        <li> <a href="" class="block text-gray-600 py-2">Press</a> </li>
-                    </ul>
-                </div>
-
-                <div class="w-full mt-6 lg:mt-0 md:w-1/2 lg:w-1/5">
-                    <h6 class="font-semibold text-gray-700 mb-4">Content</h6>
-                    <ul>
-                        <li> <a href="" class="block text-gray-600 py-2">Blog</a> </li>
-                        <li> <a href="" class="block text-gray-600 py-2">Privacy Policy</a> </li>
-                        <li> <a href="" class="block text-gray-600 py-2">Terms & Conditions</a> </li>
-                        <li> <a href="" class="block text-gray-600 py-2">Documentation</a> </li>
-                    </ul>
-                </div>
-
-                <div class="w-full mt-6 lg:mt-0 md:w-1/2 lg:w-1/5">
-                    <h6 class="font-semibold text-gray-700 mb-4">Company</h6>
-                    <ul>
-                        <li> <a href="" class="block text-gray-600 py-2">Team</a> </li>
-                        <li> <a href="" class="block text-gray-600 py-2">About us</a> </li>
-                        <li> <a href="" class="block text-gray-600 py-2">Press</a> </li>
-                    </ul>
-                </div>
-
-            </div>
-        </footer>
+        </aside>
     </div>
 </x-app-layout>

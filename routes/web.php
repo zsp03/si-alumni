@@ -29,7 +29,7 @@ Route::middleware([
     })->name('event');
     Route::get('/event/1', function () {
         return view('event-post');
-    })->name('loker');
+    })->name('event-post');
     Route::get('/database', function () {
         return view('database');
     })->name('database');
