@@ -27,8 +27,8 @@ Route::middleware([
     Route::get('/event', function () {
         return view('event');
     })->name('event');
-    Route::get('/lowongan/1', function () {
-        return view('loker');
+    Route::get('/event/1', function () {
+        return view('event-post');
     })->name('loker');
     Route::get('/database', function () {
         return view('database');
