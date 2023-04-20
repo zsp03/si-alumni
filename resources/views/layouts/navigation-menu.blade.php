@@ -1,47 +1,44 @@
 <nav x-data="{ open: false }" class="sticky top-0 z-50 bg-[#053C5E]">
     <!-- Primary Navigation Menu -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-16">
-            <div class="flex">
-                <!-- Logo -->
-                <div class="shrink-0 flex items-center">
-                    <a href="{{ route('home') }}">
-                        <x-application-logo class="ml-6 block h-12 w-auto fill-current text-gray-800" />
-                    </a>
-                    <div class="pt-2 whitespace-nowrap ml-3 font-semibold text-base">
-                        <div class="text-white">
-                            Portal Alumni
-                        </div>
-                        <div class="text-rose-600">
-                            Universitas Hasanuddin
-                        </div>
+    <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex h-16">
+            <!-- Logo -->
+            <div class="shrink-0 flex mr-auto items-center">
+                <a href="{{ route('home') }}">
+                    <x-application-logo class="block h-12 w-auto fill-current text-gray-800" />
+                </a>
+                <div class="pt-2 whitespace-nowrap ml-3 font-semibold text-base">
+                    <div class="text-white">
+                        Portal Alumni
+                    </div>
+                    <div class="text-rose-600">
+                        Universitas Hasanuddin
                     </div>
                 </div>
-
-                <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 lg:flex">
-                    <x-nav-link href="{{ route('home') }}" :active="request()->routeIs('home')">
-                        {{ __('Home') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('lowongan')" :active="request()->routeIs('lowongan')">
-                        {{ __('Job Vacancy') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('event')" :active="request()->routeIs('event')">
-                        {{ __('Event') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('database')" :active="request()->routeIs('database')">
-                        {{ __('Database') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('newsletter')" :active="request()->routeIs('newsletter')">
-                        {{ __('Newsletter') }}
-                    </x-nav-link>
-                    <x-nav-link href='https://alumni.unhas.ac.id/dana-abadi' target="_blank" :active="request()->routeIs('')">
-                        {{ __('Donasi') }}
-                    </x-nav-link>
-                </div>
+            </div>
+            <!-- Navigation Links -->
+            <div class="hidden space-x-4 items-center mx-auto lg:flex">
+                <x-nav-link href="{{ route('home') }}" :active="request()->routeIs('home')">
+                    {{ __('Home') }}
+                </x-nav-link>
+                <x-nav-link :href="route('lowongan')" :active="request()->routeIs('lowongan')">
+                    {{ __('Job Vacancy') }}
+                </x-nav-link>
+                <x-nav-link :href="route('event')" :active="request()->routeIs('event')">
+                    {{ __('Event') }}
+                </x-nav-link>
+                <x-nav-link :href="route('database')" :active="request()->routeIs('database')">
+                    {{ __('Database') }}
+                </x-nav-link>
+                <x-nav-link :href="route('newsletter')" :active="request()->routeIs('newsletter')">
+                    {{ __('Newsletter') }}
+                </x-nav-link>
+                <x-nav-link href='https://alumni.unhas.ac.id/dana-abadi' target="_blank" :active="request()->routeIs('')">
+                    {{ __('Donasi') }}
+                </x-nav-link>
             </div>
 
-            <div class="hidden lg:flex sm:items-center sm:ml-6">
+            <div class="hidden lg:flex sm:items-center sm:ml-auto">
                 <!-- Teams Dropdown -->
                 @if (Laravel\Jetstream\Jetstream::hasTeamFeatures())
                     <div class="ml-3 relative">
@@ -93,12 +90,12 @@
                 @endif
 
                 <!-- Settings Dropdown -->
-                <div class="ml-3 relative">
+                <div class="relative">
                     <x-dropdown align="right" width="48">
                         <x-slot name="trigger">
                             @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
-                                <button class="flex items-center text-sm border-2 border-transparent p-1 rounded-full focus:outline-none focus:border-gray-300 transition">
-                                    <span class="hidden lg:flex text-white pr-2">{{ Auth::user()->name }}</span>
+                                <button class="flex items-center bg-gray-200 text-sm text-gray-500 py-1 px-4 rounded-lg focus:outline-none focus:border-none focus:bg-white focus:text-gray-700 hover:text-gray-700 hover:bg-gray-200 transition">
+                                    <span class="hidden lg:flex pr-2">{{ Auth::user()->name }}</span>
                                     <img class="h-8 w-8 rounded-full object-cover" src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" />
                                 </button>
                             @else
