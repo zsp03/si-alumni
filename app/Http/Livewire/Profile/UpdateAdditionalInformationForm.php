@@ -23,7 +23,7 @@ class UpdateAdditionalInformationForm extends Component
 
         Validator::make($this->state, [
             'jurusan' => ['required', 'string', 'max:255'],
-            'angkatan' => ['required', 'numeric', 'max:4'],
+            'angkatan' => ['required', 'integer', 'max_digits:4'],
             'instagram_account' => ['string', 'max:255'],
             'profile_desc' => ['string', 'max:255'],
         ])->validateWithBag('updateAdditionalInformation');
