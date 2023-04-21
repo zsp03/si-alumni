@@ -1,4 +1,4 @@
-<nav x-data="{ open: false }" class="sticky top-0 z-50 bg-[#053C5E]">
+<nav x-data="{ open: false }" class="sticky top-0 z-50 bg-prusblue">
     <!-- Primary Navigation Menu -->
     <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex h-16">
@@ -94,8 +94,8 @@
                     <x-dropdown align="right" width="48">
                         <x-slot name="trigger">
                             @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
-                                <button class="flex items-center bg-gray-200 text-sm text-gray-500 py-1 px-4 rounded-lg focus:outline-none focus:border-none focus:bg-white focus:text-gray-700 hover:text-gray-700 hover:bg-gray-200 transition">
-                                    <span class="hidden lg:flex pr-2">{{ Auth::user()->name }}</span>
+                                <button class="flex items-center bg-gray-200 text-sm font-semibold text-gray-500 py-1 px-4 rounded-lg focus:outline-none focus:border-none focus:bg-white focus:text-gray-700 hover:text-gray-700 hover:bg-gray-200 transition">
+                                    <span class="hidden lg:flex pr-2">{{ Str::of(Auth::user()->name)->explode(' ')->first() }}</span>
                                     <img class="h-8 w-8 rounded-full object-cover" src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" />
                                 </button>
                             @else

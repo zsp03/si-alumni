@@ -20,7 +20,9 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified'
 ])->group(function () {
-    Route::get('/home', \App\Http\Controllers\HomeController::class)->name('home');
+    Route::get('/home', function () {
+        return view('home');
+    })->name('home');
     Route::get('/lowongan', function () {
         return view('lowongan');
     })->name('lowongan');

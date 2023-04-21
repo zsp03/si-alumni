@@ -28,12 +28,12 @@
 
                 <!-- Current Profile Photo -->
                 <div class="mt-2" x-show="! photoPreview">
-                    <img src="{{ $this->user->profile_photo_url }}" alt="{{ $this->user->name }}" class="rounded-full h-20 w-20 object-cover">
+                    <img src="{{ $this->user->profile_photo_url }}" alt="{{ $this->user->name }}" class="aspect-square rounded-md h-40 w-40 object-cover">
                 </div>
 
                 <!-- New Profile Photo Preview -->
                 <div class="mt-2" x-show="photoPreview" style="display: none;">
-                    <span class="block rounded-full w-20 h-20 bg-cover bg-no-repeat bg-center"
+                    <span class="block aspect-square rounded-md h-40 w-40 bg-cover bg-no-repeat bg-center"
                           x-bind:style="'background-image: url(\'' + photoPreview + '\');'">
                     </span>
                 </div>
@@ -80,6 +80,15 @@
                     </p>
                 @endif
             @endif
+        </div>
+        <!-- Phone -->
+        <div class="col-span-6 sm:col-span-4">
+            <x-label for="phone_number" value="{{ __('Nomor Telepon') }}" />
+            <x-wireui.inputs.maskable mask="['+#############']"
+                                      id="phone" type="tel" class="mt-1 block w-full"
+                                      hint="Kode negara-Nomor (ex:62821234567)"
+                                      wire:model.defer="state.phone_number" />
+            <x-input-error for="phone" class="mt-2" />
         </div>
     </x-slot>
 

@@ -31,7 +31,9 @@ class User extends Authenticatable implements FilamentUser, HasAvatar, MustVerif
     protected $fillable = [
         'name',
         'jurusan',
+        'angkatan',
         'instagram_account',
+        'profile_desc',
         'email',
         'phone_number',
         'role',

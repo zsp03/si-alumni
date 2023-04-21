@@ -1,4 +1,4 @@
-<footer class="footer p-10 border-t-8 bg-[#053C5E] text-base justify-around mt-20">
+<footer class="footer p-10 border-t-8 bg-prusblue text-base justify-around mt-20">
     <div class="text-white">
       <span class=" font-black footer-title">Links</span>
       <a href="{{ __('home') }}" class=" link link-hover">Home</a>

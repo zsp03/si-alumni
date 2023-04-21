@@ -28,6 +28,7 @@ module.exports = {
             },
             colors: {
                 primary: colors.blue,
+                'prusblue': '#053C5E',
             }
         },
     },

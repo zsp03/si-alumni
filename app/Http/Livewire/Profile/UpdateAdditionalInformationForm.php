@@ -22,15 +22,17 @@ class UpdateAdditionalInformationForm extends Component
         $this->resetErrorBag();
 
         Validator::make($this->state, [
-            'phone_number' => ['required', 'string', 'max:255'],
             'jurusan' => ['required', 'string', 'max:255'],
+            'angkatan' => ['required', 'numeric', 'max:4'],
             'instagram_account' => ['string', 'max:255'],
+            'profile_desc' => ['string', 'max:255'],
         ])->validateWithBag('updateAdditionalInformation');
 
         $user = Auth::user();
-        $user->phone_number = $this->state['phone_number'];
         $user->jurusan = $this->state['jurusan'];
+        $user->angkatan = $this->state['angkatan'];
         $user->instagram_account = $this->state['instagram_account'];
+        $user->profile_desc = $this->state['profile_desc'];
 
         $user->save();
         $this->emit('saved');

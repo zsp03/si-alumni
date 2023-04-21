@@ -9,7 +9,7 @@
                         <div class="flex flex-col gap-3">
                             <div class="w-full">
                                 <h2 class="mb-2 text-xl font-light text-white md:text-2xl">
-                                    Selamat Datang Di Portal Alumni,
+                                    Selamat datang di Portal Alumni,
                                 </h2>
                                 <h2 class="text-4xl max-w-[480px] font-semibold tracking-widest text-white uppercase title-font">
                                     {{ Auth::user()->name }}!</h2>
@@ -19,43 +19,22 @@
                                 repudiandae accusamus nesciunt inventore architecto</p>
                             <div class="lg:mt-20 flex flex-col gap-4">
                                 <div class="flex flex-col gap-2">
-                                    <h2 class="text-3xl font-semibold leading-tight lg:text-5xl text-white">Get in touch
+                                    <h2 class="text-3xl font-semibold leading-tight lg:text-5xl text-white">Get in touch,
                                     </h2>
-                                    <span class="text-lg md:text-2xl font-light text-white">Saling Terhubung dengan Para Alumni</span>
+                                    <span class="text-lg md:text-2xl font-light text-white">Saling terhubung antar sesama Alumni.</span>
                                 </div>
                                 <a href="{{ route('database') }}"
-                                    class="btn normal-case font-semibold text-lg transition-colors bg-cyan-800 rounded-md w-40 h-10 text-white text-hover drop-shadow-xl">
+                                    class="btn shadow-md shadow-gray-800 border-transparent normal-case font-semibold text-lg transition-colors bg-cyan-800 rounded-md w-40 h-10 text-white text-hover">
                                     Cari Alumni
                                 </a>
                             </div>
                         </div>
                         <div class="flex flex-col items-center">
-                            <div class="!z-5 mb-20 w-full p-4 3xl:p-![18px] rounded-[20px] max-w-[300px] bg-clip-border shadow-3xl shadow-shadow-500 bg-white bg-opacity-60">
-                                <div class="flex flex-col">
-                                    <div class="relative aspect-square">
-                                        <img src="{{ $user->profile_photo_url }}"
-                                            class="object-cover mb-3 h-full w-full rounded-xl 3xl:h-full 3xl:w-full" alt="foto-user">
-                                    </div>
-                                    <div class="my-3 px-1 md:items-start">
-                                        <div class="mb-1 flex flex-col justify-left">
-                                            <p class="text-xl font-bold text-navy-700"> {{ Auth::user()->name }} </p>
-                                            <div class="flex gap-2 items-center">
-                                                <i class="iconoir-calendar text-sm text-gray-600"></i>
-                                                <span class="text-base text-gray-600"> {{ Auth::user()->jurusan }} </span>
-                                            </div>
-                                            <p class="text-sm font-medium text-gray-600">UX Researcher,
-                                                Co-host of the Interesting Design podcast
-                                                and a proud mother of three children </p>
-                                        </div>
-                                    </div>
-                                    <div class="flex items-center">
-                                        <a href="{{ route('profile.show') }}"
-                                            class=" btn rounded-lg min-h-[40px] h-fit bg-red-800 normal-case border-none text-sm font-medium text-white shadow-md">Perbarui
-                                            Profil</a>
-                                    </div>
-
-                                </div>
-                            </div>
+                            <x-profile-card>
+                                <a href="{{ route('profile.show') }}"
+                                   class=" btn rounded-lg min-h-[40px] h-fit bg-red-800 normal-case border-none text-sm font-medium text-white shadow-md">Perbarui
+                                    Profil</a>
+                            </x-profile-card>
                         </div>
                     </div>
                 </div>
