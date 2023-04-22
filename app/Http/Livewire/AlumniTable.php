@@ -10,6 +10,8 @@ use Livewire\WithPagination;
 class AlumniTable extends Component
 {
     public $search;
+    public $showingUserProfileCard = false;
+    public $dataAlumni;
     use WithPagination;
 
     protected $queryString = [
@@ -18,8 +20,14 @@ class AlumniTable extends Component
 
     public function render()
     {
+        $dataAlumnis =  User::where('name','like','%'.$this->search.'%')->orderBy('name')->paginate(5);
         return view('livewire.alumni-table',[
-            'dataAlumni' => User::where('name','like','%'.$this->search.'%')->orderBy('name')->paginate(5)
+            'dataAlumnis' => $dataAlumnis,
         ]);
+    }
+
+    public function showUserProfileCard(User $alumni){
+        $this->dataAlumni = $alumni;
+        $this->showingUserProfileCard = true;
     }
 }

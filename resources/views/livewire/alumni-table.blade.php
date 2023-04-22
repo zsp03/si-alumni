@@ -50,22 +50,22 @@
                         </thead>
                         <tbody class="divide-y divide-gray-200 dark:divide-gray-700">
                         @if(!empty($search))
-                            @foreach($dataAlumni as $item)
-                                <tr>
+                            @foreach($dataAlumnis as $alumni)
+                                <tr wire:click="showUserProfileCard({{$alumni->id}})" class="hover:bg-gray-300">
                                     <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-gray-200">
-                                        {{ $item -> name }}
+                                        {{ $alumni -> name }}
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-gray-200">
-                                        {{ $item -> jurusan }}
+                                        {{ $alumni -> jurusan }}
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-gray-200">
-                                        {{ $item -> email }}
+                                        {{ $alumni -> email }}
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                                         <a class="text-blue-500 hover:text-blue-700"
-                                           href="https://instagram.com/{{ substr(($item -> instagram_account), 1)}}"
+                                           href="https://instagram.com/{{ substr(($alumni -> instagram_account), 1)}}"
                                            target="_blank">
-                                            {{ $item -> instagram_account }}
+                                            {{ $alumni -> instagram_account }}
                                         </a>
                                     </td>
                                 </tr>
@@ -77,7 +77,14 @@
             </div>
         </div>
     </div>
+
+    @if (!empty($search) && !empty($dataAlumnis) && !empty($dataAlumni))
+    <x-modal maxWidth="fit" wire:model="showingUserProfileCard">
+        <x-profile-card :user="$dataAlumni"/>
+    </x-modal>
+    @endif
+
     @if (!empty($search))
-        {{ $dataAlumni->withQueryString()->links() }}
+        {{ $dataAlumnis->withQueryString()->links() }}
     @endif
 </div>

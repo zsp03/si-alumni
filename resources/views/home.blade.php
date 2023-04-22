@@ -2,8 +2,7 @@
     @section('title', 'Home')
     <section class="flex flex-col w-full shadow-md">
         <div class="relative">
-            <div
-                class="flex justify-center mx-auto px-12 sm:px-10 lg:px-20 pt-10 pb-24 z-10 sm:h-[880px] bg-[url('/public/assets/image/header-bg.png')] bg-cover bg-no-repeat">
+            <div class="flex justify-center mx-auto px-12 sm:px-10 lg:px-20 pt-10 pb-24 z-10 sm:h-[880px] bg-[url('/public/assets/image/header-bg.png')] bg-cover bg-no-repeat">
                 <div class="flex sm:mt-14 max-w-6xl justify-center">
                     <div class="flex flex-col sm:flex-row gap-20 pb-7">
                         <div class="flex flex-col gap-3">
@@ -29,8 +28,8 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="flex flex-col items-center">
-                            <x-profile-card>
+                        <div class="flex flex-col mb-20 items-center">
+                            <x-profile-card :user="Auth::user()">
                                 <a href="{{ route('profile.show') }}"
                                    class=" btn rounded-lg min-h-[40px] h-fit bg-red-800 normal-case border-none text-sm font-medium text-white shadow-md">Perbarui
                                     Profil</a>
