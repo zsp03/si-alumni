@@ -3,7 +3,7 @@
     <div class="relative">
         <input wire:model="search"
                type="text"
-               class="py-3 px-4 pl-11 block w-1/3 border-gray-200 shadow-sm rounded-md text-sm focus:z-10 focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
+               class="py-3 px-4 pl-11 block w-full sm:w-1/2 lg:w-1/3 border-gray-200 shadow-sm rounded-md text-sm focus:z-10 focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
                placeholder="Ketik Nama...">
         <div class="absolute inset-y-0 left-0 flex items-center pointer-events-none pl-4">
             <svg wire:loading.remove
@@ -79,9 +79,13 @@
     </div>
 
     @if (!empty($search) && !empty($dataAlumnis) && !empty($dataAlumni))
-    <x-modal maxWidth="fit" wire:model="showingUserProfileCard">
-        <x-profile-card :user="$dataAlumni"/>
-    </x-modal>
+    <x-wireui.modal align='center' blur="sm" wire:model="showingUserProfileCard">
+        <x-profile-card :user="$dataAlumni" class="shadow">
+            <a href="{{ route('profile.show') }}"
+               class=" btn rounded-lg min-h-[40px] h-fit bg-prusblue normal-case border-none text-sm font-medium text-white shadow-md">
+                Kirim Pesan</a>
+        </x-profile-card>
+    </x-wireui.modal>
     @endif
 
     @if (!empty($search))

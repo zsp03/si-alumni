@@ -1,6 +1,6 @@
 @props(['user'])
 
-<div class="z-5 w-full p-4 rounded-lg max-w-[300px] bg-clip-border shadow-lg shadow-gray-950 bg-white bg-opacity-60">
+<div {{ $attributes->merge(['class' => 'bg-white z-5 w-full p-4 rounded-lg max-w-[300px] bg-clip-border']) }}>
     <div class="flex flex-col">
         <div class="relative aspect-square">
             <img src="{{ $user->profile_photo_url }}"

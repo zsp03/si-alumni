@@ -29,7 +29,7 @@
                             </div>
                         </div>
                         <div class="flex flex-col mb-20 items-center">
-                            <x-profile-card :user="Auth::user()">
+                            <x-profile-card :user="Auth::user()" class="bg-opacity-80 shadow-lg shadow-gray-800">
                                 <a href="{{ route('profile.show') }}"
                                    class=" btn rounded-lg min-h-[40px] h-fit bg-red-800 normal-case border-none text-sm font-medium text-white shadow-md">Perbarui
                                     Profil</a>
