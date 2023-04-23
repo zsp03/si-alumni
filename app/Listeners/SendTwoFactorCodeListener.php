@@ -30,7 +30,10 @@ class SendTwoFactorCodeListener
      */
     public function handle( TwoFactorAuthenticationChallenged|TwoFactorAuthenticationEnabled $event)
     {
-        $event->user->notify(app(SendOTPWhatsapp::class));
+        if (!$event->user->phone_number == null){
+            $event->user->notify(app(SendOTPWhatsapp::class));
+        }
+
         $event->user->notify(app(SendOTPEmail::class));
 //        $event->user->notify(app(SendOTPTwilio::class));
     }
