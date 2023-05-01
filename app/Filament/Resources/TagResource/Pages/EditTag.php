@@ -1,16 +1,16 @@
 <?php
 
-namespace App\Filament\Resources\NewsletterResource\Pages;
+namespace App\Filament\Resources\TagResource\Pages;
 
-use App\Filament\Resources\NewsletterResource;
+use App\Filament\Resources\TagResource;
 use Filament\Pages\Actions;
 use Filament\Resources\Pages\EditRecord;
 
-class EditNewsletter extends EditRecord
+class EditTag extends EditRecord
 {
-    protected static string $resource = NewsletterResource::class;
+    protected static string $resource = TagResource::class;
 
-    protected function getRedirectUrl(): ?string
+    protected function getRedirectUrl(): string
     {
         return $this->getResource()::getUrl('index');
     }

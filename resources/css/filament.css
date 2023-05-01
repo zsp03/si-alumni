@@ -1,1 +1,9 @@
 @import '../../vendor/filament/filament/resources/css/app.css';
+
+.ProseMirror {
+    @apply font-sans prose prose-img:my-0 dark:prose-invert leading-relaxed max-w-none px-4 text-gray-700 !important;
+}
+
+.ProseMirror blockquote {
+    @apply ms-0 !important;
+}

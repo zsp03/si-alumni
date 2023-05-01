@@ -1,9 +1,5 @@
 <div class="flex flex-col gap-4 items-center justify-center bg-white">
-
-
-
     <div class="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4">
-
         <div class="relative col-span-1 md:col-span-2 lg:col-span-4">
             <input wire:model="search"
                    type="text"

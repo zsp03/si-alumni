@@ -24,7 +24,8 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                'sans': ['Figtree', ...defaultTheme.fontFamily.sans],
+                'body': [...defaultTheme.fontFamily.sans],
             },
             colors: {
                 primary: colors.blue,

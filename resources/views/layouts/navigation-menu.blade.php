@@ -121,6 +121,12 @@
                                 {{ __('Profile') }}
                             </x-dropdown-link>
 
+                            @if (\Illuminate\Support\Facades\Auth::user()->canAccessFilament())
+                                <x-dropdown-link href="{{ route('filament.auth.login') }}">
+                                    {{ __('Admin Panel') }}
+                                </x-dropdown-link>
+                            @endif
+
                             @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
                                 <x-dropdown-link href="{{ route('api-tokens.index') }}">
                                     {{ __('API Tokens') }}

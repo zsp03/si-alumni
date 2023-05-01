@@ -5,7 +5,7 @@
             <div class="flex justify-center mx-auto px-12 sm:px-10 lg:px-20 pt-10 pb-24 z-10 sm:h-[880px] bg-[url('/public/assets/image/header-bg.png')] bg-cover bg-no-repeat">
                 <div class="flex sm:mt-14 max-w-6xl justify-center">
                     <div class="flex flex-col sm:flex-row gap-20 pb-7">
-                        <div class="flex flex-col gap-3">
+                        <div class="animate-in slide-in-from-bottom duration-700 flex flex-col gap-3">
                             <div class="w-full">
                                 <h2 class="mb-2 text-xl font-light text-white md:text-2xl">
                                     Selamat datang di Portal Alumni,
@@ -29,7 +29,7 @@
                             </div>
                         </div>
                         <div class="flex flex-col mb-20 items-center">
-                            <x-profile-card :user="Auth::user()" class="bg-opacity-80 shadow-lg shadow-gray-800">
+                            <x-profile-card :user="Auth::user()" class="animate-in slide-in-from-right duration-700 bg-opacity-80 shadow-lg shadow-gray-800">
                                 <a href="{{ route('profile.show') }}"
                                    class=" btn rounded-lg min-h-[40px] h-fit bg-red-800 normal-case border-none text-sm font-medium text-white shadow-md">Perbarui
                                     Profil</a>

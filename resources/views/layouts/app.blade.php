@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css">
     @livewireStyles
 
-
     <!-- Scripts -->
     @wireUiScripts
     @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -26,7 +25,10 @@
     <!-- Page Heading -->
     @if (isset($header))
         <header class="relative">
+            <img class="w-full h-96 sm:h-72 md:h-60" src="/assets/image/header-bg.png" alt="alumni unhas" >
+            <div class="max-w-7xl mx-auto px-12 sm:px-10 lg:px-20 absolute inset-0 py-10 z-10 ">
             {{$header}}
+            </div>
         </header>
     @endif
 

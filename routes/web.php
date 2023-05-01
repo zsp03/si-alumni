@@ -21,21 +21,25 @@ Route::middleware([
     'verified'
 ])->group(function () {
     Route::get('/home', function () {
-        return view('home');
+        return view('pages.home');
     })->name('home');
-    Route::get('/lowongan', function () {
-        return view('lowongan');
+    Route::get('/jobs', function () {
+        return view('pages.jobs.index');
     })->name('lowongan');
+    Route::get('/jobs/1', function () {
+        return view('pages.jobs.show');
+    })->name('jobs-post');
     Route::get('/event', function () {
-        return view('event');
+        return view('pages.event.index');
     })->name('event');
     Route::get('/event/1', function () {
-        return view('event-post');
+        return view('pages.event.show');
     })->name('event-post');
+    Route::get('/event/{slug}', \App\Http\Livewire\ShowPost::class);
     Route::get('/database', function () {
-        return view('database');
+        return view('pages.database.index');
     })->name('database');
     Route::get('/newsletter', function () {
-        return view('newsletter');
+        return view('pages.newsletter.index');
     })->name('newsletter');
 });
