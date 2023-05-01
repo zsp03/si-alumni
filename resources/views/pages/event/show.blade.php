@@ -17,15 +17,11 @@
                     </a>
                 </div>
                 <div class="flex gap-2">
-                    <a href="#" class="text-green-700 hover:text-gray-900">
-                        Cryptocurrency
-                    </a>
-                    <a href="#" class="text-green-700 hover:text-gray-900">
-                        Event
-                    </a>
-                    <a href="#" class="text-green-700 hover:text-gray-900">
-                        Tech
-                    </a>
+                    @foreach($post->tags as $tag)
+                        <a href="#" class="">
+                            <x-wireui.badge primary size="lg" label="{{ $tag->name }}"/>
+                        </a>
+                    @endforeach
                 </div>
             </div>
         </div>
