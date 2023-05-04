@@ -14,6 +14,7 @@
         "laravel/jetstream": "^3.0",
         "laravel/sanctum": "^3.0",
         "laravel/tinker": "^2.7",
+        "league/flysystem-aws-s3-v3": "^3.0",
         "livewire/livewire": "^2.11",
         "masbug/flysystem-google-drive-ext": "^2.2",
         "netflie/laravel-notification-whatsapp": "^1.1",

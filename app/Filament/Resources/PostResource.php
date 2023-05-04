@@ -15,6 +15,7 @@ use FilamentTiptapEditor\TiptapEditor;
 use Google\Service\Keep\Section;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
 
@@ -51,8 +52,9 @@ class PostResource extends Resource
                         Forms\Components\FileUpload::make('image_featured')
                             ->label('Upload')
                             ->reactive()
+                            ->directory('post-images')
                             ->afterStateUpdated(function (Closure $set, $state) {
-                                $set('image_featured_url', '/storage/'.$state->getFilename());
+                                $set('image_featured_url', Storage::disk()->url($state->getRealPath()));
                             }),
                         Forms\Components\TextInput::make('image_featured_url')
                             ->label('URL')

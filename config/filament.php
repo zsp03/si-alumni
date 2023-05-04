@@ -287,7 +287,7 @@ return [
     |
     */
 
-    'default_filesystem_disk' => env('FILAMENT_FILESYSTEM_DRIVER', 'public'),
+    'default_filesystem_disk' => (env('FILESYSTEM_DISK') == 'local') ? 'public' : env('FILESYSTEM_DISK'),
 
     /*
     |--------------------------------------------------------------------------
