@@ -24,7 +24,9 @@ class EditPost extends EditRecord
 
     protected function mutateFormDataBeforeSave(array $data): array
     {
-        $data['image_featured_url'] = Storage::disk()->url($data['image_featured']);
+        if ($data['image_featured'] !== null){
+            $data['image_featured_url'] = Storage::disk()->url($data['image_featured']);
+        }
 
         return $data;
     }
