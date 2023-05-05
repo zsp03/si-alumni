@@ -205,6 +205,12 @@
                     {{ __('Profile') }}
                 </x-responsive-nav-link>
 
+                @if (\Illuminate\Support\Facades\Auth::user()->canAccessFilament())
+                    <x-responsive-nav-link href="{{ route('filament.auth.login') }}">
+                        {{ __('Admin Panel') }}
+                    </x-responsive-nav-link>
+                @endif
+
                 @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
                     <x-responsive-nav-link href="{{ route('api-tokens.index') }}" :active="request()->routeIs('api-tokens.index')">
                         {{ __('API Tokens') }}
