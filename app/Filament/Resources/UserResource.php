@@ -27,22 +27,29 @@ class UserResource extends Resource
         return $form
             ->schema([
                 Forms\Components\TextInput::make('name')
-                    ->disabled()
+                    ->disabled(fn ($context) => $context == 'edit')
+                    ->required(fn (string $context): bool => $context === 'create')
                     ->maxLength(255),
                 Forms\Components\TextInput::make('jurusan')
-                    ->disabled()
+                    ->disabled(fn ($context) => $context == 'edit')
+                    ->required(fn (string $context): bool => $context === 'create')
                     ->maxLength(255),
                 Forms\Components\TextInput::make('email')
-                    ->disabled()
                     ->email()
                     ->required()
                     ->maxLength(255),
+                Forms\Components\TextInput::make('password')
+                    ->visibleOn('create')
+                    ->dehydrateStateUsing(fn ($state) => Hash::make($state))
+                    ->dehydrated(fn ($state) => filled($state))
+                    ->required(fn (string $context): bool => $context === 'create'),
                 Forms\Components\Select::make('role')
                     ->options([
                         '0' => 'Admin',
                         '4' => 'Alumni',
                     ])
-                    ->disablePlaceholderSelection(),
+                    ->disablePlaceholderSelection()
+                    ->required(),
             ]);
     }
 
