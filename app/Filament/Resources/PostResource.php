@@ -68,9 +68,11 @@ class PostResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('title'),
-                Tables\Columns\TextColumn::make('slug'),
-                Tables\Columns\TagsColumn::make('tags.name')
+                Tables\Columns\TextColumn::make('title')->searchable()->limit(30),
+                Tables\Columns\TagsColumn::make('tags.name'),
+                Tables\Columns\TextColumn::make('slug')->limit(20),
+                Tables\Columns\TextColumn::make('created_at'),
+                Tables\Columns\TextColumn::make('updated_at')
             ])
             ->filters([
                 //

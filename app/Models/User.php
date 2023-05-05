@@ -72,7 +72,7 @@ class User extends Authenticatable implements FilamentUser, HasAvatar, MustVerif
 
     public function canAccessFilament(): bool
     {
-        return $this->role == '0';
+        return in_array($this->role, array('0','1','2','3'));
     }
     protected function defaultProfilePhotoUrl()
     {
