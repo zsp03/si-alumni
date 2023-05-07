@@ -2,9 +2,9 @@
     <div class="container grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12">
         @foreach($dataPosts as $key => $post)
             @if($loop->first)
-                <x-event-post-card :post="$post" href="/event/{{ $post->slug }}" class="sm:col-span-2 lg:col-span-3 gap-4 sm:max-w-full grid lg:grid-cols-12" size="big"/>
+                <x-event-post-card :post="$post" href="{{ route('post.show', $post) }}" class="sm:col-span-2 lg:col-span-3 gap-4 sm:max-w-full grid lg:grid-cols-12" size="big"/>
             @else
-                <x-event-post-card :post="$post" href="/event/{{ $post->slug }}"/>
+                <x-event-post-card :post="$post" href="{{ route('post.show', $post) }}"/>
             @endif
         @endforeach
 

@@ -32,10 +32,8 @@ Route::middleware([
     Route::get('/event', function () {
         return view('pages.event.index');
     })->name('event');
-    Route::get('/event/1', function () {
-        return view('pages.event.show');
-    })->name('event-post');
-    Route::get('/event/{slug}', \App\Http\Livewire\ShowPost::class);
+    Route::get('/event/tags/{tags}', \App\Http\Livewire\IndexPostByTags::class)->name('eventByTags');
+    Route::get('/event/post/{post:slug}', \App\Http\Livewire\ShowPost::class)->name('post.show');
     Route::get('/database', function () {
         return view('pages.database.index');
     })->name('database');

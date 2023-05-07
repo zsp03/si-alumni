@@ -22,10 +22,10 @@
                     {{ __('Home') }}
                 </x-nav-link>
                 <x-nav-link :href="route('lowongan')" :active="request()->routeIs('lowongan')">
-                    {{ __('Job Vacancy') }}
+                    {{ __('Jobs') }}
                 </x-nav-link>
                 <x-nav-link :href="route('event')" :active="request()->routeIs('event')">
-                    {{ __('Event') }}
+                    {{ __('News & Events') }}
                 </x-nav-link>
                 <x-nav-link :href="route('database')" :active="request()->routeIs('database')">
                     {{ __('Database') }}
@@ -122,7 +122,7 @@
                             </x-dropdown-link>
 
                             @if (\Illuminate\Support\Facades\Auth::user()->canAccessFilament())
-                                <x-dropdown-link href="{{ route('filament.auth.login') }}">
+                                <x-dropdown-link href="{{ route('filament.auth.login') }}" target="_blank">
                                     {{ __('Admin Panel') }}
                                 </x-dropdown-link>
                             @endif

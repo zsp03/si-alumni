@@ -15,7 +15,10 @@
         <span class="text-sm text-gray-600 @if($size == 'big') sm:text-lg @endif dark:text-gray-400">{{\Carbon\Carbon::parse($post->updated_at)->translatedFormat('F d, Y')}}</span>
         <div class="mt-1 flex gap-2">
             @foreach($post->tags as $tag)
-                <x-wireui.badge primary label="{{ $tag->name }}" class="hover:bg-black"/>
+                <a href="{{ route('eventByTags', $tag->slug) }}">
+                    <x-wireui.badge primary label="{{ $tag->name }}" class="hover:bg-black"/>
+                </a>
+
             @endforeach
         </div>
         <p class="mt-2">{{ $post->shortContent() }}</p>

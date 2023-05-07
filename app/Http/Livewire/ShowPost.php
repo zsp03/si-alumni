@@ -2,15 +2,16 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Post;
 use Livewire\Component;
 
 class ShowPost extends Component
 {
     public $post;
 
-    public function mount($slug)
+    public function mount(Post $post)
     {
-        $this->post = \App\Models\Post::where('slug', $slug)->first();
+        $this->post = $post;
     }
     public function render()
     {
