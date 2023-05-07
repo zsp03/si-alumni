@@ -24,7 +24,7 @@
 
     <!-- Page Heading -->
     @if (isset($header))
-        <header class="relative">
+        <header class="relative overflow-hidden">
             {{$header}}
         </header>
     @endif

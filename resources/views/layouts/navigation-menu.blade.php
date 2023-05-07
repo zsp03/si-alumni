@@ -162,7 +162,7 @@
     </div>
 
     <!-- Responsive Navigation Menu -->
-    <div :class="{'block': open, 'hidden': ! open}" class="hidden lg:hidden bg-white">
+    <div :class="{'block': open, 'hidden': ! open}" class="hidden lg:hidden bg-white border-b-2 shadow">
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link href="{{ route('home') }}" :active="request()->routeIs('home')">
                 {{ __('Home') }}
@@ -171,10 +171,10 @@
                 {{ __('Database') }}
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('lowongan')" :active="request()->routeIs('lowongan')">
-                {{ __('Lowongan') }}
+                {{ __('Jobs') }}
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('event')" :active="request()->routeIs('event')">
-                {{ __('Event') }}
+                {{ __('News & Events') }}
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('newsletter')" :active="request()->routeIs('newsletter')">
                 {{ __('Newsletter') }}

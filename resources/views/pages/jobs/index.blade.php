@@ -1,7 +1,7 @@
 <x-app-layout>
     @section('title', 'Job Vacancy')
     <x-slot name="header">
-        <img src="/assets/image/header-bg.png" alt="alumni unhas" class="w-full h80 sm:h-60">
+        <img src="/assets/image/header-bg.png" alt="alumni unhas" class="w-full h-64 sm:h-60">
         <div class="max-w-7xl mx-auto px-12 sm:px-10 lg:px-20 absolute inset-0 py-10 z-10">
             <div class="font-semibold text-4xl text-white dark:text-gray-20 leading-tight">
                 Job Vacancy
