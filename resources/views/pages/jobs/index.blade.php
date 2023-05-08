@@ -1,7 +1,7 @@
 <x-app-layout>
     @section('title', 'Job Vacancy')
     <x-slot name="header">
-        <img src="/assets/image/header-bg.png" alt="alumni unhas" class="w-full h-64 sm:h-60">
+        <img src="/assets/image/header-bg.png" alt="alumni unhas" class="w-full h80 sm:h-60">
         <div class="max-w-7xl mx-auto px-12 sm:px-10 lg:px-20 absolute inset-0 py-10 z-10">
             <div class="font-semibold text-4xl text-white dark:text-gray-20 leading-tight">
                 Job Vacancy
@@ -16,16 +16,16 @@
     <section class="py-4 bg-white">
         <div class="main flex flex-col max-w-7xl justify-center mx-auto px-6">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <a href="https://www.w3schools.com/js/" target="_new">
+                <a href="{{ route('jobs-post') }}" target="_new">
                     <div
                         class="each w-full flex flex-col lg:flex-row hover:shadow-lg gap-2 select-none p-5 rounded-md border-gray-300 border hover:border-gray-500 cursor-pointer items-center">
                         <div class="flex d-flex justify-center items-center w-fit">
                             <img class="shadow-light-lg w-60 aspect-square"
-                                 src="https://api.sdmdigital.id/dowload/get-file?path=logo/c57732ef-fb09-42ce-8bbe-63df45a13e86.png&amp;disk=dts-storage-partnership"
-                                 alt="Metrodata Academy">
+                                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/UNIQLO_logo.svg/204px-UNIQLO_logo.svg.png"
+                                 alt="Uniqlo">
                         </div>
                         <div class="left flex flex-col w-full gap-1 overflow-hidden">
-                            <div class="header text-blue-600 font-semibold text-xl">Metrodata Full Stack</div>
+                            <div class="header text-blue-600 font-semibold text-xl">UNIQLO MANAGER CANDIDATE</div>
                             <p class="desc text-gray-600 line-clamp-2">Lorem ipsum dolor sit amet consectetur
                                 adipisicing elit. Aperiam distinctio debitis eligendi quas temporibus voluptas assumenda
                                 explicabo ad cum fugiat, nesciunt quis doloremque sit voluptatibus eius provident
