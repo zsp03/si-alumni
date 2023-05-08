@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use App\Notifications\SendOTPEmail;
 use App\Notifications\SendOTPWhatsapp;
 use Laravel\Fortify\Http\Requests\TwoFactorLoginRequest;
 use Livewire\Component;
@@ -16,7 +17,7 @@ class SendTwoFactorCode extends Component
 
     public function sendEmailTwoFactorCode(TwoFactorLoginRequest $request)
     {
-        $request->challengedUser()->notify(app(SendOTPWhatsapp::class));
+        $request->challengedUser()->notify(app(SendOTPEmail::class));
     }
 
     public function mount(TwoFactorLoginRequest $request)
