@@ -21,12 +21,12 @@ class EventServiceProvider extends ServiceProvider
         Registered::class => [
             SendEmailVerificationNotification::class,
         ],
-        TwoFactorAuthenticationChallenged::class => [
-            SendTwoFactorCodeListener::class,
-        ],
-        TwoFactorAuthenticationEnabled::class => [
-            SendTwoFactorCodeListener::class,
-        ],
+//        TwoFactorAuthenticationChallenged::class => [
+//            SendTwoFactorCodeListener::class,
+//        ],
+//        TwoFactorAuthenticationEnabled::class => [
+//            SendTwoFactorCodeListener::class,
+//        ],
     ];
 
     /**
