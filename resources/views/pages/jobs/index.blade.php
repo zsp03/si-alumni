@@ -16,7 +16,7 @@
     <section class="py-4 bg-white">
         <div class="main flex flex-col max-w-7xl justify-center mx-auto px-6">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <a href="{{ route('jobs-post') }}" target="_new">
+                <a href="{{ route('jobs-post') }}">
                     <div
                         class="each w-full flex flex-col lg:flex-row hover:shadow-lg gap-2 select-none p-5 rounded-md border-gray-300 border hover:border-gray-500 cursor-pointer items-center">
                         <div class="flex d-flex justify-center items-center w-fit">
