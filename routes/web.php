@@ -29,6 +29,9 @@ Route::middleware([
     Route::get('/jobs/1', function () {
         return view('pages.jobs.show');
     })->name('jobs-post');
+    Route::get('/messages', function () {
+        return view('pages.messages.show');
+    })->name('messages');
     Route::get('/event', function () {
         return view('pages.event.index');
     })->name('event');
