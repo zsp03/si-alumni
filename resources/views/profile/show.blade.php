@@ -1,6 +1,7 @@
 <x-app-layout>
     @section('title','Profile')
     <x-slot name="header">
+        <x-wireui.notifications position="bottom-left" />
         <div class="bg-prusblue h-32"></div>
         <div class="max-w-7xl mx-auto px-12 sm:px-10 lg:px-20 absolute inset-0 py-10 z-10">
             <div class="font-semibold text-4xl text-white dark:text-gray-20 leading-tight">

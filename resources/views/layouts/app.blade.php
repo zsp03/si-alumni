@@ -15,21 +15,19 @@
 
     <!-- Scripts -->
     @wireUiScripts
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
     @livewireScripts
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="font-sans antialiased">
 <div class="min-h-screen bg-white">
     @include('layouts.navigation-menu')
 
-    <!-- Page Heading -->
     @if (isset($header))
         <header class="relative overflow-hidden">
             {{$header}}
         </header>
     @endif
 
-    <!-- Page Content -->
     <main>
         {{ $slot }}
     </main>
