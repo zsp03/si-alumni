@@ -28,7 +28,7 @@ class SendTwoFactorCodeListener
      * @param  object  $event
      * @return void
      */
-    public function handle( TwoFactorAuthenticationChallenged|TwoFactorAuthenticationEnabled $event)
+    public function handle(TwoFactorAuthenticationEnabled $event)
     {
         if (!$event->user->phone_number == null){
             $event->user->notify(app(SendOTPWhatsapp::class));

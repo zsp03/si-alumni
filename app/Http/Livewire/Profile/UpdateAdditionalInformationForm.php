@@ -6,9 +6,11 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rule;
 use Livewire\Component;
+use WireUi\Traits\Actions;
 
 class UpdateAdditionalInformationForm extends Component
 {
+    use Actions;
     protected $rules = [
         'jurusan' => 'required|min:6',
     ];
@@ -35,8 +37,12 @@ class UpdateAdditionalInformationForm extends Component
         $user->profile_desc = $this->state['profile_desc'];
 
         $user->save();
-        $this->emit('saved');
-        $this->emit('refresh-navigation-menu');
+        $this->notification()->send([
+            'title' => 'Profile saved',
+            'description' => 'Your profile was successfully saved',
+            'icon' => 'success',
+            'timeout' => 3000
+        ]);
     }
 
     public function getUserProperty()

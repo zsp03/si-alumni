@@ -24,9 +24,9 @@ class EventServiceProvider extends ServiceProvider
 //        TwoFactorAuthenticationChallenged::class => [
 //            SendTwoFactorCodeListener::class,
 //        ],
-//        TwoFactorAuthenticationEnabled::class => [
-//            SendTwoFactorCodeListener::class,
-//        ],
+        TwoFactorAuthenticationEnabled::class => [
+            SendTwoFactorCodeListener::class,
+        ],
     ];
 
     /**
