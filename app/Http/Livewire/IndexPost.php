@@ -3,32 +3,34 @@
 namespace App\Http\Livewire;
 
 use App\Models\Post;
+use Illuminate\Support\Collection;
 use Livewire\Component;
 
 class IndexPost extends Component
 {
     public $perPage = 4;
-    protected $listeners = [
-      'increasePerPage'
-    ];
-    public function increasePerPage($count)
+    public $readyToLoad = false;
+    public $postsCount;
+
+    public function loadMore($count)
     {
         $this->perPage += $count;
     }
-    public function loadMore($counts)
+    public function loadPosts()
     {
-        $this->emit('increasePerPage', $counts);
+        $this->postsCount = Post::all()->count();
+        $this->readyToLoad = true;
     }
     public function render()
     {
-        $listPosts = Post::all();
-        $postsCount = $listPosts->count();
+        $listPosts = Post::with('tags')
+            ->latest()
+            ->take($this->perPage)
+            ->paginate($this->perPage);
 
         return view('livewire.index-post',[
-            'dataPosts' => $listPosts
-                ->sortByDesc('created_at')
-                ->paginate($this->perPage),
-            'postsCount' => $postsCount
+            'dataPosts' => $this->readyToLoad ? $listPosts : new Collection(),
+            'postsCount' => $this->postsCount
         ]);
     }
 }
