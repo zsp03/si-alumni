@@ -5,12 +5,12 @@
 ])
 
 <div {{ $attributes->merge(['class' => 'duration-300 hover:scale-[1.005] border border-gray-200 bg-white shadow-md rounded-md max-w-sm mx-auto hover:shadow-md hover:shadow-gray-500 group-hover:no-underline focus:no-underline dark:bg-gray-900']) }}>
-    <a href="{{ $href }}" class="lg:col-span-7">
+    <a x-data="{ loaded : false }" href="{{ $href }}" class="lg:col-span-7">
+        <div :class="loaded ? 'hidden' : null" class="skeleton w-full rounded-t-md @if($size == 'big') lg:rounded-tr-none lg:rounded-l-md h-64 sm:h-96 @else h-44 @endif dark:bg-gray-500"></div>
         <img
-            x-data="{ loaded : false }"
             x-init="loaded = Boolean($el.complete && $el.naturalWidth && $el.naturalHeight)"
             @load="loaded = true"
-            :class="loaded ? null : 'skeleton'"
+            :class="loaded ? null : 'hidden'"
             alt="featured-image" role="presentation" class="object-cover w-full rounded-t-md @if($size == 'big') lg:rounded-tr-none lg:rounded-l-md h-64 sm:h-96 @else h-44 @endif dark:bg-gray-500" src="{{ $post->image_featured_url !== null ? $post->image_featured_url : 'https://source.unsplash.com/random/480x360?'. rand(1,50) }}">
     </a>
     <div class="my-auto w-fit flex flex-col p-5 @if($size == 'big') lg:col-span-5 @endif">
