@@ -1,6 +1,5 @@
 <div
     x-init="openChatBox = window.innerWidth > 640"
-    x-on:resize.window = "openChatBox = window.innerWidth > 640"
     :class="openChatBox ? '!flex' : null"
     class="hidden w-full flex-col bg-white overflow-y-auto border-b rounded-r-md">
     <span wire:loading.class.remove="hidden" class="hidden  m-auto loading loading-dots loading-lg"></span>

@@ -1,5 +1,5 @@
 <div
-    x-on:resize.window = "openChatThread = (window.innerWidth < 640) && openChatBox ? false : window.innerWidth > 0"
+    x-on:resize.window = "openChatThread = (window.innerWidth < 640) && openChatBox ? false : true"
     x-show="openChatThread"
     class="w-full sm:max-w-xs bg-white flex flex-col overflow-y-auto border-r">
     <div class="p-4 w-full z-30 flex flex-col gap-2 shadow">
