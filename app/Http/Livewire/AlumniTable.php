@@ -12,6 +12,7 @@ class AlumniTable extends Component
     public $search;
     public $showingUserProfileCard = false;
     public $dataAlumni;
+    protected $listeners = ['closeUserProfileCard'];
     use WithPagination;
 
     protected $queryString = [
@@ -25,7 +26,10 @@ class AlumniTable extends Component
             'dataAlumnis' => $dataAlumnis,
         ]);
     }
-
+    public function closeUserProfileCard()
+    {
+        $this->showingUserProfileCard = false;
+    }
     public function showUserProfileCard(User $alumni){
         $this->dataAlumni = $alumni;
         $this->showingUserProfileCard = true;

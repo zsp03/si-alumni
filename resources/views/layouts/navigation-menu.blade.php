@@ -33,6 +33,9 @@
                 <x-nav-link :href="route('newsletter')" :active="request()->routeIs('newsletter')">
                     {{ __('Newsletter') }}
                 </x-nav-link>
+                <x-nav-link :href="route('messages')" :active="request()->routeIs('messages')">
+                    {{ __('Messages') }}
+                </x-nav-link>
                 <x-nav-link href='https://alumni.unhas.ac.id/dana-abadi' target="_blank" :active="request()->routeIs('')">
                     {{ __('Donasi') }}
                 </x-nav-link>
@@ -178,6 +181,9 @@
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('newsletter')" :active="request()->routeIs('newsletter')">
                 {{ __('Newsletter') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('messages')" :active="request()->routeIs('messages')">
+                {{ __('Messages') }}
             </x-responsive-nav-link>
             <x-responsive-nav-link href='https://alumni.unhas.ac.id/dana-abadi' :active="request()->routeIs('')">
                 {{ __('Donasi') }}

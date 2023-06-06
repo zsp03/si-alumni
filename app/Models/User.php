@@ -2,10 +2,10 @@
 
 namespace App\Models;
 
+use Cmgmyr\Messenger\Traits\Messagable;
 use Filament\Models\Contracts\FilamentUser;
 use Filament\Models\Contracts\HasAvatar;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -22,6 +22,7 @@ class User extends Authenticatable implements FilamentUser, HasAvatar, MustVerif
     use HasProfilePhoto;
     use Notifiable;
     use TwoFactorAuthenticatable;
+    use Messagable;
 
     /**
      * The attributes that are mass assignable.

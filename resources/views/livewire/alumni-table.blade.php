@@ -79,13 +79,16 @@
     </div>
 
     @if (!empty($search) && !empty($dataAlumnis) && !empty($dataAlumni))
-    <x-wireui.modal align='center' blur="sm" wire:model="showingUserProfileCard">
-        <x-profile-card :user="$dataAlumni" class="shadow">
-            <a href="{{ route('profile.show') }}"
-               class=" btn rounded-lg min-h-[40px] h-fit bg-prusblue normal-case border-none text-sm font-medium text-white shadow-md">
-                Kirim Pesan</a>
-        </x-profile-card>
-    </x-wireui.modal>
+        <x-wireui.modal align='center' blur="sm" wire:model="showingUserProfileCard">
+            <x-profile-card :user="$dataAlumni" class="shadow">
+                <a wire:click="$emit('showCreateModal')"
+                   class=" btn rounded-lg min-h-[40px] h-fit bg-prusblue normal-case border-none text-sm font-medium text-white shadow-md">
+                    Kirim Pesan</a>
+                @livewire('message.show-message-create', ['receiverOneId' => $dataAlumni->id, 'isSelectDisabled' => true], key($dataAlumni->id))
+
+            </x-profile-card>
+        </x-wireui.modal>
+
     @endif
 
     @if (!empty($search))

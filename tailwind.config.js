@@ -39,6 +39,6 @@ module.exports = {
         require('@tailwindcss/typography'),
         require('tw-elements/dist/plugin'),
         require('daisyui'),
-
+        require('tailwind-scrollbar'),
     ],
 };
