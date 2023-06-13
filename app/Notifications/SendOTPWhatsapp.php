@@ -46,10 +46,10 @@ class SendOTPWhatsapp extends Notification
     public function toWhatsapp($notifiable)
     {
         return WhatsAppTemplate::create()
-            ->name('verification_code') // Name of your configured template
+            ->name('two_factor_code') // Name of your configured template
             ->language('id')
-            ->body(Component::text($notifiable->name))
             ->body(Component::text($this->getTwoFactorCode($notifiable)))
+            ->buttons(Component::urlButton([$this->getTwoFactorCode($notifiable)]))
             ->to($notifiable->phone_number);
     }
 

@@ -4096,16 +4096,16 @@
         },
         {
             "name": "netflie/laravel-notification-whatsapp",
-            "version": "v1.1.0",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/netflie/laravel-notification-whatsapp.git",
-                "reference": "81f3f2b080bfcb4f61ce136b7e8ae4541bac882f"
+                "reference": "0485e6fe1e0eeafc28842b8cb77a1a6563c68a9c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/netflie/laravel-notification-whatsapp/zipball/81f3f2b080bfcb4f61ce136b7e8ae4541bac882f",
-                "reference": "81f3f2b080bfcb4f61ce136b7e8ae4541bac882f",
+                "url": "https://api.github.com/repos/netflie/laravel-notification-whatsapp/zipball/0485e6fe1e0eeafc28842b8cb77a1a6563c68a9c",
+                "reference": "0485e6fe1e0eeafc28842b8cb77a1a6563c68a9c",
                 "shasum": ""
             },
             "require": {
@@ -4155,9 +4155,9 @@
             ],
             "support": {
                 "issues": "https://github.com/netflie/laravel-notification-whatsapp/issues",
-                "source": "https://github.com/netflie/laravel-notification-whatsapp/tree/v1.1.0"
+                "source": "https://github.com/netflie/laravel-notification-whatsapp/tree/1.2.0"
             },
-            "time": "2023-03-21T15:39:11+00:00"
+            "time": "2023-06-12T16:29:22+00:00"
         },
         {
             "name": "netflie/whatsapp-cloud-api",
