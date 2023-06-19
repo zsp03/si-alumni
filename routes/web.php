@@ -25,7 +25,7 @@ Route::middleware([
     })->name('home');
     Route::get('/jobs', function () {
         return view('pages.jobs.index');
-    })->name('lowongan');
+    })->name('jobs');
     Route::get('/jobs/1', function () {
         return view('pages.jobs.show');
     })->name('jobs-post');

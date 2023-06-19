@@ -17,11 +17,11 @@
                 </div>
             </div>
             <!-- Navigation Links -->
-            <div class="hidden space-x-4 items-center mx-auto lg:flex">
+            <div class="hidden space-x-2 xl:space-x-6 items-center mx-auto lg:flex">
                 <x-nav-link href="{{ route('home') }}" :active="request()->routeIs('home')">
                     {{ __('Home') }}
                 </x-nav-link>
-                <x-nav-link :href="route('lowongan')" :active="request()->routeIs('lowongan')">
+                <x-nav-link :href="route('jobs')" :active="request()->routeIs('jobs')">
                     {{ __('Jobs') }}
                 </x-nav-link>
                 <x-nav-link :href="route('event')" :active="request()->routeIs('event')">
@@ -173,7 +173,7 @@
             <x-responsive-nav-link :href="route('database')" :active="request()->routeIs('database')">
                 {{ __('Database') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('lowongan')" :active="request()->routeIs('lowongan')">
+            <x-responsive-nav-link :href="route('jobs')" :active="request()->routeIs('jobs')">
                 {{ __('Jobs') }}
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('event')" :active="request()->routeIs('event')">

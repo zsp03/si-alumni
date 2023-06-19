@@ -1,12 +1,14 @@
 <x-guest-layout>
     @section('title', 'Two-Factor')
-    <div x-data="{ recovery: false }" class="mx-auto mt-8 mb-0 max-w-md">
-        <div class="mb-4 text-sm text-gray-600" x-show="! recovery">
-            {{ __('Please confirm access to your account by entering the authentication code provided by your authenticator application.') }}
-        </div>
+    <div x-data="{ recovery: false }" class="mx-auto mt-2 mb-0 max-w-md">
+        <div class="text-center px-6 max-w-md">
+            <div class="mb-4 text-sm text-gray-600" x-show="! recovery">
+                {{ __('Please confirm access to your account by entering the authentication code provided by your authenticator application.') }}
+            </div>
 
-        <div class="mb-4 text-sm text-gray-600" x-show="recovery">
-            {{ __('Please confirm access to your account by entering one of your emergency recovery codes.') }}
+            <div class="mb-4 text-sm text-gray-600" x-show="recovery">
+                {{ __('Please confirm access to your account by entering one of your emergency recovery codes.') }}
+            </div>
         </div>
 
         <div class="flex flex-col gap-2 items-center mt-4">
@@ -34,7 +36,7 @@
 
         <x-validation-errors class="mb-4" />
 
-        <form method="POST" action="{{ route('two-factor.login') }}">
+        <form class="mx-auto max-w-xs mt-4" method="POST" action="{{ route('two-factor.login') }}">
             @csrf
 
             <div class="mt-1" x-show="! recovery">
@@ -48,8 +50,8 @@
             </div>
 
             <div class="flex w-full items-center justify-start mt-4">
-                <button type="submit" class="btn px-10 bg-prusblue">
-                    {{ __('Log in') }}
+                <button type="submit" class="w-full inline-block rounded-lg bg-blue-500 px-5 py-3 text-sm font-medium text-white">
+                    {{ __('Masuk') }}
                 </button>
             </div>
 

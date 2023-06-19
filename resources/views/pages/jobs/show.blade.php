@@ -54,7 +54,7 @@
                     <div class="w-full lg:w-[500px] px-4 lg:-mt-44">
                         <div class="bg-white relative border rounded-lg p-8 sm:p-12 shadow-lg">
                             <div class="flex justify-center items-center gap-2 pb-2">
-                                <button class="btn btn-wide bg-prusblue">Info Lebih Lanjut</button>
+                                <button class="btn btn-wide bg-gray-300 hover:bg-prusblue hover:text-white">Info Lebih Lanjut</button>
                             </div>
                             <ul>
                                 <li class="flex items-center py-3">

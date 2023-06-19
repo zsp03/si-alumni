@@ -26,7 +26,7 @@
             <x-application-logo class="self-center h-20 w-20 mb-2"></x-application-logo>
             <h1 class="text-2xl font-bold sm:text-3xl text-red-600">Portal Alumni</h1>
 
-            <p class="mt-4 text-gray-500">
+            <p class="mt-4 font-semibold text-gray-500">
                 Selamat datang di Portal Alumni Universitas Hasanuddin
             </p>
         </div>

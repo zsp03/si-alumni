@@ -13,15 +13,19 @@ class ReplyMessageForm extends Component
     public $thread;
     public function sendReply(Thread $thread)
     {
-        Message::create([
+        if ($this->body == null){
+            return null;
+        }
+
+        $sentMessage = Message::create([
             'thread_id' => $thread->id,
             'user_id' => Auth::id(),
             'body' => $this->body,
         ]);
 
         $this->reset('body');
-        $this->emit('refreshThreadList');
-        $this->emit('loadThread', $thread->id);
+        // $this->emit('refreshThreadList');
+        $this->emit('pushNewMessage', $sentMessage->id);
     }
     public function render()
     {

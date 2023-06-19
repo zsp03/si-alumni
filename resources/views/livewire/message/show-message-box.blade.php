@@ -1,7 +1,7 @@
 <div
     x-init="openChatBox = window.innerWidth > 640"
-    :class="openChatBox ? '!flex' : null"
-    class="hidden w-full flex-col bg-white overflow-y-auto border-b rounded-r-md">
+    :style="openChatBox ? 'display: flex' : null"
+    class="hidden md:flex w-full flex-col bg-white overflow-y-auto border-b rounded-r-md">
     <span wire:loading.class.remove="hidden" class="hidden  m-auto loading loading-dots loading-lg"></span>
     @if($selectedThread)
         <div x-data="{ showBackButton : false }" wire:loading.remove class="h-20 flex justify-between items-center border-b p-4">
