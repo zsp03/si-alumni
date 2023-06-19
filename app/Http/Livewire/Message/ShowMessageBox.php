@@ -2,19 +2,21 @@
 
 namespace App\Http\Livewire\Message;
 
+use Cmgmyr\Messenger\Models\Message;
 use Cmgmyr\Messenger\Models\Thread;
-use Illuminate\Support\Collection;
-use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
-use WireUi\Traits\Actions;
 
 class ShowMessageBox extends Component
 {
     public $thread;
     public $messages;
     public $selectedThread = false;
-    protected $listeners = ['loadThread', 'deselectThread', 'refreshMessages' => '$refresh'];
+    protected $listeners = ['loadThread', 'deselectThread', 'pushNewMessage'];
 
+    public function pushNewMessage(Message $message)
+    {
+        $this->messages->push($message);
+    }
     public function loadThread(Thread $thread)
     {
         $this->thread = $thread;

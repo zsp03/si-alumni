@@ -25,14 +25,14 @@ class IndexPostByTags extends Component
 
     public function mount($tags)
     {
+        if(Tag::where('name', '=', $tags)->doesntExist()){
+            abort('404');
+        }
+
         $this->tags = $tags;
     }
     public function render()
     {
-        if(Tag::where('name', '=', $this->tags)->doesntExist()){
-            abort('404');
-        }
-
         $listPosts = Post::with('tags')->whereHas('tags',function ($query) {
             return $query->where('name', 'LIKE', '%' .$this->tags.'%');
         });
