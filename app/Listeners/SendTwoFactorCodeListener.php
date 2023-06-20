@@ -30,11 +30,19 @@ class SendTwoFactorCodeListener
      */
     public function handle(TwoFactorAuthenticationEnabled $event)
     {
-        if (!$event->user->phone_number == null){
-            $event->user->notify(app(SendOTPWhatsapp::class));
+        if (config('two-factor-notification.whatsapp-enabled')){
+            if (!$event->user->phone_number == null){
+                $event->user->notify(app(SendOTPWhatsapp::class));
+            }
         }
 
-        $event->user->notify(app(SendOTPEmail::class));
-//        $event->user->notify(app(SendOTPTwilio::class));
+        if (config('two-factor-notification.email-enabled')){
+            $event->user->notify(app(SendOTPEmail::class));
+        }
+
+        // if (config('two-factor-notification.twilio-enabled')){
+        //     $event->user->notify(app(SendOTPTwilio::class));
+        // }
+
     }
 }

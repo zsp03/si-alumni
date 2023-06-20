@@ -1,6 +1,7 @@
 <x-guest-layout>
     @section('title', 'Two-Factor')
-    <div x-data="{ recovery: false }" class="mx-auto mt-2 mb-0 max-w-md">
+    <x-wireui.notifications position="top-left" />
+    <div x-data="{ recovery: false }" class="mx-auto mb-0 max-w-md">
         <div class="text-center px-6 max-w-md">
             <div class="mb-4 text-sm text-gray-600" x-show="! recovery">
                 {{ __('Please confirm access to your account by entering the authentication code provided by your authenticator application.') }}
@@ -34,7 +35,7 @@
             </button>
         </div>
 
-        <x-validation-errors class="mb-4" />
+        <x-validation-errors class="mx-auto max-w-xs mb-4 mt-4" />
 
         <form class="mx-auto max-w-xs mt-4" method="POST" action="{{ route('two-factor.login') }}">
             @csrf

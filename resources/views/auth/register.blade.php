@@ -1,6 +1,6 @@
 <x-guest-layout>
     @section('title','Register')
-    <form method="POST" action="{{ route('register') }}" class="mx-auto max-w-md mt-8">
+    <form method="POST" action="{{ route('register') }}" class="mx-auto max-w-md mt-2">
         @csrf
 
         <!-- Name -->
@@ -13,7 +13,7 @@
         <!-- Email Address -->
         <div class="mt-4">
             <x-label for="email" :value="__('Email')" />
-            <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" />
+            <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="email" />
             <x-input-error for="email" :messages="$errors->get('email')" class="mt-2" />
         </div>
 

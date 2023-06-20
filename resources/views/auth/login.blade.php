@@ -1,7 +1,7 @@
 <x-guest-layout>
     @section('title','Login')
     <x-auth-session-status class="mb-4" :status="session('status')" />
-    <form method="POST" action="{{ route('login') }}" class="mx-auto mt-8 mb-0 max-w-md">
+    <form method="POST" action="{{ route('login') }}" class="mx-auto mt-2 mb-0 max-w-md">
         @csrf
         <div class="space-y-4">
             <div>
