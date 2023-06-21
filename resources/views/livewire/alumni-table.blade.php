@@ -32,6 +32,10 @@
                         <tr>
                             <th scope="col"
                                 class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase dark:text-gray-400">
+                                NIM
+                            </th>
+                            <th scope="col"
+                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase dark:text-gray-400">
                                 Nama
                             </th>
                             <th scope="col"
@@ -40,36 +44,47 @@
                             </th>
                             <th scope="col"
                                 class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase dark:text-gray-400">
-                                Email
+                                Fakultas
                             </th>
                             <th scope="col"
-                                class="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase dark:text-gray-400">
-                                Instagram
+                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase dark:text-gray-400">
+                                Nomor Telepon
+                            </th>
+                            <th scope="col"
+                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase dark:text-gray-400">
+                                Email
                             </th>
                         </tr>
                         </thead>
                         <tbody class="divide-y divide-gray-200 dark:divide-gray-700">
                         @if(!empty($search))
-                            @foreach($dataAlumnis as $alumni)
-                                <tr wire:click="showUserProfileCard({{$alumni->id}})" class="hover:bg-gray-300">
+                            @forelse($dataAlumnis as $alumni)
+                                <tr wire:click="showUserProfileCard({{$alumni->user_id}})"
+                                    class="hover:bg-gray-300">
                                     <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-gray-200">
-                                        {{ $alumni -> name }}
+                                        {{ $alumni->nim }}
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-gray-200">
+                                        {{ $alumni->name }}
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-gray-200">
-                                        {{ $alumni -> jurusan }}
+                                        {{ $alumni->program_studi }}
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-gray-200">
-                                        {{ $alumni -> email }}
+                                        {{ $alumni->fakultas }}
                                     </td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                        <a class="text-blue-500 hover:text-blue-700"
-                                           href="https://instagram.com/{{ substr(($alumni -> instagram_account), 1)}}"
-                                           target="_blank">
-                                            {{ $alumni -> instagram_account }}
-                                        </a>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-gray-200">
+                                        {{ $alumni->phone_number }}
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-gray-200">
+                                        {{ $alumni->email }}
                                     </td>
                                 </tr>
-                            @endforeach
+                            @empty
+                                <tr> <td colspan="6" class="text-center p-4"> No data found </td> </tr>
+                            @endforelse
+                        @else
+                            <tr> <td colspan="6" class="text-center p-4"> Ketik nama untuk memulai pencarian. </td> </tr>
                         @endif
                         </tbody>
                     </table>
@@ -81,11 +96,12 @@
     @if (!empty($search) && !empty($dataAlumnis) && !empty($dataAlumni))
         <x-wireui.modal align='center' blur="sm" wire:model="showingUserProfileCard">
             <x-profile-card :user="$dataAlumni" class="shadow">
-                <a wire:click="$emit('showCreateModal')"
-                   class=" btn rounded-lg min-h-[40px] h-fit bg-prusblue normal-case border-none text-sm font-medium text-white shadow-md">
-                    Kirim Pesan</a>
+                @if($dataAlumni->id !== null)
+                    <a wire:click="$emit('showCreateModal')"
+                       class=" btn rounded-lg min-h-[40px] h-fit bg-prusblue normal-case border-none text-sm font-medium text-white shadow-md">
+                        Kirim Pesan</a>
+                @endif
                 @livewire('message.show-message-create', ['receiverOneId' => $dataAlumni->id, 'isSelectDisabled' => true], key($dataAlumni->id))
-
             </x-profile-card>
         </x-wireui.modal>
 

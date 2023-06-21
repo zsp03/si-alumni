@@ -10,9 +10,8 @@
     <x-slot name="form">
 
         <div class="col-span-6 sm:col-span-4">
-            <x-label for="jurusan" value="{{ __('Jurusan') }}" />
-            <x-wireui.input id="jurusan" type="text" class="mt-1 block w-full" wire:model.defer="state.jurusan" />
-            <x-input-error for="jurusan" class="mt-2" />
+            <x-label for="jurusan" value="{{ __('Program Studi') }}" />
+            <x-wireui.input id="jurusan" type="text" class="mt-1 block w-full" disabled wire:model.defer="state.jurusan" />
         </div>
 
         <div class="col-span-6 sm:col-span-4">

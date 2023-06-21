@@ -29,9 +29,7 @@ Route::middleware([
     Route::get('/jobs', function () {
         return view('pages.jobs.index');
     })->name('jobs');
-    Route::get('/jobs/1', function () {
-        return view('pages.jobs.show');
-    })->name('jobs-post');
+    Route::get('/jobs/{job:id}', \App\Http\Livewire\ShowJob::class)->name('jobs-post');
     Route::get('/messages', function () {
         return view('pages.messages.show');
     })->name('messages');

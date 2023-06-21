@@ -1,5 +1,6 @@
 <x-guest-layout>
     @section('title','Register')
+    <x-wireui.errors class="max-w-md mx-auto"/>
     <form method="POST" action="{{ route('register') }}" class="mx-auto max-w-md mt-2">
         @csrf
 
@@ -7,14 +8,18 @@
         <div>
             <x-label for="name" :value="__('Name')" />
             <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
-            <x-input-error for="name" :messages="$errors->get('name')" class="mt-2" />
+        </div>
+
+        <!-- Name -->
+        <div class="mt-4">
+            <x-label for="nim" :value="__('NIM')" />
+            <x-input id="nim" class="block mt-1 w-full" type="text" name="nim" :value="old('nim')" required autofocus autocomplete="nim" />
         </div>
 
         <!-- Email Address -->
         <div class="mt-4">
             <x-label for="email" :value="__('Email')" />
-            <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="email" />
-            <x-input-error for="email" :messages="$errors->get('email')" class="mt-2" />
+            <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="email" />
         </div>
 
         <!-- Password -->
@@ -25,8 +30,6 @@
                           type="password"
                           name="password"
                           required autocomplete="new-password" />
-
-            <x-input-error for="password" :messages="$errors->get('password')" class="mt-2" />
         </div>
 
         <!-- Confirm Password -->
@@ -36,8 +39,6 @@
             <x-input id="password_confirmation" class="block mt-1 w-full"
                           type="password"
                           name="password_confirmation" required autocomplete="new-password" />
-
-            <x-input-error for="password" :messages="$errors->get('password_confirmation')" class="mt-2" />
         </div>
 
         <div class="flex items-center justify-end mt-4">

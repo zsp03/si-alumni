@@ -11,9 +11,6 @@ use WireUi\Traits\Actions;
 class UpdateAdditionalInformationForm extends Component
 {
     use Actions;
-    protected $rules = [
-        'jurusan' => 'required|min:6',
-    ];
     public function mount()
     {
         $this->state = Auth::user()->withoutRelations()->toArray();
@@ -26,12 +23,11 @@ class UpdateAdditionalInformationForm extends Component
         Validator::make($this->state, [
             'jurusan' => ['required', 'string', 'max:255'],
             'angkatan' => ['required', 'integer', 'max_digits:4'],
-            'instagram_account' => ['string', 'max:255'],
-            'profile_desc' => ['string', 'max:255'],
+            'instagram_account' => ['nullable','string', 'max:255'],
+            'profile_desc' => ['nullable','string', 'max:255'],
         ])->validateWithBag('updateAdditionalInformation');
 
         $user = Auth::user();
-        $user->jurusan = $this->state['jurusan'];
         $user->angkatan = $this->state['angkatan'];
         $user->instagram_account = $this->state['instagram_account'];
         $user->profile_desc = $this->state['profile_desc'];

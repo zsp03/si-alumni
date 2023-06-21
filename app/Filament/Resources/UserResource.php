@@ -20,7 +20,7 @@ class UserResource extends Resource
 {
     protected static ?string $model = User::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-users';
+    protected static ?string $navigationIcon = 'heroicon-o-user-circle';
 
     public static function form(Form $form): Form
     {
@@ -32,7 +32,6 @@ class UserResource extends Resource
                     ->maxLength(255),
                 Forms\Components\TextInput::make('jurusan')
                     ->disabled(fn ($context) => $context == 'edit')
-                    ->required(fn (string $context): bool => $context === 'create')
                     ->maxLength(255),
                 Forms\Components\TextInput::make('email')
                     ->email()
@@ -48,6 +47,7 @@ class UserResource extends Resource
                         '0' => 'Admin',
                         '4' => 'Alumni',
                     ])
+                    ->default('0')
                     ->disablePlaceholderSelection()
                     ->required(),
             ]);

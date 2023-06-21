@@ -30,8 +30,9 @@ class User extends Authenticatable implements FilamentUser, HasAvatar, MustVerif
      * @var array<int, string>
      */
     protected $fillable = [
+        'nim',
         'name',
-        'jurusan',
+        'program_studi',
         'angkatan',
         'instagram_account',
         'profile_desc',
