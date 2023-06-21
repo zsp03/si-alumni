@@ -83,9 +83,9 @@
                 </div>
         
                 <div class="z-10 order-2 md:order-1 w-full h-full md:w-3/5 flex items-center -mt-6 md:mt-0">
-                    <div class="p-8 md:pr-18 md:pl-14 md:py-12 mx-2 md:mx-0 h-full bg-white rounded-lg md:rounded-none md:rounded-l-lg shadow-xl md:shadow-none">
+                    <div class="p-8 md:pr-18 md:pl-14 md:py-12 mx-2 md:mx-0 h-full bg-white rounded-lg md:rounded-none md:rounded-l-lg shadow-xl md:shadow-none ">
                         <h3 class="hidden md:block font-bold text-2xl text-gray-700">Dana Abadi Untuk Unhas Maju</h3>
-                        <p class="text-gray-600 text-justify">Dana Abadi UNHAS merupakan dana investasi yang diperoleh dari donasi para alumni dan simpatisan
+                        <p class="text-gray-600 text-justify md:line-clamp-5">Dana Abadi UNHAS merupakan dana investasi yang diperoleh dari donasi para alumni dan simpatisan
                             Universitas Hasanuddin. Dana abadi bersifat simpanan yang akan dikembangkan dan hasilnya akan
                             dimanfaatkan untuk meringankan beban biaya pendidikan yang harus dibayarkan mahasiswa dalam
                             menempuh studinya, serta akan dimanfaatkan oleh dosen dan mahasiswa dalam mengembangkan riset,
@@ -177,10 +177,10 @@
             </div>
             <div class="flex flex-wrap items-center">
                 <div class="w-full px-4 mb-10 md:w-1/2 lg:mb-0 ">
-                    <h2 class="mb-4 text-2xl font-bold text-gray-700 dark:text-gray-300">
+                    <h2 class="mb-4 text-2xl font-bold text-gray-700 dark:text-gray-300 ">
                         Kami menyediakan fasilitas yang lebih baik
                     </h2>
-                    <p class="mb-4 text-base leading-7 text-gray-500 dark:text-gray-400">
+                    <p class="mb-4 text-base leading-7 text-gray-500 dark:text-gray-400 ">
                         Portal Alumni ini didirikan sebagai wadah untuk menjaga hubungan antara alumni, universitas, dan mahasiswa saat ini. Tujuan kami adalah memfasilitasi interaksi dan kolaborasi antara alumni, berbagi pengalaman, informasi karir, dan membangun jejaring yang bermanfaat.
                     </p>
                     <ul class="mb-10">
