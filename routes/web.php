@@ -14,6 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::redirect('/', 'login');
+Route::get('/landing', function () {
+    return view('pages.landing.index');
+})->name('landing');
 
 Route::middleware([
     'auth:sanctum',
