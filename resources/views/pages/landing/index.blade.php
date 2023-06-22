@@ -1,5 +1,5 @@
 <x-app-layout>
-    @section('title', 'Database')
+    @section('title', 'Welcome')
     <x-slot name="header">
     </x-slot>
     <section class=" ">
