@@ -16,7 +16,9 @@ class Alumni extends Model
         'fakultas',
         'jenis_kelamin',
         'phone_number',
+        'show_phone_number',
         'email',
+        'show_email',
         'user_id'
     ];
 }

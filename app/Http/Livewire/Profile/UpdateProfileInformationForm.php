@@ -12,7 +12,6 @@ class UpdateProfileInformationForm extends Component
 {
     use WithFileUploads;
     use Actions;
-
     /**
      * The component's state.
      *

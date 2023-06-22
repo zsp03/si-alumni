@@ -47,7 +47,7 @@
             </a>
 
             <button type="submit" class="inline-block ml-4 rounded-lg bg-gray-800 px-5 py-3 text-sm font-medium text-white">
-                Register
+                {{ __('Register') }}
             </button>
         </div>
     </form>

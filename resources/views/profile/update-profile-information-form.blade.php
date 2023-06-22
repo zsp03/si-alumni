@@ -81,6 +81,12 @@
                 @endif
             @endif
         </div>
+
+        <div class="col-span-6 sm:col-span-4">
+            <x-label class="mb-1"  value="{{ __('Perlihatkan surel di Database?') }}" />
+            <x-wireui.toggle lg id="show_email" wire:model.defer="state.show_email" />
+        </div>
+
         <!-- Phone -->
         <div class="col-span-6 sm:col-span-4">
             <x-label for="phone_number" value="{{ __('Nomor Telepon') }}" />
@@ -89,6 +95,11 @@
                                       hint="Kode negara-Nomor (ex:62821234567)"
                                       wire:model.defer="state.phone_number" />
             <x-input-error for="phone" class="mt-2" />
+        </div>
+
+        <div class="col-span-6 sm:col-span-4">
+            <x-label class="mb-1" value="{{ __('Perlihatkan nomor di Database?') }}" />
+            <x-wireui.toggle lg id="show_phone_number" wire:model.defer="state.show_phone_number" />
         </div>
     </x-slot>
 

@@ -74,10 +74,10 @@
                                         {{ $alumni->fakultas }}
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-gray-200">
-                                        {{ $alumni->phone_number }}
+                                        {{ $alumni->show_phone_number ? $alumni->phone_number : '' }}
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-gray-200">
-                                        {{ $alumni->email }}
+                                        {{ $alumni->show_email ? $alumni->email : '' }}
                                     </td>
                                 </tr>
                             @empty

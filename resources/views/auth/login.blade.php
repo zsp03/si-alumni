@@ -1,6 +1,7 @@
 <x-guest-layout>
     @section('title','Login')
     <x-auth-session-status class="mb-4" :status="session('status')" />
+    <x-wireui.errors class="max-w-md mx-auto"/>
     <form method="POST" action="{{ route('login') }}" class="mx-auto mt-2 mb-0 max-w-md">
         @csrf
         <div class="space-y-4">
@@ -13,7 +14,6 @@
                     <span class="absolute inset-y-0 right-0 grid place-content-center px-4">
                         <i class="iconoir-at-sign text-gray-400 text-xl"></i>
                     </span>
-                    <x-input-error for="email" :messages="$errors->get('email')" class="mt-2" />
                 </div>
             </div>
 
@@ -25,7 +25,6 @@
                     <span @click="show = ! show" class="absolute inset-y-0 right-0 grid place-content-center px-4">
                     <i class="text-gray-400 text-xl" :class="show ? 'iconoir-eye-empty' : 'iconoir-eye-off'"></i>
                     </span>
-                    <x-input-error for="password" :messages="$errors->get('password')" class="mt-2" />
                 </div>
             </div>
 
@@ -39,12 +38,12 @@
         <div class="flex flex-col mt-4 gap-4">
             <div class="flex items-center">
                 <button type="submit" class="w-full inline-block rounded-lg bg-blue-500 px-5 py-3 text-sm font-medium text-white">
-                    Masuk
+                    {{ __('Login') }}
                 </button>
             </div>
             <p class="text-sm text-gray-500 text-center">
-                No account?
-                <a class="underline" href="{{ route('register') }}">Sign up</a>
+                {{  __('No account?') }}
+                <a class="underline" href="{{ route('register') }}">{{ __('Register') }}</a>
             </p>
         </div>
 

@@ -21,10 +21,14 @@ class CreateNewUser implements CreatesNewUsers
     {
         Validator::make($input, [
             'name' => ['required', 'string', 'max:255'],
-            'nim' => ['required', 'string', 'max:255', 'exists:alumnis'],
+            'nim' => ['required', 'string', 'max:255', 'exists:alumnis', 'unique:alumnis'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => $this->passwordRules(),
             'terms' => Jetstream::hasTermsAndPrivacyPolicyFeature() ? ['accepted', 'required'] : '',
+        ], [
+            'nim.exists' => 'NIM anda tidak ditemukan, hubungi admin di dirhapda@unhas.ac.id',
+            'nim.unique' => 'NIM anda telah terdaftar sebagai User. Jika anda belum pernah mendaftar, hubungi admin di dirhapda@unhas.ac.id',
+            ''
         ])->validate();
 
         return User::create([

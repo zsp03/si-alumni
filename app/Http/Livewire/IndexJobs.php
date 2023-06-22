@@ -8,11 +8,19 @@ use Livewire\WithPagination;
 
 class IndexJobs extends Component
 {
+    public $search;
     use WithPagination;
+
+    protected $queryString = [
+        'search' => ['except' => '']
+    ];
 
     public function render()
     {
-        $jobs = Offering::latest()->paginate(4);
+        $jobs = Offering::where('name','like','%'.$this->search.'%')
+            ->latest()
+            ->get()
+            ->paginate(4);
         return view('livewire.index-jobs', [
             'jobs' => $jobs
         ]);

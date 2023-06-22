@@ -27,21 +27,21 @@
                     <!--First item-->
                     <div class=" relative float-left -mr-[100%] w-full h-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none bg-blue-50"
                         data-te-carousel-fade data-te-carousel-item data-te-carousel-active>
-                        <img src={{ asset('assets/image/B1.png') }}
+                        <img src="{{ asset('assets/image/B1.png') }}"
                             class="block w-auto h-auto  max-w-full max-h-full mx-auto object-contain object-center  rounded-md"
                             alt="Wild Landscape" />
                     </div>
                     <!--Second item-->
                     <div class="relative float-left -mr-[100%] hidden w-full h-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none bg-blue-50"
                         data-te-carousel-fade data-te-carousel-item>
-                        <img src={{ asset('assets/image/B2.png') }}
+                        <img src="{{ asset('assets/image/B2.png') }}"
                             class="block w-auto h-auto max-w-full max-h-full mx-auto object-contain object-center  rounded-md"
                             alt="Camera" />
                     </div>
                     <!--Third item-->
                     <div class="relative float-left -mr-[100%] hidden w-full h-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none bg-blue-50"
                         data-te-carousel-fade data-te-carousel-item>
-                        <img src={{ asset('assets/image/B3.png') }}
+                        <img src="{{ asset('assets/image/B3.png') }}"
                             class="block w-auto h-auto max-w-full max-h-full mx-auto object-contain object-center  rounded-md"
                             alt="Exotic Fruits" />
                     </div>
@@ -77,6 +77,7 @@
         </div>
 
         {{-- dana abadi --}}
+        <a id="dana-abadi" class="block relative invisible top-[-100px]"></a>
         <div class="container mx-auto my-5">
             <div class="relative rounded-lg flex flex-col md:flex-row items-center md:shadow-xl md:h-72 mx-2">
                 <div
@@ -96,13 +97,12 @@
                 </div>
 
                 <div class="z-10 order-2 md:order-1 w-full h-full md:w-3/5 flex items-center md:mt-0">
-                    <div
-                        class="p-8 md:pr-18 md:pl-14 md:pb-9 md:pt-14 mx-2 md:mx-0 h-full bg-white rounded-lg md:rounded-none md:rounded-l-lg shadow-xl md:shadow-none ">
+                    <div class="p-8 md:pr-18 md:pl-14 md:pb-9 md:pt-12 mx-2 md:mx-0 h-full bg-white rounded-lg md:rounded-none md:rounded-l-lg shadow-xl md:shadow-none ">
                         <h3 class="hidden md:block font-bold text-2xl text-gray-700">Dana Abadi Untuk Unhas Maju</h3>
-                        <p class="text-gray-600 text-justify lg:text-xl">Dana Abadi yang terkumpul ditampung pada
+                        <p class="text-gray-600 text-justify mt-2 lg:text-xl">Dana Abadi yang terkumpul ditampung pada
                             rekening bank Rektor Universitas Hasanuddin. Selanjutnya, dana tersebut tersebut dikelola
                             dan dikembangkan secara terus-menerus dalam berbagai instrumen investasi. </p>
-                        <a class="flex items-baseline mt-3 text-blue-600 hover:text-blue-900 focus:text-blue-900"
+                        <a class="flex items-baseline mt-3 text-blue-600 text-lg font-semibold hover:text-blue-900 focus:text-blue-900"
                             href="https://alumni.unhas.ac.id/dana-abadi">
                             <span>Donasi</span>
                             <span class="text-xs ml-1">&#x279c;</span>
@@ -113,70 +113,23 @@
         </div>
 
         {{-- news --}}
+        <a id="news" class="block relative invisible top-[-70px]"></a>
         <div class=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-4 mt-12 mb-14 ">
-            <article class="">
+            <article>
                 <div class="space-y-2 text-center">
-                    <h2 class="text-3xl font-poppins font-bold underline decoration-blue-900">NEWS</h2>
+                    <h2 class="text-3xl font-poppins font-bold decoration-blue-900">News and Events</h2>
                 </div>
-                <div class="mt-6 grid md:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-8 justify-center">
-                    <article
-                        class="bg-white group relative rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transform duration-200">
-                        <div class="relative w-full h-80 md:h-64 lg:h-44">
-                            <img src="https://cdn.pixabay.com/photo/2021/07/24/01/42/zebra-dove-6488440_960_720.jpg"
-                                alt="Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug."
-                                class="w-full h-full object-center object-cover">
-                        </div>
-                        <div class="px-3 py-4">
-                            <p class="text-base font-semibold text-gray-900 group-hover:text-indigo-600">
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                        </div>
-                    </article>
-                    <article
-                        class="bg-white group relative rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transform duration-200">
-                        <div class="relative w-full h-80 md:h-64 lg:h-44">
-                            <img src="https://cdn.pixabay.com/photo/2021/07/24/01/42/zebra-dove-6488440_960_720.jpg"
-                                alt="Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug."
-                                class="w-full h-full object-center object-cover">
-                        </div>
-                        <div class="px-3 py-4">
-                            <p class="text-base font-semibold text-gray-900 group-hover:text-indigo-600">
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                        </div>
-                    </article>
-                    <article
-                        class="bg-white group relative rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transform duration-200">
-                        <div class="relative w-full h-80 md:h-64 lg:h-44">
-                            <img src="https://cdn.pixabay.com/photo/2021/08/03/11/01/stairs-6519085_960_720.jpg"
-                                alt="Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug."
-                                class="w-full h-full object-center object-cover">
-                        </div>
-                        <div class="px-3 py-4">
-                            <p class="text-base font-semibold text-gray-900 group-hover:text-indigo-600">
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                        </div>
-                    </article>
-                    <article
-                        class="bg-white group relative rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transform duration-200">
-                        <div class="relative w-full h-80 md:h-64 lg:h-44">
-                            <img src="https://cdn.pixabay.com/photo/2021/09/12/17/43/parrot-feathers-6619082_960_720.jpg"
-                                alt="Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug."
-                                class="w-full h-full object-center object-cover">
-                        </div>
-                        <div class="px-3 py-4">
-                            <p class="text-base font-semibold text-gray-900 group-hover:text-indigo-600">
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                        </div>
-                    </article>
-                </div>
-                <a class="flex justify-end items-baseline mt-3 text-blue-600 hover:text-blue-900 focus:text-blue-900"
-                    href="https://alumni.unhas.ac.id/dana-abadi">
-                    <span>Liat Berita Selengkapnya</span>
+                @livewire('latest-posts')
+                <a class="flex justify-end items-baseline mt-6 text-lg font-semibold text-blue-600 hover:text-blue-900 focus:text-blue-900"
+                    href="{{ route('event') }}">
+                    <span>Lihat Berita Selengkapnya</span>
                     <span class="text-xs ml-1">&#x279c;</span>
                 </a>
             </article>
         </div>
 
         {{-- about us --}}
+        <a id="about-us" class="block relative invisible top-[-20px]"></a>
         <div class="py-10 lg:py-20 bg-blue-50 font-poppins dark:bg-gray-800">
             <div class="max-w-6xl py-4 mx-auto lg:py-6 md:px-6">
                 <div class="flex flex-wrap ">

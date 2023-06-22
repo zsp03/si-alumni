@@ -7,8 +7,7 @@
                 Database
             </div>
             <div class="font-normal text-xl text-white dark:text-gray-200 leading-tight pt-2">
-                Lorem, ipsum dolor sit amet consectetur adipisicing
-                elit.
+                Saling terhubung dengan para alumni, kita memperluas jaringan dan membangun kolaborasi.
             </div>
         </div>
     </x-slot>

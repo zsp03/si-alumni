@@ -13,7 +13,8 @@
                                 <h2 class="text-4xl max-w-[480px] font-semibold tracking-widest text-white uppercase title-font">
                                     {{ Auth::user()->name }}!</h2>
                             </div>
-                            <p class="max-w-[480px] text-lg font-light text-gray-300 md:text-lg">Di sini, Anda dapat terhubung kembali dengan teman sejawat, menjaga hubungan dengan alma mater, dan menjalin jaringan yang kuat. Bersama-sama, mari kita terus menginspirasi, berbagi pengetahuan, dan merayakan prestasi dalam komunitas alumni</p>
+                            <p class="max-w-[480px] text-lg font-light text-gray-300 md:text-lg">Mari terhubung kembali dengan teman sejawat, menjaga hubungan dengan alma mater, dan menjalin jaringan yang kuat. Bersama-sama, mari kita terus menginspirasi, berbagi pengetahuan, dan merayakan prestasi dalam komunitas alumni
+                            </p>
                             <div class="lg:mt-20 flex flex-col gap-4 items-center sm:items-start">
                                 <div class="flex flex-col gap-2">
                                     <h2 class="text-3xl font-semibold leading-tight lg:text-5xl text-white">Get in touch,

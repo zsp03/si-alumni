@@ -37,7 +37,9 @@ class User extends Authenticatable implements FilamentUser, HasAvatar, MustVerif
         'instagram_account',
         'profile_desc',
         'email',
+        'show_email',
         'phone_number',
+        'show_phone_number',
         'role',
         'password',
     ];

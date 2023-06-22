@@ -1,7 +1,7 @@
 <footer class="bg-prusblue mt-24">
     <div class="mx-auto max-w-5xl px-4 py-14 sm:px-6 lg:px-8">
         <div class="flex justify-center text-white">
-            <a href="{{ route('home') }}">
+            <a @if(auth()->check()) href="{{ route('home') }}" @else href="{{ route('landing') }}" @endif>
                 <x-application-logo class="block h-36 w-auto fill-current text-gray-800" />
             </a>
         </div>
@@ -13,38 +13,37 @@
         <ul class="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
             @if (auth()->check())
                 <li>
-                    <a href="{{ route('home') }}" class="text-white transition hover:text-white/75" href="/">
+                    <a href="{{ route('home') }}" class="text-white transition hover:text-white/75">
                         Home
                     </a>
                 </li>
 
                 <li>
-                    <a href="{{ route('jobs') }}" class="text-white transition hover:text-white/75" href="/">
+                    <a href="{{ route('jobs') }}" class="text-white transition hover:text-white/75">
                         Jobs
                     </a>
                 </li>
 
                 <li>
-                    <a href="{{ route('event') }}" class="text-white transition hover:text-white/75" href="/">
+                    <a href="{{ route('event') }}" class="text-white transition hover:text-white/75">
                         News & Event
                     </a>
                 </li>
 
                 <li>
-                    <a href="{{ route('database') }}" class="text-white transition hover:text-white/75" href="/">
+                    <a href="{{ route('database') }}" class="text-white transition hover:text-white/75">
                         Database
                     </a>
                 </li>
 
                 <li>
-                    <a href="{{ route('newsletter') }}" class="text-white transition hover:text-white/75"
-                        href="/">
+                    <a href="{{ route('newsletter') }}" class="text-white transition hover:text-white/75">
                         Newsletter
                     </a>
                 </li>
 
                 <li>
-                    <a href="{{ route('messages') }}" class="text-white transition hover:text-white/75" href="/">
+                    <a href="{{ route('messages') }}" class="text-white transition hover:text-white/75">
                         Messages
                     </a>
                 </li>
@@ -55,6 +54,11 @@
                     </a>
                 </li>
             @else
+                <li>
+                    <a href="{{ route('event') }}" class="text-white transition hover:text-white/75">
+                        News & Events
+                    </a>
+                </li>
                 <li>
                     <a href="https://tracerstudy.unhas.ac.id/" class="text-white transition hover:text-white/75">
                         Tracer Study
@@ -70,7 +74,7 @@
 
         <ul class="mt-12 flex justify-center gap-6 md:gap-8">
             <li>
-                <a href="https://www.facebook.com/profile.php?id=100088727993277'" rel="noreferrer" target="_blank"
+                <a href="https://www.facebook.com/profile.php?id=100088668265819" rel="noreferrer" target="_blank"
                     class="text-white transition hover:text-white/75">
                     <span class="sr-only">Facebook</span>
                     <svg class="h-7 w-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -113,7 +117,7 @@
                             d="M0.5 2.5C0.5 1.67157 1.17157 1 2 1H14C14.8284 1 15.5 1.67157 15.5 2.5V3.70758L8.00001 7.92632L0.5 3.70757V2.5Z"
                             fill="#FFFFFF" />
                         <path
-                            d="M0.5 4.85491V12.5C0.5 13.3284 1.17157 14 2 14H14C14.8284 14 15.5 13.3284 15.5 12.5V4.85493L8.00001 9.07367L0.5 4.85491Z"fill="#FFFFFF" />
+                            d="M0.5 4.85491V12.5C0.5 13.3284 1.17157 14 2 14H14C14.8284 14 15.5 13.3284 15.5 12.5V4.85493L8.00001 9.07367L0.5 4.85491Z" fill="#FFFFFF" />
 
                     </svg>
                 </a>

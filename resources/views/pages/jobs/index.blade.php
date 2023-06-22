@@ -7,8 +7,12 @@
                 Job Vacancy
             </div>
             <div class="font-normal text-xl text-white dark:text-gray-200 leading-tight pt-2">
-                Lorem, ipsum dolor sit amet consectetur adipisicing
-                elit.
+                <p>Temukan info terkini tentang lowongan pekerjaan di portal alumni.</p>
+                <div class="mt-4 flex flex-col sm:flex-row gap-2 sm:items-center">
+                    <p>Jelajahi peluang kerja lainnya di</p>
+                    <a href="https://cdc.unhas.ac.id/lowongan" target="_blank" class="btn btn-sm w-fit">CDC UNHAS</a>
+                </div>
+
             </div>
         </div>
     </x-slot>

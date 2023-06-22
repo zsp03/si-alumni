@@ -26,6 +26,9 @@ class UserResource extends Resource
     {
         return $form
             ->schema([
+                Forms\Components\TextInput::make('nim')
+                    ->maxLength(255)
+                    ->unique(),
                 Forms\Components\TextInput::make('name')
                     ->disabled(fn ($context) => $context == 'edit')
                     ->required(fn (string $context): bool => $context === 'create')
@@ -36,6 +39,7 @@ class UserResource extends Resource
                 Forms\Components\TextInput::make('email')
                     ->email()
                     ->required()
+                    ->unique()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('password')
                     ->visibleOn('create')

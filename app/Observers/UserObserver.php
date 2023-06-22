@@ -42,7 +42,9 @@ class UserObserver
         $alumni->update([
             'name' => $user->name,
             'email' => $user->email,
+            'show_email' => $user->show_email,
             'phone_number' => $user->phone_number,
+            'show_phone_number' => $user->show_phone_number,
         ]);
     }
 
