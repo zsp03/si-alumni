@@ -33,6 +33,7 @@ class User extends Authenticatable implements FilamentUser, HasAvatar, MustVerif
         'nim',
         'name',
         'program_studi',
+        'jurusan',
         'angkatan',
         'instagram_account',
         'profile_desc',

@@ -26,20 +26,21 @@ class UserResource extends Resource
     {
         return $form
             ->schema([
+                Forms\Components\TextInput::make('id')
+                    ->disabled(),
                 Forms\Components\TextInput::make('nim')
+                    ->required()
+                    ->exists('alumnis')
                     ->maxLength(255)
-                    ->unique(),
+                    ->unique(ignoreRecord: true),
                 Forms\Components\TextInput::make('name')
-                    ->disabled(fn ($context) => $context == 'edit')
                     ->required(fn (string $context): bool => $context === 'create')
                     ->maxLength(255),
                 Forms\Components\TextInput::make('jurusan')
-                    ->disabled(fn ($context) => $context == 'edit')
                     ->maxLength(255),
                 Forms\Components\TextInput::make('email')
-                    ->email()
-                    ->required()
-                    ->unique()
+                    ->required(fn (string $context): bool => $context === 'create')
+                    ->unique(ignoreRecord: true)
                     ->maxLength(255),
                 Forms\Components\TextInput::make('password')
                     ->visibleOn('create')
