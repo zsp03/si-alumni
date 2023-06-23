@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::table('alumnis', function (Blueprint $table) {
-            $table->boolean('show_phone_number')->default(0)->after('phone_number');
+            $table->boolean('show_phone_number')->nullable()->default(0)->after('phone_number');
         });
     }
 

@@ -21,8 +21,8 @@ class UpdateAdditionalInformationForm extends Component
         $this->resetErrorBag();
 
         Validator::make($this->state, [
-            'jurusan' => ['required', 'string', 'max:255'],
-            'angkatan' => ['required', 'integer', 'max_digits:4'],
+            'jurusan' => ['nullable','string', 'max:255'],
+            'angkatan' => ['nullable', 'integer', 'max_digits:4'],
             'instagram_account' => ['nullable','string', 'max:255'],
             'profile_desc' => ['nullable','string', 'max:255'],
         ])->validateWithBag('updateAdditionalInformation');

@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::table('alumnis', function (Blueprint $table) {
-            $table->boolean('show_email')->default(0)->after('email');
+            $table->boolean('show_email')->nullable()->default(0)->after('email');
         });
     }
 
