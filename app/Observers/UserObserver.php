@@ -13,20 +13,17 @@ class UserObserver
      * @param  \App\Models\User  $user
      * @return void
      */
+
     public function created(User $user)
     {
-        if ($user->role == '4'){
-            $alumni = Alumni::where('nim', '=', $user->nim)->get()->first();
+        $alumni_id = Alumni::where('nim', '=', $user->nim)->get()->first();
+        $alumni_id->name = $user->name;
+        $alumni_id->email = $user->email;
+        $alumni_id->user_id = $user->id;
+        $alumni_id->save();
 
-            $user->jurusan = $alumni->program_studi;
-            $user->save();
-
-            $alumni->update([
-                'name' => $user->name,
-                'email' => $user->email,
-                'user_id' => $user->id,
-            ]);
-        }
+        $user->jurusan = $alumni_id->program_studi;
+        $user->save();
     }
 
     /**

@@ -26,8 +26,8 @@ class CreateNewUser implements CreatesNewUsers
             'password' => $this->passwordRules(),
             'terms' => Jetstream::hasTermsAndPrivacyPolicyFeature() ? ['accepted', 'required'] : '',
         ], [
-            'nim.exists' => 'NIM anda belum terdaftar di Databse, hubungi admin di dirhapda@unhas.ac.id atau 081253584528',
-            'nim.users' => 'NIM anda telah terdaftar sebagai User. Jika anda belum pernah mendaftar, hubungi admin di dirhapda@unhas.ac.id atau 081253584528',
+            'nim.exists' => 'NIM anda belum terdaftar di Database, hubungi admin di dirhapda@unhas.ac.id atau 081253584528',
+            'nim.unique' => 'NIM anda telah terdaftar sebagai User. Jika anda belum pernah mendaftar, hubungi admin di dirhapda@unhas.ac.id atau 081253584528',
         ])->validate();
 
         return User::create([
