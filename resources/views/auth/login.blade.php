@@ -42,6 +42,9 @@
                 </button>
             </div>
             <p class="text-sm text-gray-500 text-center">
+                <a class="underline" href="{{ route('password.request') }}">{{ __('Lupa Kata Sandi?') }}</a>
+            </p>
+            <p class="text-sm text-gray-500 text-center">
                 {{  __('No account?') }}
                 <a class="underline" href="{{ route('register') }}">{{ __('Register') }}</a>
             </p>
