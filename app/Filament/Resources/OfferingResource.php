@@ -19,8 +19,10 @@ use InvadersXX\FilamentJsoneditor\Forms\JSONEditor;
 class OfferingResource extends Resource
 {
     protected static ?string $model = Offering::class;
+    protected static ?string $navigationLabel = 'Jobs';
+    protected static ?string $navigationIcon = 'heroicon-o-fire';
+    protected static ?string $navigationGroup = 'Pages';
 
-    protected static ?string $navigationIcon = 'heroicon-o-collection';
 
     public static function form(Form $form): Form
     {

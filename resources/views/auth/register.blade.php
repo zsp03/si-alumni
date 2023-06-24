@@ -10,10 +10,10 @@
             <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
         </div>
 
-        <!-- Name -->
+        <!-- NIM -->
         <div class="mt-4">
             <x-label for="nim" :value="__('NIM')" />
-            <x-input id="nim" class="block mt-1 w-full" type="text" name="nim" :value="old('nim')" required autofocus autocomplete="nim" />
+            <x-input id="nim" class="block mt-1 w-full uppercase" type="text" name="nim" :value="old('nim')" required autofocus autocomplete="nim" />
         </div>
 
         <!-- Email Address -->
