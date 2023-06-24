@@ -32,8 +32,9 @@ class AlumniTable extends Component
     public function render()
     {
         $dataAlumnis = Alumni::where('name','like','%'.$this->search.'%')
+            ->orWhere('nim', 'like', $this->search.'%')
             ->orderBy('name')
-            ->paginate(5);
+            ->paginate(7);
         return view('livewire.alumni-table',[
             'dataAlumnis' => $dataAlumnis,
         ]);

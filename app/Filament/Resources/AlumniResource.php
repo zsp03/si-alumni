@@ -51,8 +51,10 @@ class AlumniResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('nim'),
-                Tables\Columns\TextColumn::make('name'),
+                Tables\Columns\TextColumn::make('nim')
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('name')
+                    ->searchable(),
                 Tables\Columns\TextColumn::make('program_studi'),
                 Tables\Columns\TextColumn::make('fakultas'),
                 Tables\Columns\TextColumn::make('jenis_kelamin'),
