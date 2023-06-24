@@ -102,7 +102,7 @@
                         <p class="text-gray-600 text-justify mt-2 lg:text-xl">Dana Abadi yang terkumpul ditampung pada
                             rekening bank Rektor Universitas Hasanuddin. Selanjutnya, dana tersebut tersebut dikelola
                             dan dikembangkan secara terus-menerus dalam berbagai instrumen investasi. </p>
-                        <a class="flex items-baseline mt-3 text-blue-600 text-lg font-semibold hover:text-blue-900 focus:text-blue-900"
+                        <a class="btn flex items-center mt-3 text-white bg-prusblue text-lg font-semibold hover:text-blue-900 focus:text-blue-900 "
                             href="https://alumni.unhas.ac.id/dana-abadi">
                             <span>Donasi</span>
                             <span class="text-xs ml-1">&#x279c;</span>

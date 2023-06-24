@@ -83,7 +83,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-4">
-            <x-label class="mb-1"  value="{{ __('Perlihatkan surel di Database?') }}" />
+            <x-label class="mb-1"  value="{{ __('Perlihatkan Email di Database?') }}" />
             <x-wireui.toggle lg id="show_email" wire:model.defer="state.show_email" />
         </div>
 

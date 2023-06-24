@@ -23,7 +23,7 @@
     <section class="relative flex flex-wrap h-screen items-center">
     <div class="w-full px-4 py-12 sm:px-6 sm:py-16 lg:w-1/2 lg:px-8 lg:py-24">
         <div class="flex flex-col mx-auto max-w-lg text-center">
-            <x-application-logo class="self-center h-20 w-20 mb-2"></x-application-logo>
+            <a class="self-center h-20 w-20 mb-2" href="{{ route('landing') }}"><x-application-logo class="self-center h-20 w-20 mb-2"></x-application-logo></a>
             <h1 class="text-2xl font-bold sm:text-3xl text-red-600">Portal Alumni</h1>
 
             <p class="mx-auto mt-2 mb-4 font-semibold w-[30ch] sm:w-full text-gray-500">
