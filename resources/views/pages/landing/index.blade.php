@@ -8,7 +8,7 @@
 
         {{-- dana abadi --}}
         <a id="dana-abadi" class="block relative invisible top-[-100px]"></a>
-        <div class="container mx-auto my-5">
+        <div class="mx-4 md:mx-auto my-5 max-w-7xl">
             <div class="relative rounded-lg flex flex-col md:flex-row items-center md:shadow-xl md:h-72 mx-2">
                 <div class="z-0 order-1 md:order-2 relative w-full md:w-2/5 h-80 md:h-full overflow-hidden rounded-lg md:rounded-none md:rounded-r-lg">
                     <div class="absolute inset-0 w-full h-full object-fill object-center bg-opacity-30 bg-cover bg-bottom bg-[url('/public/assets/image/foto-unhas.jpg')]">

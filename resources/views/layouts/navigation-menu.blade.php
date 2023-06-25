@@ -171,15 +171,19 @@
                 <x-responsive-nav-link href="{{ route('landing') }}" :active="request()->routeIs('landing')">
                     {{ __('Home') }}
                 </x-responsive-nav-link>
-                <x-responsive-nav-link :href="route('event')" :active="request()->routeIs('event')">
-                    {{ __('News & Events') }}
-                </x-responsive-nav-link>
-                <x-responsive-nav-link :href="route('newsletter')" :active="request()->routeIs('newsletter')">
-                    {{ __('Newsletter') }}
-                </x-responsive-nav-link>
                 <x-responsive-nav-link href='https://alumni.unhas.ac.id/dana-abadi' :active="request()->routeIs('')">
                     {{ __('Donasi') }}
                 </x-responsive-nav-link>
+                <x-responsive-nav-link :href="route('event')" :active="request()->routeIs('event')">
+                    {{ __('News & Events') }}
+                </x-responsive-nav-link>
+                <x-responsive-nav-link href="#about-us">
+                    {{ __('About us') }}
+                </x-responsive-nav-link>
+                <x-responsive-nav-link href="https://tracerstudy.unhas.ac.id/">
+                    {{ __('Tracer Study') }}
+                </x-responsive-nav-link>
+
             @endif
 
         </div>

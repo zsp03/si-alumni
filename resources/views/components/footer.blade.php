@@ -55,18 +55,23 @@
                 </li>
             @else
                 <li>
+                    <a href="https://alumni.unhas.ac.id/dana-abadi" class="text-white transition hover:text-white/75">
+                        Donasi
+                    </a>
+                </li>
+                <li>
                     <a href="{{ route('event') }}" class="text-white transition hover:text-white/75">
                         News & Events
                     </a>
                 </li>
                 <li>
-                    <a href="https://tracerstudy.unhas.ac.id/" class="text-white transition hover:text-white/75">
-                        Tracer Study
+                    <a href="#about-us" class="text-white transition hover:text-white/75">
+                        About us
                     </a>
                 </li>
                 <li>
-                    <a href="https://alumni.unhas.ac.id/dana-abadi" class="text-white transition hover:text-white/75">
-                        Donasi
+                    <a href="https://tracerstudy.unhas.ac.id/" class="text-white transition hover:text-white/75">
+                        Tracer Study
                     </a>
                 </li>
             @endif
@@ -137,8 +142,9 @@
         </ul>
     </div>
     <div class=" px-10 py-4 border-t bg-prusblue text-base-content border-sky-950">
-        <div class="items-center text-center grid-flow-col text-white">
-            <p>Universitas Hasanuddin <br />Direktorat Hub. Alumni & Pengembangan Dana Abadi</p>
+        <div class="text-center text-white">
+            <p>@ 2023 - DIRHAPDA UNHAS & Informatika 20
+            </p>
         </div>
     </div>
 </footer>
