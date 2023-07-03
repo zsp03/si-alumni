@@ -40,7 +40,7 @@
         <div class="mx-auto flex flex-col lg:justify-between lg:flex-row">
             <div class="flex flex-col w-full items-center px-4 lg:w-1/2 xl:w-6/12 mx-auto">
                 <div class="flex gap-3 justify-center items-center w-fit pb-4">
-                    <img class="shadow-light-lg w-24 aspect-square"
+                    <img class="shadow-light-lg w-full max-h-64"
                          src="{{ $job->logo_url }}"
                          alt="Metrodata Academy">
                 </div>
