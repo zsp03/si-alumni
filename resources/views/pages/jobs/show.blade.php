@@ -41,17 +41,13 @@
             <div class="flex flex-col w-full items-center px-4 lg:w-1/2 xl:w-6/12 mx-auto">
                 <div class="flex gap-3 justify-center items-center w-fit pb-4">
                     <img class="shadow-light-lg w-24 aspect-square"
-                         src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/UNIQLO_logo.svg/204px-UNIQLO_logo.svg.png"
+                         src="{{ $job->logo_url }}"
                          alt="Metrodata Academy">
                 </div>
                 <div class="max-w-[570px] mb-12 lg:mb-0">
-                    <p class="text-base text-justify leading-relaxed">
-                        Uniqlo adalah perusahaan Jepang dalam bidang perencanaan produk, produksi, distribusi pakaian
-                        kasual. Saat ini, Uniqlo membuka kesempatan bagi yang berstatus mahasiswa tingkat akhir atau
-                        lulusan baru Perguruan Tinggi untuk mengikuti program training intensif bertajuk “Uniqlo Manager
-                        Candidate”. Untuk persyaratan dan info lebih lanjut bisa dilihat di slide selanjutnya yaa
-
-                    </p>
+                    <div class="text-base text-justify leading-relaxed">
+                        {!! $job->description !!}
+                    </div>
                 </div>
             </div>
 
