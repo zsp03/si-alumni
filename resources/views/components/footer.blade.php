@@ -143,7 +143,7 @@
     </div>
     <div class=" px-10 py-4 border-t bg-prusblue text-base-content border-sky-950">
         <div class="text-center text-white">
-            <p>@ 2023 - DIRHAPDA UNHAS & Informatika 20
+            <p>@ 2023 - Direktorat Hubungan Alumni dan Pengembangan Dana Abadi UNHAS & Informatika 20
             </p>
         </div>
     </div>
