@@ -1,19 +1,31 @@
 <nav x-data="{ open: false }" class="sticky top-0 z-50 bg-prusblue">
     <!-- Primary Navigation Menu -->
     <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex h-16">
+        <div class="flex h-20">
             <!-- Logo -->
             <div class="shrink-0 flex mr-auto items-center">
                 <a @if(auth()->check()) href="{{ route('home') }}" @else href="{{ route('landing') }}" @endif>
                     <x-application-logo class="block h-12 w-auto fill-current text-gray-800" />
                 </a>
-                <div class="pt-2 whitespace-nowrap ml-3 font-semibold text-base">
+                <div class="pt-1 whitespace-nowrap ml-3 font-semibold text-base leading-none">
+                    @if(auth()->check())
                     <div class="text-white">
                         Portal Alumni
                     </div>
-                    <div class="text-rose-600">
+                    <div class="text-white mb-2">
                         Universitas Hasanuddin
                     </div>
+                    @else
+                    <div class="text-white">
+                        Direktorat Hubungan Alumni &
+                        <br>
+                        Pengembangan Dana Abadi
+                    </div>
+                    <div class="text-white mb-2">
+                        Universitas Hasanuddin
+                    </div>
+                    @endif
+
                 </div>
             </div>
             <!-- Navigation Links -->
