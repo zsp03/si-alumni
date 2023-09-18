@@ -7,7 +7,7 @@ use Livewire\Component;
 
 class PenjaringanAlumni extends Component
 {
-    public $name, $jenis_kelamin, $program_studi, $fakultas, $nim, $phone_number, $email, $alamat, $tempat_kerja, $alamat_kerja, $posisi;
+    public $name, $nim, $fakultas, $program_studi, $tahun_masuk, $tahun_lulus, $jenis_kelamin, $phone_number, $email, $alamat, $tempat_kerja, $alamat_kerja, $posisi;
 
     public function render()
     {
@@ -18,10 +18,12 @@ class PenjaringanAlumni extends Component
     {
         PenjaringAlumni::create([
             'name' => $this->name,
-            'jenis_kelamin' => $this->jenis_kelamin,
-            'program_studi' => $this->program_studi,
-            'fakultas' => $this->fakultas,
             'nim' => $this->nim,
+            'fakultas' => $this->fakultas,
+            'program_studi' => $this->program_studi,
+            'tahun_masuk' => $this->tahun_masuk,
+            'tahun_lulus' => $this->tahun_lulus,
+            'jenis_kelamin' => $this->jenis_kelamin,
             'phone_number' => $this->phone_number,
             'email' => $this->email,
             'alamat' => $this->alamat,

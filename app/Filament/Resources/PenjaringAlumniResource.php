@@ -26,14 +26,20 @@ class PenjaringAlumniResource extends Resource
                 Forms\Components\TextInput::make('name')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('jenis_kelamin')
-                    ->required()
-                    ->maxLength(255),
-                Forms\Components\TextInput::make('program_studi')
+                Forms\Components\TextInput::make('nim')
                     ->maxLength(255),
                 Forms\Components\TextInput::make('fakultas')
                     ->maxLength(255),
-                Forms\Components\TextInput::make('nim')
+                Forms\Components\TextInput::make('program_studi')
+                    ->maxLength(255),
+                Forms\Components\TextInput::make('tahun_masuk')
+                    ->required()
+                    ->maxLength(255),
+                Forms\Components\TextInput::make('tahun_lulus')
+                    ->required()
+                    ->maxLength(255),
+                Forms\Components\TextInput::make('jenis_kelamin')
+                    ->required()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('phone_number')
                     ->tel()
@@ -58,13 +64,17 @@ class PenjaringAlumniResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('name')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('jenis_kelamin'),
-                Tables\Columns\TextColumn::make('program_studi')
+                Tables\Columns\TextColumn::make('nim')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('fakultas')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('nim')
+                Tables\Columns\TextColumn::make('program_studi')
                     ->searchable(),
+                Tables\Columns\TextColumn::make('tahun_masuk')
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('tahun_lulus')
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('jenis_kelamin'),
                 Tables\Columns\TextColumn::make('phone_number'),
                 Tables\Columns\TextColumn::make('email'),
                 Tables\Columns\TextColumn::make('alamat'),

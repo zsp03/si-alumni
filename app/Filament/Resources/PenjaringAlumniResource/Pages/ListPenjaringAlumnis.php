@@ -22,17 +22,23 @@ class ListPenjaringAlumnis extends ListRecords
                     ImportField::make('name')
                         ->label('Nama')
                         ->required(),
-                    ImportField::make('jenis_kelamin')
-                        ->label('Jenis Kelamin')
-                        ->required(),
-                    ImportField::make('program_studi')
-                        ->label('Program Studi')
+                    ImportField::make('nim')
+                        ->label('NIM')
                         ->required(),
                     ImportField::make('fakultas')
                         ->label('Fakultas')
                         ->required(),
-                    ImportField::make('nim')
-                        ->label('NIM')
+                    ImportField::make('program_studi')
+                        ->label('Program Studi')
+                        ->required(),
+                    ImportField::make('tahun_masuk')
+                        ->label('Tahun Masuk')
+                        ->required(),
+                    ImportField::make('tahun_lulus')
+                        ->label('Tahun Lulus')
+                        ->required(),
+                    ImportField::make('jenis_kelamin')
+                        ->label('Jenis Kelamin')
                         ->required(),
                     ImportField::make('No. Handphone')
                         ->label('Phone Number')
