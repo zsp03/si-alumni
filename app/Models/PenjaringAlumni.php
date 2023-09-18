@@ -11,10 +11,12 @@ class PenjaringAlumni extends Model
 
     protected $fillable = [
         'name',
-        'jenis_kelamin',
-        'program_studi',
-        'fakultas',
         'nim',
+        'fakultas',
+        'program_studi',
+        'tahun_masuk',
+        'tahun_lulus',
+        'jenis_kelamin',
         'phone_number',
         'email',
         'alamat',
