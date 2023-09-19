@@ -26,6 +26,8 @@ Route::get('/event/post/{post:slug}', \App\Http\Livewire\ShowPost::class)->name(
 Route::get('/survey', function () {
     return view('pages.survey.index');
 })->name('survey');
+
+Route::get('/database', [\App\Http\Livewire\AlumniTable::class, 'export']);
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),

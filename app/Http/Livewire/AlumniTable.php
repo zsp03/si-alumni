@@ -6,6 +6,8 @@ use App\Models\Alumni;
 use App\Models\User;
 use Livewire\Component;
 use Livewire\WithPagination;
+use App\Exports\AlumnisExport;
+use Maatwebsite\Excel\Facades\Excel;
 
 
 class AlumniTable extends Component
@@ -28,6 +30,11 @@ class AlumniTable extends Component
     {
         $this->dataAlumni = $alumni;
         $this->showingUserProfileCard = true;
+    }
+
+    public function downloadData()
+    {
+        return Excel::download(new AlumnisExport, 'Alumni.xlsx');
     }
 
     public function render()

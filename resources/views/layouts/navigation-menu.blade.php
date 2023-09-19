@@ -16,12 +16,12 @@
                         Universitas Hasanuddin
                     </div>
                     @else
-                    <div class="text-white">
+                    <div class="text-white font-thin">
                         Direktorat Hubungan Alumni &
                         <br>
                         Pengembangan Dana Abadi
                     </div>
-                    <div class="text-white mb-2">
+                    <div class="text-white mb-2 font-thin">
                         Universitas Hasanuddin
                     </div>
                     @endif
