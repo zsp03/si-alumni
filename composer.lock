@@ -4,8 +4,74 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "456c74841225b7998331e22e00f414eb",
+    "content-hash": "4b74a1cfc10fe8ed0e2170bf40569866",
     "packages": [
+        {
+            "name": "3x1io/filament-excel",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/3x1io/filament-excel.git",
+                "reference": "1084b37bdeac239fdadf88767729300956d0eca7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/3x1io/filament-excel/zipball/1084b37bdeac239fdadf88767729300956d0eca7",
+                "reference": "1084b37bdeac239fdadf88767729300956d0eca7",
+                "shasum": ""
+            },
+            "require": {
+                "filament/filament": "^2.9",
+                "maatwebsite/excel": "^3.1",
+                "php": "^8.0",
+                "spatie/laravel-package-tools": "^1.10"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "io3x1\\FilamentExcel\\FilamentExcelProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "io3x1\\FilamentExcel\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "3x1",
+                    "email": "info@3x1.io",
+                    "role": "CEO"
+                }
+            ],
+            "description": "Excel Export for Resources",
+            "homepage": "https://3x1.io",
+            "keywords": [
+                "excel",
+                "export",
+                "filament",
+                "import",
+                "laravel",
+                "ui"
+            ],
+            "support": {
+                "issues": "https://github.com/3x1io/filament-excel/issues",
+                "source": "https://github.com/3x1io/filament-excel/tree/v1.0.1"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/3x1io",
+                    "type": "github"
+                }
+            ],
+            "time": "2023-01-29T02:04:56+00:00"
+        },
         {
             "name": "akaunting/laravel-money",
             "version": "4.0.1",

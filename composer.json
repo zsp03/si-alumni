@@ -6,6 +6,7 @@
     "license": "MIT",
     "require": {
         "php": "^8.1",
+        "3x1io/filament-excel": "^1.0",
         "awcodes/filament-tiptap-editor": "^2.2",
         "cmgmyr/messenger": "^2.29",
         "filament/filament": "^2.17",

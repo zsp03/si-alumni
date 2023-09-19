@@ -1,10 +1,12 @@
 <?php
-
 namespace App\Filament\Resources\PenjaringAlumniResource\Pages;
 
 use App\Filament\Resources\PenjaringAlumniResource;
-use Filament\Pages\Actions;
 use Filament\Resources\Pages\ListRecords;
+use Filament\Pages\Actions\Action;
+use App\Exports\PenjaringAlumnisExport;
+use Maatwebsite\Excel\Facades\Excel;
+use Filament\Pages\Actions;
 use Konnco\FilamentImport\Actions\ImportAction;
 use Konnco\FilamentImport\Actions\ImportField;
 
@@ -14,10 +16,14 @@ class ListPenjaringAlumnis extends ListRecords
 
     protected function getActions(): array
     {
-        return [
+        return array_merge(parent::getActions(), [
+            Action::make('export')
+                ->button()
+                ->color('success')
+                ->action('export'),
             ImportAction::make()
                 ->uniqueField('nim')
-                ->color('success')
+                ->color('warning')
                 ->fields([
                     ImportField::make('name')
                         ->label('Nama')
@@ -54,6 +60,11 @@ class ListPenjaringAlumnis extends ListRecords
                         ->required()
                 ]),
             Actions\CreateAction::make(),
-        ];
+        ]);
+    }
+
+    public function export()
+    {
+        return Excel::download(new PenjaringAlumnisExport, 'penjaringalumnis.xlsx');
     }
 }
