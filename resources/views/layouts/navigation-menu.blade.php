@@ -65,9 +65,31 @@
                     <x-nav-link href="#about-us">
                         {{ __('About us') }}
                     </x-nav-link>
-                    <x-nav-link href="https://tracerstudy.unhas.ac.id/">
-                        {{ __('Tracer Study') }}
-                    </x-nav-link>
+                    <div class="relative">
+                        <x-dropdown>
+                            <x-slot name="trigger">
+                                    <button>
+                                        <span class="'text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium focus:outline-none focus:text-white focus:border-gray-300 transition duration-150 ease-in-out'">Survey</span>
+                                    </button>
+                                    <span class="inline-flex rounded-md">
+                                </span>
+                            </x-slot>
+                            <div x-show = "open">
+                                <x-slot name="content">
+                                    <x-dropdown-link href="https://tracerstudy.unhas.ac.id/">
+                                        {{ __('Tracer Study') }}
+                                    </x-dropdown-link>
+                                    <x-dropdown-link href="https://tracerstudy.unhas.ac.id/survey/566599">
+                                        {{ __('Survey Alumni') }}
+                                    </x-dropdown-link>
+                                    <x-dropdown-link href="{{ route('survey') }}">
+                                        {{ __('Penjaring Alumni') }}
+                                    </x-dropdown-link>
+                                </x-slot>
+                            </div>
+                        </x-dropdown>
+                    </div>
+                    
                 @endif
 
             </div>
