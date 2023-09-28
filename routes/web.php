@@ -28,6 +28,7 @@ Route::get('/survey', function () {
 })->name('survey');
 
 Route::get('/database', [\App\Http\Livewire\AlumniTable::class, 'export']);
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
@@ -49,4 +50,6 @@ Route::middleware([
     Route::get('/database', function () {
         return view('pages.database.index');
     })->name('database');
+
+
 });
