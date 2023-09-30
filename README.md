@@ -1,4 +1,3 @@
-Testing Push
 This project is using Jetstream as base, and Filamentphp as admin panel
 
 ## Installation
