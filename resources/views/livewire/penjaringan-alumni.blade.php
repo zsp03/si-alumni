@@ -7,7 +7,12 @@
             </div>
             <div class="mb-6">
                 <label for="nama" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nama Lengkap <span class="text-red-500"> *</span></label>
-                <input wire:model="name" type="nama" id="nama" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Nama Lengkap" >
+                <input wire:model="name" type="nama" id="nama" class="@error('name') is-invalid @enderror bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Nama Lengkap" >
+                @error('name')
+                    <span class="invalid-feedback">
+                            {{ $message }}
+                    </span>
+                @enderror
             </div>
             <div class="mb-6">
                 <label for="nim" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">NIM</label>
@@ -15,19 +20,39 @@
             </div>
             <div class="mb-6">
                 <label for="fakultas" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Fakultas<span class="text-red-500"> *</span></label>
-                <input wire:model="fakultas" type="nama" id="nama" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Fakultas" >
+                <input wire:model="fakultas" type="fakultas" id="fakultas" class="@error('fakultas') is-invalid @enderror bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Fakultas" >
+                @error('fakultas')
+                    <span class="invalid-feedback">
+                            {{ $message }}
+                    </span>
+                @enderror
             </div>
             <div class="mb-6">
                 <label for="program_studi" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Program Studi/jurusan<span class="text-red-500"> *</span></label>
-                <input wire:model="program_studi" type="program_studi" id="program_studi" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Program Studi/jurusan" >
+                <input wire:model="program_studi" type="program_studi" id="program_studi" class="@error('program_studi') is-invalid @enderror bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Program Studi/jurusan" >
+                @error('program_studi')
+                    <span class="invalid-feedback">
+                            {{ $message }}
+                    </span>
+                @enderror
             </div>
             <div class="mb-6">
                 <label for="tahun_masuk" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Tahun Masuk<span class="text-red-500"> *</span></label>
-                <input wire:model="tahun_masuk" type="tahun_masuk" id="tahun_masuk" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Tahun lasuk" >
+                <input wire:model="tahun_masuk" type="tahun_masuk" id="tahun_masuk" class="@error('tahun_masuk') is-invalid @enderror bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Tahun lasuk" >
+                @error('tahun_masuk')
+                    <span class="invalid-feedback">
+                            {{ $message }}
+                    </span>
+                @enderror
             </div>
             <div class="mb-6">
                 <label for="tahun_lulus" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Tahun Lulus<span class="text-red-500"> *</span></label>
-                <input wire:model="tahun_lulus" type="tahun_lulus" id="tahun_lulus" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Tahun lulus" >
+                <input wire:model="tahun_lulus" type="tahun_lulus" id="tahun_lulus" class="@error('tahun_lulus') is-invalid @enderror bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Tahun lulus" >
+                @error('tahun_lulus')
+                    <span class="invalid-feedback">
+                            {{ $message }}
+                    </span>
+                @enderror           
             </div>
             <div class="mb-6">
                 <label for="jenis_kelamin" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Jenis Kelamin</label>
@@ -39,7 +64,12 @@
             </div>
             <div class="mb-6">
                 <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email<span class="text-red-500"> *</span></label>
-                <input wire:model="email" type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Alamat Email" >
+                <input wire:model="email" type="email" id="email" class="@error('email') is-invalid @enderror bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Alamat Email" >
+                @error('email')
+                    <span class="invalid-feedback">
+                            {{ $message }}
+                    </span>
+                @enderror
             </div>
             <div class="mb-6">
                 <label for="alamat" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Alamat</label>
@@ -59,5 +89,13 @@
             </div>
             <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
         </form>
+
+        <div class="py-4">
+            @if (session()->has('message'))
+                <div class="alert alert-success">
+                    {{ session('message') }}
+                </div>
+            @endif
+        </div>
     </div>
 </div>

@@ -52,7 +52,7 @@
                     </svg>
                     <div class="md:hidden absolute inset-0 h-full p-6 pb-6 flex justify-start items-start bg-gradient-to-b from-transparent via-transparent to-gray-900">
                         <h3 class="w-full font-bold text-2xl text-white leading-tight mb-2">
-                            Survey Pengguna Alumni
+                            Penjaringan Alumni
                         </h3>
                     </div>
                     
@@ -60,13 +60,13 @@
 
                 <div class="z-10 order-2 md:order-1 w-full h-full md:w-3/5 flex items-center md:mt-0">
                     <div class="p-8 md:pr-18 md:pl-14 md:pb-9 md:pt-12 mx-2 md:mx-0 h-full bg-white rounded-lg md:rounded-none md:rounded-l-lg shadow-xl md:shadow-none ">
-                        <h3 class="hidden md:block font-bold text-2xl text-gray-700">Survey Pengguna Alumni</h3>
-                        <p class="text-gray-600 text-justify mt-2 lg:text-xl">Dana Abadi yang terkumpul ditampung pada
-                            rekening bank Rektor Universitas Hasanuddin. Selanjutnya, dana tersebut tersebut dikelola
-                            dan dikembangkan secara terus-menerus dalam berbagai instrumen investasi. </p>
+                        <h3 class="hidden md:block font-bold text-2xl text-gray-700">Penjaringan Alumni</h3>
+                        <p class="text-gray-600 text-justify mt-2 lg:text-xl">Membantu alumni-alumni untuk menambahkan data mereka agar dapat mempermudah dalam
+                            mengelolah data mereka dan agar mereka tetap saling terhubung.
+                        </p>
                         <a class="btn flex items-center mt-3 text-white bg-prusblue text-lg font-semibold hover:text-blue-900 focus:text-blue-900 "
                             href="{{ route('survey') }}">
-                            <span>Isi Survey</span>
+                            <span>Isi Data Alumni</span>
                             <span class="text-xs ml-1">&#x279c;</span>
                         </a>
                     </div>

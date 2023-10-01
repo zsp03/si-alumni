@@ -16,6 +16,15 @@ class PenjaringanAlumni extends Component
 
     public function addData()
     {
+        $this->validate([
+            'name' => 'required',
+            'fakultas' => 'required',
+            'program_studi' => 'required',
+            'tahun_masuk' => 'required',
+            'tahun_lulus' => 'required',
+            'email' => 'required',
+        ]);
+
         PenjaringAlumni::create([
             'name' => $this->name,
             'nim' => $this->nim,
@@ -33,5 +42,7 @@ class PenjaringanAlumni extends Component
         ]);
 
         session()->flash('message', 'Data Berhasil Disimpan.');
+        return redirect()->route('survey');
+
     }
 }

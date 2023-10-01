@@ -69,7 +69,7 @@
                         <x-dropdown>
                             <x-slot name="trigger">
                                     <button>
-                                        <span class="'text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium focus:outline-none focus:text-white focus:border-gray-300 transition duration-150 ease-in-out'">Survey</span>
+                                        <span class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium focus:outline-none focus:text-white focus:border-gray-300 transition duration-150 ease-in-out">Survey</span>
                                     </button>
                                     <span class="inline-flex rounded-md">
                                 </span>
@@ -89,7 +89,6 @@
                             </div>
                         </x-dropdown>
                     </div>
-                    
                 @endif
 
             </div>
@@ -216,6 +215,12 @@
                 </x-responsive-nav-link>
                 <x-responsive-nav-link href="https://tracerstudy.unhas.ac.id/">
                     {{ __('Tracer Study') }}
+                </x-responsive-nav-link>
+                <x-responsive-nav-link href="https://tracerstudy.unhas.ac.id/survey/566599">
+                    {{ __('Survey Alumni') }}
+                </x-responsive-nav-link>
+                <x-responsive-nav-link href="{{ route('survey') }}">
+                    {{ __('Penjaring Alumni') }}
                 </x-responsive-nav-link>
 
             @endif
