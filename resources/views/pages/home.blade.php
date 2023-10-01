@@ -2,7 +2,7 @@
     @section('title', 'Home')
     <section class="flex flex-col w-full shadow-md">
         <div class="relative">
-            <div class="flex justify-center mx-auto px-12 sm:px-10 lg:px-20 pt-10 pb-24 z-10 sm:h-[880px] bg-[url('/public/assets/image/-bg.png')] bg-cover bg-no-repeat">
+            <div class="flex justify-center mx-auto px-12 sm:px-10 lg:px-20 pt-10 pb-24 z-10 sm:h-[880px] bg-[url('/public/assets/image/header-bg.png')] bg-cover bg-no-repeat">
                 <div class="flex sm:mt-14 max-w-6xl justify-center">
                     <div class="flex flex-col sm:flex-row gap-20 pb-7">
                         <div class="flex flex-col gap-3 text-center sm:text-left animate-in slide-in-from-bottom duration-700">

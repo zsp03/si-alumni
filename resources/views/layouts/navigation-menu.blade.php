@@ -68,11 +68,7 @@
                     <div class="relative">
                         <x-dropdown>
                             <x-slot name="trigger">
-                                    <button>
-                                        <span class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium focus:outline-none focus:text-white focus:border-gray-300 transition duration-150 ease-in-out">Survey</span>
-                                    </button>
-                                    <span class="inline-flex rounded-md">
-                                </span>
+                                    <a class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium focus:outline-none focus:text-white focus:border-gray-300 transition duration-150 ease-in-out">Survey</a>
                             </x-slot>
                             <div x-show = "open">
                                 <x-slot name="content">
