@@ -59,12 +59,12 @@
 
                 <div class="z-10 order-2 md:order-1 w-full h-full md:w-3/5 flex items-center md:mt-0">
                     <div class="p-8 md:pr-18 md:pl-14 md:pb-9 md:pt-12 mx-2 md:mx-0 h-full bg-white rounded-lg md:rounded-none md:rounded-l-lg shadow-xl md:shadow-none ">
-                        <h3 class="hidden md:block font-bold text-2xl text-gray-700">Survey Penjaringan Alumni</h3>
-                        <p class="text-gray-600 text-justify mt-2 lg:text-xl">Survey ini ditujukan untuk para alumni unhas yang lulus pada tahun 2010 dan tahun-tahun sebelumnya
+                        <h3 class="hidden md:block font-bold text-2xl text-gray-700">Survei Penjaringan Alumni</h3>
+                        <p class="text-gray-600 text-justify mt-2 lg:text-xl">Survei ini ditujukan untuk para alumni unhas yang lulus pada tahun 2010 dan tahun-tahun sebelumnya
                         </p>
                         <a class="btn flex items-center mt-3 text-white bg-prusblue text-lg font-semibold hover:text-blue-900 focus:text-blue-900 "
                             href="{{ route('survey') }}">
-                            <span>Isi Survey</span>
+                            <span>Isi Survei</span>
                             <span class="text-xs ml-1">&#x279c;</span>
                         </a>
                     </div>
