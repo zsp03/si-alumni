@@ -76,10 +76,10 @@
                                         {{ __('Tracer Study') }}
                                     </x-dropdown-link>
                                     <x-dropdown-link href="https://tracerstudy.unhas.ac.id/survey/566599">
-                                        {{ __('Survey Alumni') }}
+                                        {{ __('Survei Pengguna Alumni') }}
                                     </x-dropdown-link>
                                     <x-dropdown-link href="{{ route('survey') }}">
-                                        {{ __('Penjaring Alumni') }}
+                                        {{ __('Survei Penjaring Alumni') }}
                                     </x-dropdown-link>
                                 </x-slot>
                             </div>
@@ -213,10 +213,10 @@
                     {{ __('Tracer Study') }}
                 </x-responsive-nav-link>
                 <x-responsive-nav-link href="https://tracerstudy.unhas.ac.id/survey/566599">
-                    {{ __('Survey Alumni') }}
+                    {{ __('Survei Pengguna Alumni') }}
                 </x-responsive-nav-link>
                 <x-responsive-nav-link href="{{ route('survey') }}">
-                    {{ __('Penjaring Alumni') }}
+                    {{ __('Survey Penjaring Alumni') }}
                 </x-responsive-nav-link>
 
             @endif
