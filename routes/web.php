@@ -27,7 +27,7 @@ Route::get('/survey', function () {
     return view('pages.survey.index');
 })->name('survey');
 
-Route::get('/database', [\App\Http\Livewire\AlumniTable::class, 'export']);
+
 
 Route::middleware([
     'auth:sanctum',
@@ -50,6 +50,4 @@ Route::middleware([
     Route::get('/database', function () {
         return view('pages.database.index');
     })->name('database');
-
-
 });

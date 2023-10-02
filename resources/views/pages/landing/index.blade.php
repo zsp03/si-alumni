@@ -40,28 +40,27 @@
             </div>
         </div>
 
-        <a id="dana-abadi" class="block relative invisible top-[-100px]"></a>
+        <a id="penjaringan-alumni" class="block relative invisible top-[-100px]"></a>
         <div class="mx-4 md:mx-auto my-5 max-w-7xl">
             <div class="relative rounded-lg flex flex-col md:flex-row items-center md:shadow-xl md:h-72 mx-2">
                 <div class="z-0  relative w-full md:w-2/5 h-80 md:h-full overflow-hidden rounded-lg md:rounded-none md:rounded-r-lg">
-                    <div class="w-full h-full object-fill object-center bg-opacity-30 bg-cover bg-bottom bg-[url('/public/assets/image/foto-unhas.jpg')]">
+                    <div class="w-full h-full object-fill object-center bg-opacity-30 bg-cover bg-bottom bg-[url('/public/assets/image/wisuda.jpg')]">
                     </div>
-                    <svg class="hidden md:block absolute inset-x-0 h-full w-24 fill-current text-white -ml-12"
+                    {{-- <svg class="hidden md:block absolute inset-x-0 h-full w-24 fill-current text-white -ml-12"
                         viewBox="0 0 100 100" preserveAspectRatio="none">
                         <polygon points="50,0 100,0 50,100 0,100" />
-                    </svg>
+                    </svg> --}}
                     <div class="md:hidden absolute inset-0 h-full p-6 pb-6 flex justify-start items-start bg-gradient-to-b from-transparent via-transparent to-gray-900">
                         <h3 class="w-full font-bold text-2xl text-white leading-tight mb-2">
                             Penjaringan Alumni
                         </h3>
                     </div>
-                    
                 </div>
 
                 <div class="z-10 order-2 md:order-1 w-full h-full md:w-3/5 flex items-center md:mt-0">
                     <div class="p-8 md:pr-18 md:pl-14 md:pb-9 md:pt-12 mx-2 md:mx-0 h-full bg-white rounded-lg md:rounded-none md:rounded-l-lg shadow-xl md:shadow-none ">
                         <h3 class="hidden md:block font-bold text-2xl text-gray-700">Survey Penjaringan Alumni</h3>
-                        <p class="text-gray-600 text-justify mt-2 lg:text-xl">Survey ini ditujukan untuk para alumni unhas yg lulus pada tahun 2010 dan tahun-tahun sebelumnya
+                        <p class="text-gray-600 text-justify mt-2 lg:text-xl">Survey ini ditujukan untuk para alumni unhas yang lulus pada tahun 2010 dan tahun-tahun sebelumnya
                         </p>
                         <a class="btn flex items-center mt-3 text-white bg-prusblue text-lg font-semibold hover:text-blue-900 focus:text-blue-900 "
                             href="{{ route('survey') }}">
