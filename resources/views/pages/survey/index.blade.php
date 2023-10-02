@@ -4,10 +4,10 @@
         <img src="/assets/image/header-bg.png" alt="alumni unhas" class="w-full h-64 sm:h-60">
         <div class="max-w-7xl mx-auto px-12 sm:px-10 lg:px-20 absolute inset-0 py-10 z-10">
             <div class="font-semibold text-4xl text-white dark:text-gray-20 leading-tight">
-                Survey Alumni
+                Survey Penjaringan Alumni
             </div>
             <div class="font-normal text-xl text-white dark:text-gray-200 leading-tight pt-2">
-                Silahkan isi data survey alumni
+                Survey ini ditujukan untuk para alumni unhas yang lulus pada tahun 2010 dan tahun-tahun sebelumnya
             </div>
         </div>
     </x-slot>
