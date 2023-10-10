@@ -22,6 +22,7 @@
         "livewire/livewire": "^2.11",
         "masbug/flysystem-google-drive-ext": "^2.2",
         "netflie/laravel-notification-whatsapp": "^1.1",
+        "rap2hpoutre/fast-excel": "^5.3",
         "spatie/laravel-collection-macros": "^7.12",
         "wireui/wireui": "^1.17"
     },

@@ -4,11 +4,15 @@ namespace App\Filament\Resources\PenjaringAlumniResource\Pages;
 use App\Filament\Resources\PenjaringAlumniResource;
 use Filament\Resources\Pages\ListRecords;
 use Filament\Pages\Actions\Action;
-use App\Exports\PenjaringAlumnisExport;
+// use App\Exports\PenjaringAlumnisExport;
+use App\Models\PenjaringAlumni;
 use Maatwebsite\Excel\Facades\Excel;
 use Filament\Pages\Actions;
 use Konnco\FilamentImport\Actions\ImportAction;
 use Konnco\FilamentImport\Actions\ImportField;
+use Rap2hpoutre\FastExcel\FastExcel;
+use Symfony\Component\HttpFoundation\BinaryFileResponse;
+
 
 class ListPenjaringAlumnis extends ListRecords
 {
@@ -63,8 +67,22 @@ class ListPenjaringAlumnis extends ListRecords
         ]);
     }
 
+
+
+
+    public function downloadPdfFile($namaFile): BinaryFileResponse
+    {
+        return response()->download(public_path("{$namaFile}"));
+    }
     public function export()
     {
-        return Excel::download(new PenjaringAlumnisExport, 'penjaringalumnis.xlsx');
+        $namaFile = "Alumni.xlsx";
+
+        (new fastexcel(PenjaringAlumni::exportData()))->export("{$namaFile}");
+
+        return ListPenjaringAlumnis::downloadPdfFile("{$namaFile}");
+
+
     }
+
 }

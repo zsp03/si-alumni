@@ -24,4 +24,10 @@ class PenjaringAlumni extends Model
         'alamat_kerja',
         'posisi'
     ];
+    public static function exportData()
+    {
+        foreach (PenjaringAlumni::cursor() as $penjaringan) {
+            yield $penjaringan;
+        }
+    }
 }

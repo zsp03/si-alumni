@@ -5,34 +5,27 @@ namespace App\Exports;
 use App\Models\Alumni;
 use Maatwebsite\Excel\Concerns\FromCollection;
 use Maatwebsite\Excel\Concerns\WithHeadings;
+use Rap2hpoutre\FastExcel\FastExcel;
+use Symfony\Component\HttpFoundation\BinaryFileResponse;
 
-
-class AlumnisExport implements FromCollection, WithHeadings
+class AlumnisExport
 {
     /**
      * @return \Illuminate\Support\Collection
      */
-    public function collection()
+    public function downloadPdfFile($namaFile): BinaryFileResponse
     {
-        return Alumni::all();
+        return response()->download(public_path("{$namaFile}"));
     }
-
-    public function headings(): array
+    public function export()
     {
-        return [
-            'id',
-            'nim',
-            'name',
-            'program_studi',
-            'fakultas',
-            'jenis_kelamin',
-            'phone_number',
-            'show_phone_number',
-            'email',
-            'show_email',
-            'user_id',
-            'created_at',
-            'update_at'
-        ];
+
+        $namaFile = "User.xlsx";
+
+        (new fastexcel(Alumni::exportDataAlumni()))->export("{$namaFile}");
+
+        return AlumnisExport::downloadPdfFile("{$namaFile}");
+
+
     }
 }
