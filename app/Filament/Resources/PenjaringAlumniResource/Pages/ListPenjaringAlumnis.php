@@ -76,13 +76,10 @@ class ListPenjaringAlumnis extends ListRecords
     }
     public function export()
     {
-        $namaFile = "Alumni.xlsx";
+        $namaFile = "PenjaringAlumnis.xlsx";
 
         (new fastexcel(PenjaringAlumni::exportData()))->export("{$namaFile}");
 
         return ListPenjaringAlumnis::downloadPdfFile("{$namaFile}");
-
-
     }
-
 }

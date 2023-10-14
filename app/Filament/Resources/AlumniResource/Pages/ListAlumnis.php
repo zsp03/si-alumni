@@ -11,6 +11,8 @@ use Filament\Forms;
 use Konnco\FilamentImport\Actions\ImportAction;
 use Konnco\FilamentImport\Actions\ImportField;
 use Filament\Pages\Actions;
+use Rap2hpoutre\FastExcel\Facades\FastExcel;
+use Symfony\Component\HttpFoundation\BinaryFileResponse;
 
 class ListAlumnis extends ListRecords
 {
@@ -53,8 +55,16 @@ class ListAlumnis extends ListRecords
         ]);
     }
 
-    public function export()
+    public function downloadPdfFile($namaFile): BinaryFileResponse
     {
-        return Excel::download(new AlumnisExport, 'alumnis.xlsx');
+        return response()->download(public_path("{$namaFile}"));
+    }
+    public function exportDataAlumni()
+    {
+        $namaFile = "Alumnis.xlsx";
+
+        (new FastExcel(Alumni::exportData()))->export("{$namaFile}");
+
+        return ListAlumnis::downloadPdfFile("{$namaFile}");
     }
 }
