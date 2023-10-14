@@ -8,7 +8,8 @@ use Livewire\Component;
 use Livewire\WithPagination;
 use App\Exports\AlumnisExport;
 use Maatwebsite\Excel\Facades\Excel;
-
+use Rap2hpoutre\FastExcel\FastExcel;
+use Symfony\Component\HttpFoundation\BinaryFileResponse;
 
 class AlumniTable extends Component
 {
@@ -32,9 +33,23 @@ class AlumniTable extends Component
         $this->showingUserProfileCard = true;
     }
 
+    // public function downloadData()
+    // {
+    //     return Excel::download(new AlumnisExport, 'Alumni.xlsx');
+    // }
+
+    public function downloadPdfFile($namaFile): BinaryFileResponse
+    {
+        return response()->download(public_path("{$namaFile}"));
+    }
     public function downloadData()
     {
-        return Excel::download(new AlumnisExport, 'Alumni.xlsx');
+
+        $namaFile = "Alumni.xlsx";
+
+        (new fastexcel(Alumni::exportDataAlumni()))->export("{$namaFile}");
+
+        return AlumniTable::downloadPdfFile("{$namaFile}");
     }
 
     public function render()

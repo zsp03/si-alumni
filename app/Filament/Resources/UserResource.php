@@ -34,19 +34,23 @@ class UserResource extends Resource
                     ->maxLength(255)
                     ->unique(ignoreRecord: true),
                 Forms\Components\TextInput::make('name')
-                    ->required(fn (string $context): bool => $context === 'create')
+                    ->required(fn(string $context): bool => $context === 'create')
                     ->maxLength(255),
                 Forms\Components\TextInput::make('jurusan')
                     ->maxLength(255),
+                Forms\Components\TextInput::make('angkatan')
+                    ->maxLength(255),
+                Forms\Components\TextInput::make('profile_desc')
+                    ->maxLength(255),
                 Forms\Components\TextInput::make('email')
-                    ->required(fn (string $context): bool => $context === 'create')
+                    ->required(fn(string $context): bool => $context === 'create')
                     ->unique(ignoreRecord: true)
                     ->maxLength(255),
                 Forms\Components\TextInput::make('password')
                     ->visibleOn('create')
-                    ->dehydrateStateUsing(fn ($state) => Hash::make($state))
-                    ->dehydrated(fn ($state) => filled($state))
-                    ->required(fn (string $context): bool => $context === 'create'),
+                    ->dehydrateStateUsing(fn($state) => Hash::make($state))
+                    ->dehydrated(fn($state) => filled($state))
+                    ->required(fn(string $context): bool => $context === 'create'),
                 Forms\Components\Select::make('role')
                     ->options([
                         '0' => 'Admin',
@@ -62,8 +66,13 @@ class UserResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('name')->searchable(),
-                Tables\Columns\TextColumn::make('jurusan'),
+                Tables\Columns\TextColumn::make('name')
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('jurusan')
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('angkatan'),
+                Tables\Columns\TextColumn::make('profile_desc')
+                    ->label('Pekerjaan'),
                 Tables\Columns\TextColumn::make('email'),
                 Tables\Columns\TextColumn::make('role'),
                 Tables\Columns\TextColumn::make('created_at')

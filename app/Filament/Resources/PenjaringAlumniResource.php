@@ -6,12 +6,15 @@ use App\Filament\Resources\PenjaringAlumniResource\Pages;
 use App\Filament\Resources\PenjaringAlumniResource\RelationManagers;
 use App\Models\PenjaringAlumni;
 use Filament\Forms;
+use Filament\Notifications\Collection;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Rap2hpoutre\FastExcel\FastExcel;
+use Symfony\Component\HttpFoundation\BinaryFileResponse;
 
 class PenjaringAlumniResource extends Resource
 {
@@ -97,6 +100,21 @@ class PenjaringAlumniResource extends Resource
             ])
             ->bulkActions([
                 Tables\Actions\DeleteBulkAction::make(),
+                // Tables\Actions\BulkAction::make('export')
+                //     ->requiresConfirmation()
+                //     ->action(fn(Collection $records) => $records->each->export()),
+                // ->action(function(Collection $records) {
+                //     // $penjaringanAlumni = PenjaringAlumni::All();
+                //     // return (new FastExcel(PenjaringAlumni::all()))->download('users.xlsx');
+
+                //     $namaFile = "Alumni.xlsx";
+
+                //     (new fastexcel(PenjaringAlumni::exportData()))->export("{$namaFile}");
+
+                //     return PenjaringAlumniResource::downloadPdfFile("{$namaFile}");
+
+
+                // }),
             ]);
     }
 
@@ -114,5 +132,22 @@ class PenjaringAlumniResource extends Resource
             'create' => Pages\CreatePenjaringAlumni::route('/create'),
             'edit' => Pages\EditPenjaringAlumni::route('/{record}/edit'),
         ];
+    }
+    public static function downloadPdfFile($namaFile): BinaryFileResponse
+    {
+        return response()->download(public_path("{$namaFile}"));
+    }
+    public function export()
+    {
+        // $penjaringanAlumni = PenjaringAlumni::All();
+        // return (new FastExcel(PenjaringAlumni::all()))->download('users.xlsx');
+
+        $namaFile = "Alumni.xlsx";
+
+        (new fastexcel(PenjaringAlumni::exportData()))->export("{$namaFile}");
+
+        return PenjaringAlumniResource::downloadPdfFile("{$namaFile}");
+
+
     }
 }

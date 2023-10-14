@@ -98,5 +98,10 @@ class User extends Authenticatable implements FilamentUser, HasAvatar, MustVerif
     {
         return 'whatsapp:+'.$this->phone_number;
     }
-
+    public static function exportDataUser()
+    {
+        foreach (User::cursor() as $user) {
+            yield $user;
+        }
+    }
 }

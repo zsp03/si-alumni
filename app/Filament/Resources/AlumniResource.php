@@ -55,8 +55,10 @@ class AlumniResource extends Resource
                     ->searchable(),
                 Tables\Columns\TextColumn::make('name')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('program_studi'),
-                Tables\Columns\TextColumn::make('fakultas'),
+                Tables\Columns\TextColumn::make('program_studi')
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('fakultas')
+                    ->searchable(),
                 Tables\Columns\TextColumn::make('jenis_kelamin'),
                 Tables\Columns\TextColumn::make('phone_number'),
                 Tables\Columns\TextColumn::make('email'),
@@ -73,6 +75,7 @@ class AlumniResource extends Resource
             ])
             ->bulkActions([
                 Tables\Actions\DeleteBulkAction::make(),
+                
             ]);
     }
 
