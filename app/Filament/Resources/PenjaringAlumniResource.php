@@ -50,6 +50,7 @@ class PenjaringAlumniResource extends Resource
                     ->maxLength(255),
                 Forms\Components\TextInput::make('email')
                     ->email()
+                    ->required()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('alamat')
                     ->maxLength(255),
@@ -67,7 +68,8 @@ class PenjaringAlumniResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('name')
-                    ->searchable(),
+                    ->label('Nama')
+                    ->searchable(isIndividual:true),
                 Tables\Columns\TextColumn::make('nim')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('fakultas')
@@ -79,7 +81,8 @@ class PenjaringAlumniResource extends Resource
                 Tables\Columns\TextColumn::make('tahun_lulus')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('jenis_kelamin'),
-                Tables\Columns\TextColumn::make('phone_number'),
+                Tables\Columns\TextColumn::make('phone_number')
+                    ->label('Nomor Hp'),
                 Tables\Columns\TextColumn::make('email'),
                 Tables\Columns\TextColumn::make('alamat'),
                 Tables\Columns\TextColumn::make('tempat_kerja')
