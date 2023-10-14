@@ -24,7 +24,9 @@ class ListPenjaringAlumnis extends ListRecords
             Action::make('export')
                 ->button()
                 ->color('success')
-                ->action('export'),
+                ->action('export')
+                ->requiresconfirmation()
+                ->modalSubHeading('Proses ini akan memakan waktu beberapa menit jika terdapat banyak data'),
             ImportAction::make()
                 ->uniqueField('nim')
                 ->color('warning')
@@ -72,13 +74,15 @@ class ListPenjaringAlumnis extends ListRecords
 
     public function downloadPdfFile($namaFile): BinaryFileResponse
     {
-        return response()->download(public_path("{$namaFile}"));
+
+        return response()->download(public_path("{$namaFile}"))->deleteFileAfterSend();
     }
+
     public function export()
     {
         $namaFile = "PenjaringAlumnis.xlsx";
 
-        (new fastexcel(PenjaringAlumni::exportData()))->export("{$namaFile}");
+        (new FastExcel(PenjaringAlumni::exportData()))->export("{$namaFile}");
 
         return ListPenjaringAlumnis::downloadPdfFile("{$namaFile}");
     }

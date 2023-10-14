@@ -20,14 +20,16 @@ class ListUsers extends ListRecords
             Action::make('export')
                 ->button()
                 ->color('success')
-                ->action('export'),
+                ->action('export')
+                ->requiresconfirmation()
+                ->modalSubHeading('Proses ini akan memakan waktu beberapa menit jika terdapat banyak data'),
             Actions\CreateAction::make(),
         ]);
     }
 
     public function downloadPdfFile($namaFile): BinaryFileResponse
     {
-        return response()->download(public_path("{$namaFile}"));
+        return response()->download(public_path("{$namaFile}"))->deleteFileAfterSend();
     }
     public function export()
     {

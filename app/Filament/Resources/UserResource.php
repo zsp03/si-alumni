@@ -88,6 +88,7 @@ class UserResource extends Resource
                 Tables\Actions\EditAction::make(),
             ])
             ->bulkActions([
+                Tables\Actions\DeleteBulkAction::make(),
                 FilamentExportBulkAction::make('export')
             ]);
     }
