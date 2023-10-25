@@ -25,8 +25,9 @@ class ListPenjaringAlumnis extends ListRecords
                 ->button()
                 ->color('success')
                 ->action('export')
-                ->requiresconfirmation()
-                ->modalSubHeading('Proses ini akan memakan waktu beberapa menit jika terdapat banyak data'),
+                ->requiresconfirmation(fn(PenjaringAlumni $records) => ($records->count()) >= 1000)
+                ->modalSubHeading('Proses ini akan memakan waktu beberapa menit jika terdapat banyak data')
+                ->modalHidden(fn(PenjaringAlumni $records) => ($records->count()) < 1000),
             ImportAction::make()
                 ->uniqueField('nim')
                 ->color('warning')

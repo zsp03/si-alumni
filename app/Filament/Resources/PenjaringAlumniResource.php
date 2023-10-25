@@ -7,7 +7,7 @@ use App\Filament\Resources\PenjaringAlumniResource\Pages;
 use App\Filament\Resources\PenjaringAlumniResource\RelationManagers;
 use App\Models\PenjaringAlumni;
 use Filament\Forms;
-use Filament\Notifications\Collection;
+use Illuminate\Database\Eloquent\Collection;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
@@ -69,7 +69,7 @@ class PenjaringAlumniResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('name')
                     ->label('Nama')
-                    ->searchable(isIndividual:true),
+                    ->searchable(isIndividual: true),
                 Tables\Columns\TextColumn::make('nim')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('fakultas')

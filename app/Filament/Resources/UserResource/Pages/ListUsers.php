@@ -21,8 +21,9 @@ class ListUsers extends ListRecords
                 ->button()
                 ->color('success')
                 ->action('export')
-                ->requiresconfirmation()
-                ->modalSubHeading('Proses ini akan memakan waktu beberapa menit jika terdapat banyak data'),
+                ->requiresconfirmation(fn(User $records) => ($records->count()) >= 1000)
+                ->modalSubHeading('Proses ini akan memakan waktu beberapa menit jika terdapat banyak data')
+                ->modalHidden(fn(User $records) => ($records->count()) < 1000),
             Actions\CreateAction::make(),
         ]);
     }
