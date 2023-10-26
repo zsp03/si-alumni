@@ -25,6 +25,7 @@
         "netflie/laravel-notification-whatsapp": "^1.1",
         "rap2hpoutre/fast-excel": "^5.3",
         "spatie/laravel-collection-macros": "^7.12",
+        "webbingbrasil/filament-2fa": "^1.0",
         "wireui/wireui": "^1.17"
     },
     "require-dev": {

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "566a08435c29445ca8795503a033e2cb",
+    "content-hash": "ade6ca3745946bbf3d6ae919d431eb56",
     "packages": [
         {
             "name": "3x1io/filament-excel",
@@ -9947,6 +9947,65 @@
                 }
             ],
             "time": "2022-03-08T17:03:00+00:00"
+        },
+        {
+            "name": "webbingbrasil/filament-2fa",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/webbingbrasil/filament-2fa.git",
+                "reference": "0f5f397d88236f61debf11870c0784820a3e31f3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/webbingbrasil/filament-2fa/zipball/0f5f397d88236f61debf11870c0784820a3e31f3",
+                "reference": "0f5f397d88236f61debf11870c0784820a3e31f3",
+                "shasum": ""
+            },
+            "require": {
+                "bacon/bacon-qr-code": "^2.0",
+                "ext-json": "*",
+                "filament/filament": "^2.10.40",
+                "php": "^8.0",
+                "pragmarx/google2fa": "^7.0|^8.0",
+                "spatie/laravel-package-tools": "^1.9.2"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Webbingbrasil\\FilamentTwoFactor\\FilamentTwoFactorProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Webbingbrasil\\FilamentTwoFactor\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Danilo Andrade",
+                    "email": "danilo@webbingbrasil.com.br",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A 2FA plugin for filament.",
+            "homepage": "https://github.com/webbingbrasil/filament-2fa",
+            "keywords": [
+                "2fa",
+                "filament",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/webbingbrasil/filament-2fa/issues",
+                "source": "https://github.com/webbingbrasil/filament-2fa/tree/v1.0.0"
+            },
+            "time": "2023-03-20T18:11:54+00:00"
         },
         {
             "name": "webmozart/assert",
