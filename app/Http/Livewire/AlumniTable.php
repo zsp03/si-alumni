@@ -40,7 +40,7 @@ class AlumniTable extends Component
 
     public function downloadPdfFile($namaFile): BinaryFileResponse
     {
-        return response()->download(public_path("{$namaFile}"));
+        return response()->download(public_path("{$namaFile}"))->deleteFileAfterSend();
     }
     public function downloadData()
     {
