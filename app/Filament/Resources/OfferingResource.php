@@ -78,6 +78,7 @@ class OfferingResource extends Resource
                             ->schema([
                                 Forms\Components\FileUpload::make('logo')
                                     ->label('Upload')
+                                    ->image()
                                     ->reactive()
                                     ->directory('jobs-images')
                                     ->afterStateUpdated(function (Closure $set, $state) {

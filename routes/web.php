@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Livewire\PenjaringAlumniPost;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,6 +23,11 @@ Route::get('/event', function () {
 })->name('event');
 Route::get('/event/tags/{tags}', \App\Http\Livewire\IndexPostByTags::class)->name('eventByTags');
 Route::get('/event/post/{post:slug}', \App\Http\Livewire\ShowPost::class)->name('post.show');
+Route::get('/survey', function () {
+    return view('pages.survey.index');
+})->name('survey');
+
+
 
 Route::middleware([
     'auth:sanctum',

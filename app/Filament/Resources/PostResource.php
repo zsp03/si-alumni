@@ -51,6 +51,7 @@ class PostResource extends Resource
                     ->schema([
                         Forms\Components\FileUpload::make('image_featured')
                             ->label('Upload')
+                            ->image()
                             ->reactive()
                             ->directory('post-images')
                             ->afterStateUpdated(function (Closure $set, $state) {

@@ -66,6 +66,7 @@
                     <a href='https://alumni.unhas.ac.id/dana-abadi' target="_blank" class="btn btn-neutral"> Donasi </a>
                 </div>
             </div>
+
         </div>
     </section>
 </x-app-layout>

@@ -33,6 +33,7 @@ class BannerResource extends Resource
                     ->maxLength(255),
                 Forms\Components\FileUpload::make('image_featured')
                     ->label('Upload Image')
+                    ->image()
                     ->reactive()
                     ->directory('post-images')
                     ->afterStateUpdated(function (Closure $set, $state) {

@@ -4,7 +4,8 @@
         <input wire:model="search"
                type="text"
                class="py-3 px-4 pl-11 block w-full sm:w-1/2 lg:w-1/3 border-gray-200 shadow-sm rounded-md text-sm focus:z-10 focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
-               placeholder="Ketik Nama/NIM...">
+               placeholder="Search...">
+        
         <div class="absolute inset-y-0 left-0 flex items-center pointer-events-none pl-4">
             <svg wire:loading.remove
                  class="h-4 w-4 text-gray-400"
@@ -20,7 +21,15 @@
                  role="status" aria-label="loading">
                 <span class="sr-only">Loading...</span>
             </div>
+            
         </div>
+    </div>
+
+    <div class="flex justify-end">
+        <button wire:click.prevent="downloadData" class="bg-green-500 hover:bg-green-700 text-white border border-green-700 rounded font-bold py-2 px-4 inline-flex items-center">
+            <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/></svg>
+            <span>Export</span>
+          </button>
     </div>
 
     <div class="flex flex-col">

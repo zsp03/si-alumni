@@ -21,4 +21,11 @@ class Alumni extends Model
         'show_email',
         'user_id'
     ];
+
+    public static function exportDataAlumni()
+    {
+        foreach (Alumni::cursor() as $alumni) {
+            yield $alumni;
+        }
+    }
 }

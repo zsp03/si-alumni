@@ -1,19 +1,31 @@
 <nav x-data="{ open: false }" class="sticky top-0 z-50 bg-prusblue">
     <!-- Primary Navigation Menu -->
     <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex h-16">
+        <div class="flex h-20">
             <!-- Logo -->
             <div class="shrink-0 flex mr-auto items-center">
                 <a @if(auth()->check()) href="{{ route('home') }}" @else href="{{ route('landing') }}" @endif>
                     <x-application-logo class="block h-12 w-auto fill-current text-gray-800" />
                 </a>
-                <div class="pt-2 whitespace-nowrap ml-3 font-semibold text-base">
+                <div class="pt-1 whitespace-nowrap ml-3 font-semibold text-base leading-none">
+                    @if(auth()->check())
                     <div class="text-white">
                         Portal Alumni
                     </div>
-                    <div class="text-rose-600">
+                    <div class="text-white mb-2">
                         Universitas Hasanuddin
                     </div>
+                    @else
+                    <div class="text-white font-thin">
+                        Direktorat Hubungan Alumni &
+                        <br>
+                        Pengembangan Dana Abadi
+                    </div>
+                    <div class="text-white mb-2 font-thin">
+                        Universitas Hasanuddin
+                    </div>
+                    @endif
+
                 </div>
             </div>
             <!-- Navigation Links -->
@@ -53,9 +65,26 @@
                     <x-nav-link href="#about-us">
                         {{ __('About us') }}
                     </x-nav-link>
-                    <x-nav-link href="https://tracerstudy.unhas.ac.id/">
-                        {{ __('Tracer Study') }}
-                    </x-nav-link>
+                    <div class="relative">
+                        <x-dropdown>
+                            <x-slot name="trigger">
+                                    <a class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium focus:outline-none focus:text-white focus:border-gray-300 transition duration-150 ease-in-out">Survey</a>
+                            </x-slot>
+                            <div x-show = "open">
+                                <x-slot name="content">
+                                    <x-dropdown-link href="https://tracerstudy.unhas.ac.id/">
+                                        {{ __('Tracer Study') }}
+                                    </x-dropdown-link>
+                                    <x-dropdown-link href="https://tracerstudy.unhas.ac.id/survey/566599">
+                                        {{ __('Survei Pengguna Alumni') }}
+                                    </x-dropdown-link>
+                                    <x-dropdown-link href="{{ route('survey') }}">
+                                        {{ __('Survei Penjaring Alumni') }}
+                                    </x-dropdown-link>
+                                </x-slot>
+                            </div>
+                        </x-dropdown>
+                    </div>
                 @endif
 
             </div>
@@ -182,6 +211,12 @@
                 </x-responsive-nav-link>
                 <x-responsive-nav-link href="https://tracerstudy.unhas.ac.id/">
                     {{ __('Tracer Study') }}
+                </x-responsive-nav-link>
+                <x-responsive-nav-link href="https://tracerstudy.unhas.ac.id/survey/566599">
+                    {{ __('Survei Pengguna Alumni') }}
+                </x-responsive-nav-link>
+                <x-responsive-nav-link href="{{ route('survey') }}">
+                    {{ __('Survey Penjaring Alumni') }}
                 </x-responsive-nav-link>
 
             @endif

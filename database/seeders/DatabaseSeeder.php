@@ -13,16 +13,16 @@ class DatabaseSeeder extends Seeder
      *
      * @return void
      */
-    
-     use WithoutModelEvents;
+
+    use WithoutModelEvents;
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        \App\Models\PenjaringAlumni::factory(100000)->create();
 
-         \App\Models\User::factory()->create([
-             'name' => 'Admin',
-             'email' => 'admin@admin.com',
-             'role' => '0',
-         ]);
+        //  \App\Models\User::factory()->create([
+        //      'name' => 'Admin',
+        //      'email' => 'admin@admin.com',
+        //      'role' => '0',
+        //  ]);
     }
 }
